@@ -1,0 +1,45 @@
+{
+  "name": "freqscope",
+  "private": true,
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "postinstall": "cp -r node_modules/cesium/Build/Cesium/Workers public/Workers && cp -r node_modules/cesium/Build/Cesium/Assets public/Assets && cp -r node_modules/cesium/Build/Cesium/ThirdParty public/ThirdParty && cp -r node_modules/cesium/Build/Cesium/Widgets public/Widgets",
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build:data": "node scripts/build-nasr-data.mjs",
+    "build:airspace": "node scripts/build-airspace.mjs",
+    "setup:models": "node scripts/setup-fr24-models.mjs"
+  },
+  "dependencies": {
+    "cesium": "^1.142.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.16.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@gltf-transform/core": "^4.4.0",
+    "@gltf-transform/extensions": "^4.4.0",
+    "@gltf-transform/functions": "^4.4.0",
+    "@squawk/airspace-data": "^0.5.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^24.12.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.59.2",
+    "vite": "^8.0.12"
+  }
+}
