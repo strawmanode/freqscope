@@ -20,6 +20,10 @@ npm run build:data
 
 The script selects up to **500** US airports (ICAO `K…`), prioritized by facility size.
 
+Prebuilt outputs are checked into `src/data/` so a fresh clone can run without
+this step. Use `npm run build:data` when you need to refresh airport,
+frequency, or runway JSON from newer source CSVs.
+
 ### Fallback: OurAirports CSV
 
 If `APT_BASE.csv` / `FRQ.csv` are not present, the script uses `airports.csv`, `airport-frequencies.csv`, and optionally `runways.csv` from [OurAirports](https://ourairports.com/data/) when placed in `scripts/nasr/`. A warning is printed to the console.

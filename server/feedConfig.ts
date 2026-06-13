@@ -144,8 +144,9 @@ export function getFeedConfigStatus(): FeedConfigStatus {
 /** Ensures feed identity env vars are valid; throws FeedConfigurationError when not. */
 export function assertFeedConfigured(): void {
   readRequiredFeedEnv('AIRCRAFT_FEED_CONTACT')
-  readOptionalFeedEnv('AIRCRAFT_FEED_X_APPLICATION') ??
+  if (readOptionalFeedEnv('AIRCRAFT_FEED_X_APPLICATION') === null) {
     readRequiredFeedEnv('AIRCRAFT_FEED_APPLICATION')
+  }
 }
 
 function upsertEnvLocal(updates: Record<string, string>): void {

@@ -1058,7 +1058,7 @@ body {
 }
 
 .bottom-strip {
-  flex: 0 0 168px;
+  flex: 0 0 160px;
   display: flex;
   gap: 11px;
   min-height: 0;
@@ -1073,7 +1073,7 @@ body {
 }
 
 .bsec-filters {
-  flex: 1 1 auto;
+  flex: 0 0 360px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: auto 1fr;
@@ -1081,27 +1081,91 @@ body {
   row-gap: 0;
   min-width: 0;
 }
+.bsec-layers {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
 .bsec-liveatc {
   flex: 0 0 350px;
   width: 350px;
   min-width: 0;
   overflow: hidden;
 }
+
+.layers-bar {
+  display: flex;
+  gap: 20px;
+  /* natural height, vertically centered in the panel for even breathing room */
+  flex: 0 1 auto;
+  margin: auto 0;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.layers-group {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.layers-group .filter-label {
+  margin-bottom: 2px;
+}
+
+.layers-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.layers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  align-content: start;
+}
+
+.layers-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 8px;
+  margin-top: 1px;
+}
+
+.layers-legend .lg {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--dim);
+}
+
+.layers-legend .lg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
 .filter-group {
   margin-bottom: 0;
-  align-self: start;
+  align-self: center;
 }
 
 .filter-group:last-child {
   margin-bottom: 0;
 }
 .bsec-title {
-  font-size: 15px;
-  letter-spacing: 5px;
+  font-size: 12px;
+  letter-spacing: 4px;
   color: var(--amber);
   text-align: center;
   text-shadow: 0 0 9px rgba(255, 170, 0, 0.4);
-  margin-bottom: 13px;
+  margin-bottom: 11px;
   flex-shrink: 0;
 }
 
@@ -1109,29 +1173,28 @@ body {
   grid-column: 1 / -1;
 }
 
-.bsec-liveatc .bsec-title {
-  font-size: 12px;
-  letter-spacing: 4px;
-  margin-bottom: 8px;
-}
-
 .liveatc-module {
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
+  min-height: 0;
   min-width: 0;
 }
 
 .liveatc-readout {
   flex: 1 1 auto;
+  min-height: 0;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
   padding: 8px 10px;
   background: var(--inset-bg);
   border: 1px solid var(--button-border);
   border-radius: 4px;
   box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
 }
 
 .liveatc-kicker {
@@ -1141,32 +1204,54 @@ body {
   margin-bottom: 4px;
 }
 
-.liveatc-airport {
-  font-size: 24px;
-  line-height: 1;
-  color: var(--lcd);
-  letter-spacing: 3px;
+.liveatc-headline {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
 }
 
-.liveatc-name,
-.liveatc-preview {
-  margin-top: 4px;
+.liveatc-airport {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--lcd);
+  letter-spacing: 2.5px;
+  flex-shrink: 0;
+}
+
+.liveatc-name {
+  flex: 1 1 auto;
   min-width: 0;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--green2);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.liveatc-name {
-  font-size: 9px;
-  letter-spacing: 1.5px;
-  color: var(--green2);
+.liveatc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
 }
 
-.liveatc-preview {
+.liveatc-chip {
+  font-family: var(--mono);
   font-size: 8px;
   letter-spacing: 1.5px;
+  color: var(--green2);
+  background: var(--button-bg);
+  border: 1px solid var(--button-border);
+  border-radius: 3px;
+  padding: 2px 6px;
+}
+
+.liveatc-chip-empty {
   color: var(--dim);
+  letter-spacing: 1px;
 }
 
 .liveatc-actions {
@@ -1181,8 +1266,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 30px;
-  width: 100%;
+  min-height: 28px;
+  flex: 1 1 0;
+  min-width: 0;
   padding: 0 8px;
   font-family: var(--mono);
   font-size: 9px;
@@ -1572,14 +1658,11 @@ body {
 }
 
 .bsec-filters .bsec-title {
-  font-size: 11px;
-  letter-spacing: 3px;
-  margin-bottom: 8px;
   white-space: nowrap;
 }
 
 .bsec-filters .filter-group {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .bsec-filters .filter-label {

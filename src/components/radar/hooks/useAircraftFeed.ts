@@ -128,7 +128,7 @@ export function useAircraftFeed({
       window.clearInterval(id)
     }
     // display filters omitted — client-side filter only; avoids refetch on pill toggle
-  }, [icao, lat, lon, elevationFt, altFilter, bbox.lamin, bbox.lamax, bbox.lomin, bbox.lomax])
+  }, [icao, lat, lon, elevationFt, altFilter, bbox])
 
   return { states, feedError, feedConfigRequired }
 }

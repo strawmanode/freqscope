@@ -1,7 +1,5 @@
 import {
-  createContext,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useState,
@@ -13,31 +11,15 @@ import {
   type FeedConfigStatus,
 } from '../../lib/feedConfig'
 import { FeedSetupModal } from './FeedSetupModal'
-
-type FeedSetupContextValue = {
-  status: FeedConfigStatus | null
-  loading: boolean
-  openSetup: () => void
-  refresh: () => Promise<void>
-}
-
-const FeedSetupContext = createContext<FeedSetupContextValue | null>(null)
-
-export function useFeedSetup(): FeedSetupContextValue {
-  const ctx = useContext(FeedSetupContext)
-  if (!ctx) {
-    throw new Error('useFeedSetup must be used within FeedSetupProvider')
-  }
-  return ctx
-}
+import { FeedSetupContext } from './feedSetupContext'
 
 export function FeedSetupProvider({ children }: { children: ReactNode }) {
   const [status, setStatus] = useState<FeedConfigStatus | null>(null)
   const [loading, setLoading] = useState(true)
   const [modalOpen, setModalOpen] = useState(false)
 
-  const refresh = useCallback(async () => {
-    setLoading(true)
+  const refresh = useCallback(async (showLoading = false) => {
+    if (showLoading) setLoading(true)
     try {
       const next = await fetchFeedConfigStatus()
       setStatus(next)
@@ -51,8 +33,27 @@ export function FeedSetupProvider({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => {
-    void refresh()
-  }, [refresh])
+    let cancelled = false
+
+    void (async () => {
+      try {
+        const next = await fetchFeedConfigStatus()
+        if (cancelled) return
+        setStatus(next)
+        setModalOpen(!next.configured)
+      } catch (err) {
+        if (cancelled) return
+        console.warn('[feedSetup] status check failed:', err)
+        setStatus(null)
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   useEffect(() => {
     const onUpdated = () => {
@@ -76,10 +77,15 @@ export function FeedSetupProvider({ children }: { children: ReactNode }) {
     [status, loading, openSetup, refresh],
   )
 
+  const modalKey = modalOpen
+    ? `${status?.application ?? ''}:${status?.contact ?? ''}`
+    : 'closed'
+
   return (
     <FeedSetupContext.Provider value={value}>
       {children}
       <FeedSetupModal
+        key={modalKey}
         open={modalOpen}
         initialApplication={status?.application ?? ''}
         initialContact={status?.contact ?? ''}

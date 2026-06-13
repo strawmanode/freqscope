@@ -1,8 +1,17 @@
 {
   "name": "freqscope",
   "private": true,
+  "version": "0.1.0",
+  "description": "Local web app for live aircraft radar, airport frequencies, and an external LiveATC audio handoff.",
+  "author": "Chris Dionne",
   "license": "PolyForm-Noncommercial-1.0.0",
-  "version": "0.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strawmanode/freqscope.git"
+  },
   "type": "module",
   "scripts": {
     "postinstall": "cp -r node_modules/cesium/Build/Cesium/Workers public/Workers && cp -r node_modules/cesium/Build/Cesium/Assets public/Assets && cp -r node_modules/cesium/Build/Cesium/ThirdParty public/ThirdParty && cp -r node_modules/cesium/Build/Cesium/Widgets public/Widgets",
