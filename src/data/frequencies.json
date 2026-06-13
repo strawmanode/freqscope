@@ -1,0 +1,8000 @@
+{
+  "KABE": [
+    {
+      "type": "ATIS",
+      "frequency": "126.97",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.50",
+      "label": "Tower"
+    }
+  ],
+  "KABI": [
+    {
+      "type": "ATIS",
+      "frequency": "118.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KABQ": [
+    {
+      "type": "APP",
+      "frequency": "123.90",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "118.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "123.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.78",
+      "label": "Tower"
+    }
+  ],
+  "KACY": [
+    {
+      "type": "ATIS",
+      "frequency": "108.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KADW": [
+    {
+      "type": "APP",
+      "frequency": "119.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "113.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.65",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.40",
+      "label": "Tower"
+    }
+  ],
+  "KAEG": [
+    {
+      "type": "CLD",
+      "frequency": "124.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.15",
+      "label": "Tower"
+    }
+  ],
+  "KAEX": [
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.35",
+      "label": "Tower"
+    }
+  ],
+  "KAGC": [
+    {
+      "type": "ATIS",
+      "frequency": "120.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.10",
+      "label": "Tower"
+    }
+  ],
+  "KAGS": [
+    {
+      "type": "ATIS",
+      "frequency": "132.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KAHN": [
+    {
+      "type": "CLD",
+      "frequency": "127.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.30",
+      "label": "Tower"
+    }
+  ],
+  "KALB": [
+    {
+      "type": "ATIS",
+      "frequency": "120.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KALI": [
+    {
+      "type": "APP",
+      "frequency": "119.90",
+      "label": "Approach"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.90",
+      "label": "Departure"
+    }
+  ],
+  "KALM": [
+    {
+      "type": "APP",
+      "frequency": "120.60",
+      "label": "Approach"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.10",
+      "label": "Departure"
+    }
+  ],
+  "KAPA": [
+    {
+      "type": "ATIS",
+      "frequency": "120.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KAPN": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.35",
+      "label": "Tower"
+    }
+  ],
+  "KARA": [
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.00",
+      "label": "Tower"
+    }
+  ],
+  "KASE": [
+    {
+      "type": "ATIS",
+      "frequency": "120.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "123.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.85",
+      "label": "Tower"
+    }
+  ],
+  "KATL": [
+    {
+      "type": "ATIS",
+      "frequency": "119.650",
+      "label": "Arrival ATIS"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.550",
+      "label": "Departure ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.100",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.650",
+      "label": "Departure South"
+    },
+    {
+      "type": "DEP",
+      "frequency": "133.475",
+      "label": "Departure North"
+    },
+    {
+      "type": "GND",
+      "frequency": "COMB",
+      "label": "All Runways Combined"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.650",
+      "label": "Ground Rwy 10/28"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.750",
+      "label": "Ground Rwy 9/27"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.900",
+      "label": "Ground Rwy 8/26"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "COMB",
+      "label": "All Ramps Combined"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "128.975",
+      "label": "Ramp"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "129.275",
+      "label": "Ramp 3"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "129.375",
+      "label": "Ramp 5"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "130.075",
+      "label": "Ramp 4"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "131.375",
+      "label": "Ramp 6"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "131.450",
+      "label": "Ramp 1"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "131.850",
+      "label": "Ramp 2"
+    },
+    {
+      "type": "RAMP",
+      "frequency": "131.875",
+      "label": "Ramp"
+    },
+    {
+      "type": "TWR",
+      "frequency": "COMB",
+      "label": "All Runways Combined"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.100",
+      "label": "Tower Rwy 8L/26R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.300",
+      "label": "Tower Rwy 9R/27L"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.500",
+      "label": "Tower Rwy 10/28"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.850",
+      "label": "Tower Rwy 9L/27R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.325",
+      "label": "Tower Rwy 8R/26L"
+    },
+    {
+      "type": "APP",
+      "frequency": "121.000",
+      "label": "Approach NW Satellite"
+    },
+    {
+      "type": "APP",
+      "frequency": "124.600",
+      "label": "Final 27L/9R"
+    },
+    {
+      "type": "APP",
+      "frequency": "127.250",
+      "label": "Final 26R/8L"
+    },
+    {
+      "type": "APP",
+      "frequency": "128.000",
+      "label": "Approach TAR North"
+    },
+    {
+      "type": "APP",
+      "frequency": "135.375",
+      "label": "Final 28/10"
+    },
+    {
+      "type": "TMU",
+      "frequency": "118.700",
+      "label": "Traffic Management"
+    },
+    {
+      "type": "CTR",
+      "frequency": "119.375",
+      "label": "ZTL Macon High"
+    },
+    {
+      "type": "CTR",
+      "frequency": "120.450",
+      "label": "ZTL Sector 09"
+    },
+    {
+      "type": "CTR",
+      "frequency": "134.800",
+      "label": "ZTL Sector 18"
+    }
+  ],
+  "KATW": [
+    {
+      "type": "ATIS",
+      "frequency": "127.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.60",
+      "label": "Tower"
+    }
+  ],
+  "KAUG": [
+    {
+      "type": "CLD",
+      "frequency": "119.95",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KAUS": [
+    {
+      "type": "ATIS",
+      "frequency": "124.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.00",
+      "label": "Tower"
+    }
+  ],
+  "KAVL": [
+    {
+      "type": "ATIS",
+      "frequency": "120.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.10",
+      "label": "Tower"
+    }
+  ],
+  "KAZO": [
+    {
+      "type": "ATIS",
+      "frequency": "127.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KBAB": [
+    {
+      "type": "APP",
+      "frequency": "125.40",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "27.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.40",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KBAD": [
+    {
+      "type": "ATIS",
+      "frequency": "37.58",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.25",
+      "label": "Tower"
+    }
+  ],
+  "KBAK": [
+    {
+      "type": "CLD",
+      "frequency": "121.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.60",
+      "label": "Tower"
+    }
+  ],
+  "KBCT": [
+    {
+      "type": "APP",
+      "frequency": "125.20",
+      "label": "Approach"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "127.35",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.42",
+      "label": "Tower"
+    }
+  ],
+  "KBDL": [
+    {
+      "type": "APP",
+      "frequency": "32.58",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "123.95",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "118.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "35.90",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "123.95",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KBDR": [
+    {
+      "type": "ATIS",
+      "frequency": "119.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KBED": [
+    {
+      "type": "ATIS",
+      "frequency": "124.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KBFI": [
+    {
+      "type": "ATIS",
+      "frequency": "127.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "132.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.60",
+      "label": "Tower"
+    }
+  ],
+  "KBFL": [
+    {
+      "type": "APP",
+      "frequency": "118.80",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "118.90",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "118.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CTR",
+      "frequency": "127.10",
+      "label": "Center"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.45",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KBGM": [
+    {
+      "type": "ATIS",
+      "frequency": "128.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KBGR": [
+    {
+      "type": "ATIS",
+      "frequency": "127.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KBHB": [
+    {
+      "type": "CLD",
+      "frequency": "119.90",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KBHM": [
+    {
+      "type": "ATIS",
+      "frequency": "119.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.67",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KBIF": [
+    {
+      "type": "APP",
+      "frequency": "119.15",
+      "label": "Approach"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "121.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.90",
+      "label": "Tower"
+    }
+  ],
+  "KBIL": [
+    {
+      "type": "ATIS",
+      "frequency": "126.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.20",
+      "label": "Tower"
+    }
+  ],
+  "KBIS": [
+    {
+      "type": "ATIS",
+      "frequency": "119.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KBIX": [
+    {
+      "type": "ATIS",
+      "frequency": "25.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.75",
+      "label": "Tower"
+    }
+  ],
+  "KBKF": [
+    {
+      "type": "ATIS",
+      "frequency": "119.67",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.00",
+      "label": "Tower"
+    }
+  ],
+  "KBKL": [
+    {
+      "type": "ATIS",
+      "frequency": "125.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.30",
+      "label": "Tower"
+    }
+  ],
+  "KBLI": [
+    {
+      "type": "ATIS",
+      "frequency": "134.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "127.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.90",
+      "label": "Tower"
+    }
+  ],
+  "KBMI": [
+    {
+      "type": "ATIS",
+      "frequency": "135.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.60",
+      "label": "Tower"
+    }
+  ],
+  "KBNA": [
+    {
+      "type": "APP",
+      "frequency": "120.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.40",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.60",
+      "label": "Tower"
+    }
+  ],
+  "KBOI": [
+    {
+      "type": "ATIS",
+      "frequency": "123.90",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KBOS": [
+    {
+      "type": "APP",
+      "frequency": "118.25",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "120.60",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "127.20",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "133.00",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.80",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.22",
+      "label": "Tower"
+    }
+  ],
+  "KBPT": [
+    {
+      "type": "ATIS",
+      "frequency": "126.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KBQK": [
+    {
+      "type": "CLD",
+      "frequency": "126.75",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KBRO": [
+    {
+      "type": "ATIS",
+      "frequency": "128.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KBTL": [
+    {
+      "type": "ATIS",
+      "frequency": "128.32",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.83",
+      "label": "Tower"
+    }
+  ],
+  "KBTR": [
+    {
+      "type": "ATIS",
+      "frequency": "125.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.45",
+      "label": "Tower"
+    }
+  ],
+  "KBUF": [
+    {
+      "type": "ATIS",
+      "frequency": "135.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "133.20",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.50",
+      "label": "Tower"
+    }
+  ],
+  "KBUR": [
+    {
+      "type": "ATIS",
+      "frequency": "134.50",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "123.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KBVI": [
+    {
+      "type": "ATIS",
+      "frequency": "118.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KBVY": [
+    {
+      "type": "ATIS",
+      "frequency": "119.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.20",
+      "label": "Tower"
+    }
+  ],
+  "KBWI": [
+    {
+      "type": "APP",
+      "frequency": "119.00",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "115.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.75",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KBXM": [
+    {
+      "type": "ATIS",
+      "frequency": "120.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "134.55",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.60",
+      "label": "Tower"
+    }
+  ],
+  "KBZN": [
+    {
+      "type": "ATIS",
+      "frequency": "135.43",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KCAE": [
+    {
+      "type": "ATIS",
+      "frequency": "120.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KCAK": [
+    {
+      "type": "ATIS",
+      "frequency": "121.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "132.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KCBM": [
+    {
+      "type": "APP",
+      "frequency": "126.08",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "115.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "33.86",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "132.05",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.65",
+      "label": "Tower"
+    }
+  ],
+  "KCCR": [
+    {
+      "type": "ATIS",
+      "frequency": "124.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.70",
+      "label": "Tower"
+    }
+  ],
+  "KCGF": [
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KCGI": [
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.00",
+      "label": "Tower"
+    }
+  ],
+  "KCHA": [
+    {
+      "type": "APP",
+      "frequency": "119.20",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "122.50",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "119.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.95",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.20",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KCHO": [
+    {
+      "type": "ATIS",
+      "frequency": "118.42",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.50",
+      "label": "Tower"
+    }
+  ],
+  "KCHS": [
+    {
+      "type": "APP",
+      "frequency": "30.69",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "119.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.00",
+      "label": "Tower"
+    }
+  ],
+  "KCLE": [
+    {
+      "type": "APP",
+      "frequency": "119.63",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "127.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.15",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KCLL": [
+    {
+      "type": "ATIS",
+      "frequency": "126.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "128.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KCLT": [
+    {
+      "type": "ATIS",
+      "frequency": "121.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.15",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KCMA": [
+    {
+      "type": "ATIS",
+      "frequency": "126.03",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.20",
+      "label": "Tower"
+    }
+  ],
+  "KCMH": [
+    {
+      "type": "ATIS",
+      "frequency": "124.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.70",
+      "label": "Tower"
+    }
+  ],
+  "KCON": [
+    {
+      "type": "CLD",
+      "frequency": "133.65",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KCOS": [
+    {
+      "type": "APP",
+      "frequency": "118.50",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.45",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.00",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KCOU": [
+    {
+      "type": "ATIS",
+      "frequency": "128.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KCPR": [
+    {
+      "type": "ATIS",
+      "frequency": "126.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KCRE": [
+    {
+      "type": "ATIS",
+      "frequency": "119.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.60",
+      "label": "Tower"
+    }
+  ],
+  "KCRG": [
+    {
+      "type": "APP",
+      "frequency": "124.90",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.00",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.10",
+      "label": "Tower"
+    }
+  ],
+  "KCRP": [
+    {
+      "type": "ATIS",
+      "frequency": "126.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KCRQ": [
+    {
+      "type": "ATIS",
+      "frequency": "120.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.60",
+      "label": "Tower"
+    }
+  ],
+  "KCSG": [
+    {
+      "type": "ATIS",
+      "frequency": "127.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KCUB": [
+    {
+      "type": "CLD",
+      "frequency": "124.40",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KCVG": [
+    {
+      "type": "APP",
+      "frequency": "119.70",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "123.88",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "363.15",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "134.38",
+      "label": "ATIS"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.17",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.65",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.70",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "254.25",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.97",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.32",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "360.85",
+      "label": "Tower"
+    }
+  ],
+  "KCVN": [
+    {
+      "type": "APP",
+      "frequency": "125.50",
+      "label": "Approach"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.50",
+      "label": "Departure"
+    }
+  ],
+  "KCVS": [
+    {
+      "type": "APP",
+      "frequency": "125.50",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "119.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.50",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.40",
+      "label": "Tower"
+    }
+  ],
+  "KCWA": [
+    {
+      "type": "ATIS",
+      "frequency": "127.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.75",
+      "label": "Tower"
+    }
+  ],
+  "KCXO": [
+    {
+      "type": "CLD",
+      "frequency": "119.55",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KCYS": [
+    {
+      "type": "ATIS",
+      "frequency": "134.43",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KDAA": [
+    {
+      "type": "APP",
+      "frequency": "119.85",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "128.18",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "24.52",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.30",
+      "label": "Tower"
+    }
+  ],
+  "KDAB": [
+    {
+      "type": "APP",
+      "frequency": "118.85",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "132.88",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "123.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KDAL": [
+    {
+      "type": "APP",
+      "frequency": "124.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.55",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KDAY": [
+    {
+      "type": "ATIS",
+      "frequency": "125.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KDBQ": [
+    {
+      "type": "ATIS",
+      "frequency": "127.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KDCA": [
+    {
+      "type": "APP",
+      "frequency": "119.85",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "124.20",
+      "label": "Approach"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.95",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.65",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "257.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "134.35",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "257.60",
+      "label": "Tower"
+    }
+  ],
+  "KDEC": [
+    {
+      "type": "ATIS",
+      "frequency": "126.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KDEN": [
+    {
+      "type": "APP",
+      "frequency": "119.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.30",
+      "label": "Tower"
+    }
+  ],
+  "KDET": [
+    {
+      "type": "ATIS",
+      "frequency": "124.88",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.30",
+      "label": "Tower"
+    }
+  ],
+  "KDFW": [
+    {
+      "type": "APP",
+      "frequency": "28.46",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "119.88",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "123.78",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "31.98",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.55",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.15",
+      "label": "Tower"
+    }
+  ],
+  "KDHN": [
+    {
+      "type": "ATIS",
+      "frequency": "135.72",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.40",
+      "label": "Tower"
+    }
+  ],
+  "KDLF": [
+    {
+      "type": "APP",
+      "frequency": "119.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "114.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.60",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "138.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.20",
+      "label": "Tower"
+    }
+  ],
+  "KDLH": [
+    {
+      "type": "ATIS",
+      "frequency": "124.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KDMA": [
+    {
+      "type": "ATIS",
+      "frequency": "27.01",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.85",
+      "label": "Tower"
+    }
+  ],
+  "KDNL": [
+    {
+      "type": "CLD",
+      "frequency": "128.10",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KDOV": [
+    {
+      "type": "APP",
+      "frequency": "132.43",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "32.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.88",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.35",
+      "label": "Tower"
+    }
+  ],
+  "KDPA": [
+    {
+      "type": "ATIS",
+      "frequency": "124.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KDRT": [
+    {
+      "type": "APP",
+      "frequency": "119.60",
+      "label": "Approach"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.60",
+      "label": "Departure"
+    }
+  ],
+  "KDSM": [
+    {
+      "type": "ATIS",
+      "frequency": "119.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.15",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KDTS": [
+    {
+      "type": "CLD",
+      "frequency": "121.60",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KDTW": [
+    {
+      "type": "APP",
+      "frequency": "118.58",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "133.68",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.58",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "119.25",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.40",
+      "label": "Tower"
+    }
+  ],
+  "KDXR": [
+    {
+      "type": "ATIS",
+      "frequency": "127.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KDYS": [
+    {
+      "type": "ATIS",
+      "frequency": "38.57",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.35",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.00",
+      "label": "Tower"
+    }
+  ],
+  "KECG": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.50",
+      "label": "Tower"
+    }
+  ],
+  "KEDW": [
+    {
+      "type": "ATIS",
+      "frequency": "26.99",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KEFD": [
+    {
+      "type": "ATIS",
+      "frequency": "135.57",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.05",
+      "label": "Tower"
+    }
+  ],
+  "KEGE": [
+    {
+      "type": "ATIS",
+      "frequency": "135.57",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KEGI": [
+    {
+      "type": "APP",
+      "frequency": "37.91",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "125.10",
+      "label": "Approach"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "25.11",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.20",
+      "label": "Tower"
+    }
+  ],
+  "KELM": [
+    {
+      "type": "ATIS",
+      "frequency": "125.47",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.10",
+      "label": "Tower"
+    }
+  ],
+  "KELP": [
+    {
+      "type": "APP",
+      "frequency": "119.15",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.15",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KENW": [
+    {
+      "type": "ATIS",
+      "frequency": "127.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.88",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.60",
+      "label": "Tower"
+    }
+  ],
+  "KERI": [
+    {
+      "type": "ATIS",
+      "frequency": "120.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KEUG": [
+    {
+      "type": "ATIS",
+      "frequency": "125.22",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KEVV": [
+    {
+      "type": "APP",
+      "frequency": "124.03",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "127.35",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CTR",
+      "frequency": "128.30",
+      "label": "Center"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KEWN": [
+    {
+      "type": "CLD",
+      "frequency": "120.53",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.25",
+      "label": "Tower"
+    }
+  ],
+  "KEWR": [
+    {
+      "type": "APP",
+      "frequency": "127.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "115.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.20",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KEYW": [
+    {
+      "type": "ATIS",
+      "frequency": "119.67",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KFAF": [
+    {
+      "type": "GND",
+      "frequency": "121.35",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.30",
+      "label": "Tower"
+    }
+  ],
+  "KFAR": [
+    {
+      "type": "ATIS",
+      "frequency": "124.50",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.80",
+      "label": "Tower"
+    }
+  ],
+  "KFAT": [
+    {
+      "type": "ATIS",
+      "frequency": "121.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KFAY": [
+    {
+      "type": "ATIS",
+      "frequency": "121.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KFCS": [
+    {
+      "type": "ATIS",
+      "frequency": "108.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.50",
+      "label": "Tower"
+    }
+  ],
+  "KFLG": [
+    {
+      "type": "ATIS",
+      "frequency": "125.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "134.55",
+      "label": "Tower"
+    }
+  ],
+  "KFLL": [
+    {
+      "type": "APP",
+      "frequency": "118.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KFLO": [
+    {
+      "type": "APP",
+      "frequency": "118.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "123.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.10",
+      "label": "Tower"
+    }
+  ],
+  "KFMN": [
+    {
+      "type": "ATIS",
+      "frequency": "127.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KFNT": [
+    {
+      "type": "ATIS",
+      "frequency": "133.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.30",
+      "label": "Tower"
+    }
+  ],
+  "KFSI": [
+    {
+      "type": "ATIS",
+      "frequency": "135.43",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.95",
+      "label": "Tower"
+    }
+  ],
+  "KFSM": [
+    {
+      "type": "APP",
+      "frequency": "35.36",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "120.17",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "126.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "133.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KFTK": [
+    {
+      "type": "ATIS",
+      "frequency": "109.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.80",
+      "label": "Tower"
+    }
+  ],
+  "KFTW": [
+    {
+      "type": "ATIS",
+      "frequency": "120.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KFTY": [
+    {
+      "type": "ATIS",
+      "frequency": "120.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.45",
+      "label": "Tower"
+    }
+  ],
+  "KFWA": [
+    {
+      "type": "ATIS",
+      "frequency": "121.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KFXE": [
+    {
+      "type": "ATIS",
+      "frequency": "119.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.95",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KFYV": [
+    {
+      "type": "ATIS",
+      "frequency": "133.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.00",
+      "label": "Tower"
+    }
+  ],
+  "KGCK": [
+    {
+      "type": "GND",
+      "frequency": "119.00",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.15",
+      "label": "Tower"
+    }
+  ],
+  "KGCN": [
+    {
+      "type": "ATIS",
+      "frequency": "124.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.00",
+      "label": "Tower"
+    }
+  ],
+  "KGEG": [
+    {
+      "type": "ATIS",
+      "frequency": "124.33",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KGFK": [
+    {
+      "type": "ATIS",
+      "frequency": "119.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.58",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.40",
+      "label": "Tower"
+    }
+  ],
+  "KGGG": [
+    {
+      "type": "ATIS",
+      "frequency": "119.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.20",
+      "label": "Tower"
+    }
+  ],
+  "KGJT": [
+    {
+      "type": "ATIS",
+      "frequency": "118.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KGMU": [
+    {
+      "type": "GND",
+      "frequency": "121.25",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KGNV": [
+    {
+      "type": "ATIS",
+      "frequency": "127.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.55",
+      "label": "Tower"
+    }
+  ],
+  "KGON": [
+    {
+      "type": "ATIS",
+      "frequency": "127.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.60",
+      "label": "Tower"
+    }
+  ],
+  "KGPI": [
+    {
+      "type": "ATIS",
+      "frequency": "132.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.55",
+      "label": "Tower"
+    }
+  ],
+  "KGPT": [
+    {
+      "type": "ATIS",
+      "frequency": "119.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "120.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.70",
+      "label": "Tower"
+    }
+  ],
+  "KGRB": [
+    {
+      "type": "APP",
+      "frequency": "119.40",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.55",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KGRF": [
+    {
+      "type": "ATIS",
+      "frequency": "124.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.33",
+      "label": "Tower"
+    }
+  ],
+  "KGRI": [
+    {
+      "type": "ATIS",
+      "frequency": "127.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KGRK": [
+    {
+      "type": "ATIS",
+      "frequency": "111.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "126.20",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.75",
+      "label": "Tower"
+    }
+  ],
+  "KGRR": [
+    {
+      "type": "ATIS",
+      "frequency": "118.72",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "135.65",
+      "label": "Tower"
+    }
+  ],
+  "KGSO": [
+    {
+      "type": "ATIS",
+      "frequency": "128.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KGSP": [
+    {
+      "type": "ATIS",
+      "frequency": "134.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KGTF": [
+    {
+      "type": "ATIS",
+      "frequency": "126.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KGTR": [
+    {
+      "type": "ATIS",
+      "frequency": "126.38",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "135.38",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KGUS": [
+    {
+      "type": "ATIS",
+      "frequency": "108.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "CTR",
+      "frequency": "121.05",
+      "label": "Center"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.43",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "128.43",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.70",
+      "label": "Tower"
+    }
+  ],
+  "KGWO": [
+    {
+      "type": "CLD",
+      "frequency": "125.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "125.55",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.35",
+      "label": "Tower"
+    }
+  ],
+  "KGYY": [
+    {
+      "type": "ATIS",
+      "frequency": "120.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.60",
+      "label": "Tower"
+    }
+  ],
+  "KHBR": [
+    {
+      "type": "APP",
+      "frequency": "125.10",
+      "label": "Approach"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.10",
+      "label": "Departure"
+    }
+  ],
+  "KHEF": [
+    {
+      "type": "ATIS",
+      "frequency": "125.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.10",
+      "label": "Tower"
+    }
+  ],
+  "KHFD": [
+    {
+      "type": "ATIS",
+      "frequency": "126.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.60",
+      "label": "Tower"
+    }
+  ],
+  "KHGR": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KHHR": [
+    {
+      "type": "APP",
+      "frequency": "124.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "118.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "125.10",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.10",
+      "label": "Tower"
+    }
+  ],
+  "KHIF": [
+    {
+      "type": "APP",
+      "frequency": "25.79",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "31.93",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "121.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "134.93",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "121.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.15",
+      "label": "Tower"
+    }
+  ],
+  "KHKY": [
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.15",
+      "label": "Tower"
+    }
+  ],
+  "KHLN": [
+    {
+      "type": "ATIS",
+      "frequency": "120.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KHMN": [
+    {
+      "type": "APP",
+      "frequency": "120.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "27.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "127.05",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KHOB": [
+    {
+      "type": "ATIS",
+      "frequency": "119.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.65",
+      "label": "Tower"
+    }
+  ],
+  "KHOP": [
+    {
+      "type": "APP",
+      "frequency": "118.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "138.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KHOU": [
+    {
+      "type": "APP",
+      "frequency": "120.05",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.45",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "28.40",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KHRT": [
+    {
+      "type": "APP",
+      "frequency": "37.91",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "133.00",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "36.07",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "132.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "123.97",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.50",
+      "label": "Tower"
+    }
+  ],
+  "KHST": [
+    {
+      "type": "ATIS",
+      "frequency": "132.28",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "27.58",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.45",
+      "label": "Tower"
+    }
+  ],
+  "KHSV": [
+    {
+      "type": "APP",
+      "frequency": "118.05",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "121.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.05",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.60",
+      "label": "Tower"
+    }
+  ],
+  "KHUT": [
+    {
+      "type": "ATIS",
+      "frequency": "124.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KHXD": [
+    {
+      "type": "ATIS",
+      "frequency": "121.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.10",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.97",
+      "label": "Tower"
+    }
+  ],
+  "KHYA": [
+    {
+      "type": "ATIS",
+      "frequency": "123.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.15",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KIAB": [
+    {
+      "type": "APP",
+      "frequency": "120.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.60",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.00",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.25",
+      "label": "Tower"
+    }
+  ],
+  "KIAD": [
+    {
+      "type": "APP",
+      "frequency": "120.45",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "134.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.05",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KIAH": [
+    {
+      "type": "APP",
+      "frequency": "120.05",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "28.14",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.58",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "29.02",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.72",
+      "label": "Tower"
+    }
+  ],
+  "KIDA": [
+    {
+      "type": "ATIS",
+      "frequency": "135.32",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KIFP": [
+    {
+      "type": "CLD",
+      "frequency": "118.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.25",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.90",
+      "label": "Tower"
+    }
+  ],
+  "KIND": [
+    {
+      "type": "APP",
+      "frequency": "128.18",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "134.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KISM": [
+    {
+      "type": "CLD",
+      "frequency": "119.95",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.45",
+      "label": "Tower"
+    }
+  ],
+  "KISO": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.60",
+      "label": "Tower"
+    }
+  ],
+  "KISP": [
+    {
+      "type": "ATIS",
+      "frequency": "120.72",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "135.30",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KITH": [
+    {
+      "type": "ATIS",
+      "frequency": "125.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.60",
+      "label": "Tower"
+    }
+  ],
+  "KJAC": [
+    {
+      "type": "ATIS",
+      "frequency": "120.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.55",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.08",
+      "label": "Tower"
+    }
+  ],
+  "KJAN": [
+    {
+      "type": "ATIS",
+      "frequency": "121.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KJAX": [
+    {
+      "type": "ATIS",
+      "frequency": "125.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KJFK": [
+    {
+      "type": "APP",
+      "frequency": "125.70",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "127.40",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "132.40",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "115.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "135.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.90",
+      "label": "Tower"
+    }
+  ],
+  "KJLN": [
+    {
+      "type": "ATIS",
+      "frequency": "120.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KJQF": [
+    {
+      "type": "CLD",
+      "frequency": "118.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "134.65",
+      "label": "Tower"
+    }
+  ],
+  "KJST": [
+    {
+      "type": "ATIS",
+      "frequency": "118.33",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.75",
+      "label": "Tower"
+    }
+  ],
+  "KJXN": [
+    {
+      "type": "ATIS",
+      "frequency": "125.72",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KLAL": [
+    {
+      "type": "ATIS",
+      "frequency": "118.03",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.50",
+      "label": "Tower"
+    }
+  ],
+  "KLAN": [
+    {
+      "type": "ATIS",
+      "frequency": "119.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "123.67",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KLAS": [
+    {
+      "type": "APP",
+      "frequency": "125.03",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "132.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.02",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.10",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KLAW": [
+    {
+      "type": "ATIS",
+      "frequency": "120.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KLAX": [
+    {
+      "type": "APP",
+      "frequency": "36.07",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "124.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "133.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KLBB": [
+    {
+      "type": "APP",
+      "frequency": "119.20",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.20",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.50",
+      "label": "Tower"
+    }
+  ],
+  "KLBE": [
+    {
+      "type": "ATIS",
+      "frequency": "118.38",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.00",
+      "label": "Tower"
+    }
+  ],
+  "KLCH": [
+    {
+      "type": "ATIS",
+      "frequency": "118.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KLEB": [
+    {
+      "type": "ATIS",
+      "frequency": "118.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.95",
+      "label": "Tower"
+    }
+  ],
+  "KLEE": [
+    {
+      "type": "ATIS",
+      "frequency": "134.32",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.72",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.35",
+      "label": "Tower"
+    }
+  ],
+  "KLEX": [
+    {
+      "type": "ATIS",
+      "frequency": "126.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "132.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KLFI": [
+    {
+      "type": "ATIS",
+      "frequency": "27.01",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.00",
+      "label": "Tower"
+    }
+  ],
+  "KLFT": [
+    {
+      "type": "ATIS",
+      "frequency": "134.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KLGA": [
+    {
+      "type": "APP",
+      "frequency": "118.00",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "132.70",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.95",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.88",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.40",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KLGB": [
+    {
+      "type": "APP",
+      "frequency": "124.65",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "127.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.15",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "127.20",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "133.00",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KLIT": [
+    {
+      "type": "ATIS",
+      "frequency": "125.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.95",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KLMT": [
+    {
+      "type": "ATIS",
+      "frequency": "126.50",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KLNK": [
+    {
+      "type": "ATIS",
+      "frequency": "118.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KLNS": [
+    {
+      "type": "ATIS",
+      "frequency": "125.67",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KLOU": [
+    {
+      "type": "ATIS",
+      "frequency": "112.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KLRD": [
+    {
+      "type": "ATIS",
+      "frequency": "125.78",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KLRF": [
+    {
+      "type": "ATIS",
+      "frequency": "25.11",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "25.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "132.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.60",
+      "label": "Tower"
+    }
+  ],
+  "KLSE": [
+    {
+      "type": "ATIS",
+      "frequency": "124.95",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.45",
+      "label": "Tower"
+    }
+  ],
+  "KLSF": [
+    {
+      "type": "ATIS",
+      "frequency": "134.38",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.05",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.05",
+      "label": "Tower"
+    }
+  ],
+  "KLTS": [
+    {
+      "type": "APP",
+      "frequency": "125.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "27.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.65",
+      "label": "Tower"
+    }
+  ],
+  "KLUF": [
+    {
+      "type": "ATIS",
+      "frequency": "134.93",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "133.18",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KLUK": [
+    {
+      "type": "ATIS",
+      "frequency": "120.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KLWB": [
+    {
+      "type": "CLD",
+      "frequency": "120.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.90",
+      "label": "Tower"
+    }
+  ],
+  "KLWM": [
+    {
+      "type": "ATIS",
+      "frequency": "126.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.30",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.25",
+      "label": "Tower"
+    }
+  ],
+  "KLWS": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.40",
+      "label": "Tower"
+    }
+  ],
+  "KLYH": [
+    {
+      "type": "ATIS",
+      "frequency": "119.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.65",
+      "label": "Tower"
+    }
+  ],
+  "KMBS": [
+    {
+      "type": "ATIS",
+      "frequency": "118.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KMCF": [
+    {
+      "type": "APP",
+      "frequency": "124.95",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "133.82",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.65",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.58",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.70",
+      "label": "Tower"
+    }
+  ],
+  "KMCI": [
+    {
+      "type": "APP",
+      "frequency": "120.95",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "126.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.75",
+      "label": "Tower"
+    }
+  ],
+  "KMCO": [
+    {
+      "type": "ATIS",
+      "frequency": "121.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.45",
+      "label": "Tower"
+    }
+  ],
+  "KMDT": [
+    {
+      "type": "ATIS",
+      "frequency": "118.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.80",
+      "label": "Tower"
+    }
+  ],
+  "KMDW": [
+    {
+      "type": "ATIS",
+      "frequency": "132.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KMEI": [
+    {
+      "type": "ATIS",
+      "frequency": "126.47",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KMEM": [
+    {
+      "type": "ATIS",
+      "frequency": "127.750",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.200",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "COMB",
+      "label": "All Runways Combined"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.000",
+      "label": "Ground Rwy 9/27"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.650",
+      "label": "Ground Rwy 18R/36L"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.900",
+      "label": "Ground Rwy 18C/36C, 18L/36R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "COMB",
+      "label": "All Runways Combined"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.300",
+      "label": "Tower Rwy 9/27"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.700",
+      "label": "Tower Rwy 18C/36C, 18L/36R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.425",
+      "label": "Tower Rwy 18R/36L"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.150",
+      "label": "Departure East"
+    },
+    {
+      "type": "DEP",
+      "frequency": "124.650",
+      "label": "Departure West"
+    },
+    {
+      "type": "APP",
+      "frequency": "119.100",
+      "label": "Approach West"
+    },
+    {
+      "type": "APP",
+      "frequency": "125.800",
+      "label": "Approach East"
+    },
+    {
+      "type": "APP",
+      "frequency": "126.700",
+      "label": "Approach Final"
+    },
+    {
+      "type": "CTR",
+      "frequency": "118.625",
+      "label": "ZME Sector 28"
+    },
+    {
+      "type": "CTR",
+      "frequency": "133.125",
+      "label": "ZME Sector 34"
+    }
+  ],
+  "KMFD": [
+    {
+      "type": "ATIS",
+      "frequency": "125.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KMFE": [
+    {
+      "type": "ATIS",
+      "frequency": "128.50",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KMGE": [
+    {
+      "type": "ATIS",
+      "frequency": "26.95",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "125.30",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.75",
+      "label": "Tower"
+    }
+  ],
+  "KMHK": [
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.55",
+      "label": "Tower"
+    }
+  ],
+  "KMHT": [
+    {
+      "type": "ATIS",
+      "frequency": "119.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.30",
+      "label": "Tower"
+    }
+  ],
+  "KMIA": [
+    {
+      "type": "APP",
+      "frequency": "120.50",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "119.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.45",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KMIE": [
+    {
+      "type": "ATIS",
+      "frequency": "133.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KMKC": [
+    {
+      "type": "ATIS",
+      "frequency": "120.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.30",
+      "label": "Tower"
+    }
+  ],
+  "KMKE": [
+    {
+      "type": "APP",
+      "frequency": "118.00",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "126.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.65",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KMKL": [
+    {
+      "type": "GND",
+      "frequency": "120.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.15",
+      "label": "Tower"
+    }
+  ],
+  "KMLB": [
+    {
+      "type": "ATIS",
+      "frequency": "132.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KMMT": [
+    {
+      "type": "GND",
+      "frequency": "127.63",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.40",
+      "label": "Tower"
+    }
+  ],
+  "KMMV": [
+    {
+      "type": "CLD",
+      "frequency": "118.35",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KMRB": [
+    {
+      "type": "CLD",
+      "frequency": "132.07",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.30",
+      "label": "Tower"
+    }
+  ],
+  "KMSN": [
+    {
+      "type": "APP",
+      "frequency": "120.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "124.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.62",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.85",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KMSP": [
+    {
+      "type": "APP",
+      "frequency": "118.72",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "133.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "132.97",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.67",
+      "label": "Tower"
+    }
+  ],
+  "KMSY": [
+    {
+      "type": "ATIS",
+      "frequency": "127.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KMTN": [
+    {
+      "type": "ATIS",
+      "frequency": "124.92",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.30",
+      "label": "Tower"
+    }
+  ],
+  "KMWH": [
+    {
+      "type": "ATIS",
+      "frequency": "119.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.25",
+      "label": "Tower"
+    }
+  ],
+  "KMXF": [
+    {
+      "type": "ATIS",
+      "frequency": "134.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "127.15",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.15",
+      "label": "Tower"
+    }
+  ],
+  "KMYR": [
+    {
+      "type": "ATIS",
+      "frequency": "123.92",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "120.30",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.45",
+      "label": "Tower"
+    }
+  ],
+  "KNBC": [
+    {
+      "type": "ATIS",
+      "frequency": "27.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.05",
+      "label": "Tower"
+    }
+  ],
+  "KNCA": [
+    {
+      "type": "ATIS",
+      "frequency": "28.83",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "23.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.00",
+      "label": "Tower"
+    }
+  ],
+  "KNEL": [
+    {
+      "type": "GND",
+      "frequency": "118.38",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.78",
+      "label": "Tower"
+    }
+  ],
+  "KNEW": [
+    {
+      "type": "ATIS",
+      "frequency": "124.90",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.95",
+      "label": "Tower"
+    }
+  ],
+  "KNFG": [
+    {
+      "type": "APP",
+      "frequency": "128.45",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "26.76",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "128.78",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.78",
+      "label": "Tower"
+    }
+  ],
+  "KNFL": [
+    {
+      "type": "ATIS",
+      "frequency": "37.09",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "35.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "25.11",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.25",
+      "label": "Tower"
+    }
+  ],
+  "KNID": [
+    {
+      "type": "ATIS",
+      "frequency": "32.24",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "36.02",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.15",
+      "label": "Tower"
+    }
+  ],
+  "KNIP": [
+    {
+      "type": "ATIS",
+      "frequency": "28.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.78",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "128.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.00",
+      "label": "Tower"
+    }
+  ],
+  "KNJK": [
+    {
+      "type": "ATIS",
+      "frequency": "26.93",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "34.02",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KNKT": [
+    {
+      "type": "ATIS",
+      "frequency": "24.49",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.95",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "128.63",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.30",
+      "label": "Tower"
+    }
+  ],
+  "KNLC": [
+    {
+      "type": "APP",
+      "frequency": "118.15",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "26.76",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.15",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.30",
+      "label": "Tower"
+    }
+  ],
+  "KNQI": [
+    {
+      "type": "APP",
+      "frequency": "119.90",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "27.62",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "32.84",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "26.68",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "35.24",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.10",
+      "label": "Tower"
+    }
+  ],
+  "KOAK": [
+    {
+      "type": "APP",
+      "frequency": "31.76",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "125.35",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "133.78",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.90",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KOKC": [
+    {
+      "type": "ATIS",
+      "frequency": "125.85",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.35",
+      "label": "Tower"
+    }
+  ],
+  "KOMA": [
+    {
+      "type": "ATIS",
+      "frequency": "120.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.10",
+      "label": "Tower"
+    }
+  ],
+  "KONT": [
+    {
+      "type": "ATIS",
+      "frequency": "124.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.60",
+      "label": "Tower"
+    }
+  ],
+  "KORD": [
+    {
+      "type": "APP",
+      "frequency": "118.925",
+      "label": "Approach SE Feeder"
+    },
+    {
+      "type": "APP",
+      "frequency": "119.00",
+      "label": "Approach Z Arrival"
+    },
+    {
+      "type": "APP",
+      "frequency": "124.35",
+      "label": "Approach F Arrival"
+    },
+    {
+      "type": "APP",
+      "frequency": "125.70",
+      "label": "Approach NE Feeder"
+    },
+    {
+      "type": "APP",
+      "frequency": "132.175",
+      "label": "Approach/Departure Secondary"
+    },
+    {
+      "type": "APP",
+      "frequency": "133.625",
+      "label": "Approach W Arrival"
+    },
+    {
+      "type": "APP",
+      "frequency": "135.025",
+      "label": "Approach NW Feeder"
+    },
+    {
+      "type": "APP",
+      "frequency": "135.075",
+      "label": "Approach SW Feeder"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "135.40",
+      "label": "D-ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.25",
+      "label": "O'Hare Clearance"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.275",
+      "label": "Departure NE Loop"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.40",
+      "label": "Departure West"
+    },
+    {
+      "type": "DEP",
+      "frequency": "126.625",
+      "label": "Departure South"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.575",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.05",
+      "label": "Ground South"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.675",
+      "label": "Ground/Metering"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.75",
+      "label": "Ground Outbound"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground Inbound"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.125",
+      "label": "Ground North"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.75",
+      "label": "Tower Rwy 4R/22L 10C/28C"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.15",
+      "label": "Tower Rwy 9C/27C"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.90",
+      "label": "Tower North"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.15",
+      "label": "Tower Rwy 9L/27R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.70",
+      "label": "Tower Rwy 10L/28R"
+    },
+    {
+      "type": "TWR",
+      "frequency": "133.00",
+      "label": "Tower Rwy 10R/28L"
+    },
+    {
+      "type": "CTR",
+      "frequency": "120.350",
+      "label": "ZAU Chicago Center CRIBB Low"
+    }
+  ],
+  "KORF": [
+    {
+      "type": "APP",
+      "frequency": "28.83",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "118.90",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "127.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.20",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.80",
+      "label": "Tower"
+    }
+  ],
+  "KOZR": [
+    {
+      "type": "ATIS",
+      "frequency": "111.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.08",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "135.20",
+      "label": "Tower"
+    }
+  ],
+  "KPAH": [
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.60",
+      "label": "Tower"
+    }
+  ],
+  "KPBI": [
+    {
+      "type": "APP",
+      "frequency": "124.60",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "123.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "127.35",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KPDK": [
+    {
+      "type": "ATIS",
+      "frequency": "128.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.60",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KPDT": [
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.70",
+      "label": "Tower"
+    }
+  ],
+  "KPDX": [
+    {
+      "type": "APP",
+      "frequency": "118.10",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "129.92",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.13",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KPHL": [
+    {
+      "type": "APP",
+      "frequency": "123.80",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "133.40",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.75",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KPHX": [
+    {
+      "type": "ATIS",
+      "frequency": "127.58",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "119.75",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "132.55",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KPIA": [
+    {
+      "type": "ATIS",
+      "frequency": "126.10",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KPIE": [
+    {
+      "type": "ATIS",
+      "frequency": "134.50",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KPIT": [
+    {
+      "type": "APP",
+      "frequency": "36.08",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "120.88",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "127.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "118.65",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.10",
+      "label": "Tower"
+    }
+  ],
+  "KPNS": [
+    {
+      "type": "ATIS",
+      "frequency": "121.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "123.72",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KPOU": [
+    {
+      "type": "ATIS",
+      "frequency": "126.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.80",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.00",
+      "label": "Tower"
+    }
+  ],
+  "KPSP": [
+    {
+      "type": "ATIS",
+      "frequency": "118.25",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.70",
+      "label": "Tower"
+    }
+  ],
+  "KPVD": [
+    {
+      "type": "ATIS",
+      "frequency": "124.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.70",
+      "label": "Tower"
+    }
+  ],
+  "KPWK": [
+    {
+      "type": "ATIS",
+      "frequency": "124.20",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KPWM": [
+    {
+      "type": "ATIS",
+      "frequency": "119.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.90",
+      "label": "Tower"
+    }
+  ],
+  "KRCA": [
+    {
+      "type": "ATIS",
+      "frequency": "120.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.05",
+      "label": "Tower"
+    }
+  ],
+  "KRDR": [
+    {
+      "type": "ATIS",
+      "frequency": "27.34",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.15",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "119.15",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.90",
+      "label": "Tower"
+    }
+  ],
+  "KRDU": [
+    {
+      "type": "APP",
+      "frequency": "124.80",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "123.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "120.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.30",
+      "label": "Tower"
+    }
+  ],
+  "KRFD": [
+    {
+      "type": "ATIS",
+      "frequency": "126.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KRIC": [
+    {
+      "type": "ATIS",
+      "frequency": "119.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.10",
+      "label": "Tower"
+    }
+  ],
+  "KRIV": [
+    {
+      "type": "ATIS",
+      "frequency": "134.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "TWR",
+      "frequency": "127.65",
+      "label": "Tower"
+    }
+  ],
+  "KRNO": [
+    {
+      "type": "ATIS",
+      "frequency": "135.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KROC": [
+    {
+      "type": "ATIS",
+      "frequency": "124.83",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KRSW": [
+    {
+      "type": "ATIS",
+      "frequency": "124.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "132.07",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.75",
+      "label": "Tower"
+    }
+  ],
+  "KRYY": [
+    {
+      "type": "GND",
+      "frequency": "119.00",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.90",
+      "label": "Tower"
+    }
+  ],
+  "KSAN": [
+    {
+      "type": "ATIS",
+      "frequency": "134.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.90",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "123.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KSAT": [
+    {
+      "type": "ATIS",
+      "frequency": "118.90",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.80",
+      "label": "Tower"
+    }
+  ],
+  "KSAV": [
+    {
+      "type": "ATIS",
+      "frequency": "123.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.55",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.97",
+      "label": "Tower"
+    }
+  ],
+  "KSAW": [
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.97",
+      "label": "Tower"
+    }
+  ],
+  "KSBD": [
+    {
+      "type": "ATIS",
+      "frequency": "124.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.45",
+      "label": "Tower"
+    }
+  ],
+  "KSDF": [
+    {
+      "type": "APP",
+      "frequency": "123.67",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "118.72",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "123.67",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.20",
+      "label": "Tower"
+    }
+  ],
+  "KSDM": [
+    {
+      "type": "ATIS",
+      "frequency": "132.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "124.40",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.15",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.50",
+      "label": "Tower"
+    }
+  ],
+  "KSEA": [
+    {
+      "type": "ATIS",
+      "frequency": "118.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "128.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    }
+  ],
+  "KSFB": [
+    {
+      "type": "ATIS",
+      "frequency": "125.97",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.35",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.35",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KSFF": [
+    {
+      "type": "ATIS",
+      "frequency": "120.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.50",
+      "label": "Tower"
+    }
+  ],
+  "KSFO": [
+    {
+      "type": "APP",
+      "frequency": "128.32",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "133.95",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "134.50",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "113.70",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "120.90",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "135.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.50",
+      "label": "Tower"
+    }
+  ],
+  "KSJC": [
+    {
+      "type": "APP",
+      "frequency": "33.82",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "120.10",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "126.95",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "121.30",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.00",
+      "label": "Tower"
+    }
+  ],
+  "KSKA": [
+    {
+      "type": "ATIS",
+      "frequency": "25.76",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.85",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.20",
+      "label": "Tower"
+    }
+  ],
+  "KSKF": [
+    {
+      "type": "APP",
+      "frequency": "118.05",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "120.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "DEP",
+      "frequency": "125.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.30",
+      "label": "Tower"
+    }
+  ],
+  "KSLC": [
+    {
+      "type": "ATIS",
+      "frequency": "124.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.30",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KSLI": [
+    {
+      "type": "GND",
+      "frequency": "126.95",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "123.85",
+      "label": "Tower"
+    }
+  ],
+  "KSMF": [
+    {
+      "type": "ATIS",
+      "frequency": "126.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.10",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.70",
+      "label": "Tower"
+    }
+  ],
+  "KSNA": [
+    {
+      "type": "APP",
+      "frequency": "38.02",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "121.30",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "126.00",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.00",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.85",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.10",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "132.70",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "120.80",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "132.25",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.90",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.80",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "128.35",
+      "label": "Tower"
+    }
+  ],
+  "KSPI": [
+    {
+      "type": "ATIS",
+      "frequency": "127.65",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.30",
+      "label": "Tower"
+    }
+  ],
+  "KSRQ": [
+    {
+      "type": "ATIS",
+      "frequency": "134.15",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "118.25",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.10",
+      "label": "Tower"
+    }
+  ],
+  "KSTL": [
+    {
+      "type": "APP",
+      "frequency": "120.05",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "121.03",
+      "label": "Approach"
+    },
+    {
+      "type": "APP",
+      "frequency": "123.70",
+      "label": "Approach"
+    },
+    {
+      "type": "ATIS",
+      "frequency": "125.03",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "119.50",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "DEP",
+      "frequency": "119.15",
+      "label": "Departure"
+    },
+    {
+      "type": "DEP",
+      "frequency": "128.10",
+      "label": "Departure"
+    },
+    {
+      "type": "GND",
+      "frequency": "118.92",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.65",
+      "label": "Ground"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.05",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "132.47",
+      "label": "Tower"
+    }
+  ],
+  "KSTS": [
+    {
+      "type": "ATIS",
+      "frequency": "120.55",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.50",
+      "label": "Tower"
+    }
+  ],
+  "KSUN": [
+    {
+      "type": "ATIS",
+      "frequency": "128.22",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "125.60",
+      "label": "Tower"
+    }
+  ],
+  "KSVN": [
+    {
+      "type": "ATIS",
+      "frequency": "32.31",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "46.70",
+      "label": "Tower"
+    }
+  ],
+  "KSYR": [
+    {
+      "type": "ATIS",
+      "frequency": "132.05",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "125.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KTCM": [
+    {
+      "type": "ATIS",
+      "frequency": "27.01",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "125.15",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.80",
+      "label": "Tower"
+    }
+  ],
+  "KTOL": [
+    {
+      "type": "ATIS",
+      "frequency": "118.75",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.75",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.10",
+      "label": "Tower"
+    }
+  ],
+  "KTPA": [
+    {
+      "type": "ATIS",
+      "frequency": "126.45",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "133.60",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "119.50",
+      "label": "Tower"
+    }
+  ],
+  "KTPL": [
+    {
+      "type": "CLD",
+      "frequency": "125.90",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KTUL": [
+    {
+      "type": "ATIS",
+      "frequency": "124.90",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "134.05",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.70",
+      "label": "Tower"
+    }
+  ],
+  "KTUS": [
+    {
+      "type": "ATIS",
+      "frequency": "123.80",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "126.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "124.40",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.30",
+      "label": "Tower"
+    }
+  ],
+  "KTVC": [
+    {
+      "type": "ATIS",
+      "frequency": "119.17",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "124.20",
+      "label": "Tower"
+    }
+  ],
+  "KTWF": [
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KTYS": [
+    {
+      "type": "ATIS",
+      "frequency": "128.35",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "121.65",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.90",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "121.20",
+      "label": "Tower"
+    }
+  ],
+  "KUAO": [
+    {
+      "type": "CLD",
+      "frequency": "119.95",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KVPS": [
+    {
+      "type": "ATIS",
+      "frequency": "134.63",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "127.70",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.20",
+      "label": "Tower"
+    }
+  ],
+  "KVQQ": [
+    {
+      "type": "ATIS",
+      "frequency": "125.28",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.63",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "126.10",
+      "label": "Tower"
+    }
+  ],
+  "KWJF": [
+    {
+      "type": "ATIS",
+      "frequency": "126.30",
+      "label": "ATIS"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.70",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "120.30",
+      "label": "Tower"
+    }
+  ],
+  "KWRI": [
+    {
+      "type": "ATIS",
+      "frequency": "110.60",
+      "label": "ATIS"
+    },
+    {
+      "type": "CLD",
+      "frequency": "135.20",
+      "label": "Clearance Delivery"
+    },
+    {
+      "type": "GND",
+      "frequency": "121.80",
+      "label": "Ground"
+    },
+    {
+      "type": "TWR",
+      "frequency": "118.65",
+      "label": "Tower"
+    }
+  ],
+  "KWWD": [
+    {
+      "type": "CLD",
+      "frequency": "121.70",
+      "label": "Clearance Delivery"
+    }
+  ],
+  "KXMR": [
+    {
+      "type": "TWR",
+      "frequency": "118.63",
+      "label": "Tower"
+    },
+    {
+      "type": "TWR",
+      "frequency": "239.05",
+      "label": "Tower"
+    }
+  ]
+}

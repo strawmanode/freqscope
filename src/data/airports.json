@@ -1,0 +1,4557 @@
+[
+  {
+    "icao": "KALB",
+    "name": "Albany International Airport",
+    "city": "Albany",
+    "state": "NY",
+    "lat": 42.748299,
+    "lon": -73.801697,
+    "elevation_ft": 285
+  },
+  {
+    "icao": "KABQ",
+    "name": "Albuquerque International Sunport",
+    "city": "Albuquerque",
+    "state": "NM",
+    "lat": 35.039976,
+    "lon": -106.608925,
+    "elevation_ft": 5355
+  },
+  {
+    "icao": "KAUS",
+    "name": "Austin Bergstrom International Airport",
+    "city": "Austin",
+    "state": "TX",
+    "lat": 30.197535,
+    "lon": -97.662015,
+    "elevation_ft": 542
+  },
+  {
+    "icao": "KBWI",
+    "name": "Baltimore/Washington International Thurgood Marshall Airport",
+    "city": "Baltimore",
+    "state": "MD",
+    "lat": 39.1754,
+    "lon": -76.668297,
+    "elevation_ft": 146
+  },
+  {
+    "icao": "KBHM",
+    "name": "Birmingham-Shuttlesworth International Airport",
+    "city": "Birmingham",
+    "state": "AL",
+    "lat": 33.562877,
+    "lon": -86.750712,
+    "elevation_ft": 650
+  },
+  {
+    "icao": "KBOI",
+    "name": "Boise Air Terminal/Gowen Field",
+    "city": "Boise",
+    "state": "ID",
+    "lat": 43.5644,
+    "lon": -116.223,
+    "elevation_ft": 2871
+  },
+  {
+    "icao": "KBOS",
+    "name": "Boston Logan International Airport",
+    "city": "Boston",
+    "state": "MA",
+    "lat": 42.36197,
+    "lon": -71.0079,
+    "elevation_ft": 20
+  },
+  {
+    "icao": "KBDL",
+    "name": "Bradley International Airport",
+    "city": "Hartford",
+    "state": "CT",
+    "lat": 41.938555,
+    "lon": -72.688016,
+    "elevation_ft": 173
+  },
+  {
+    "icao": "KBUF",
+    "name": "Buffalo Niagara International Airport",
+    "city": "Buffalo",
+    "state": "NY",
+    "lat": 42.940498,
+    "lon": -78.732201,
+    "elevation_ft": 728
+  },
+  {
+    "icao": "KCHS",
+    "name": "Charleston International Airport",
+    "city": "Charleston",
+    "state": "SC",
+    "lat": 32.896159,
+    "lon": -80.038151,
+    "elevation_ft": 46
+  },
+  {
+    "icao": "KCLT",
+    "name": "Charlotte Douglas International Airport",
+    "city": "Charlotte",
+    "state": "NC",
+    "lat": 35.2140007019043,
+    "lon": -80.94309997558594,
+    "elevation_ft": 748
+  },
+  {
+    "icao": "KMDW",
+    "name": "Chicago Midway International Airport",
+    "city": "Chicago",
+    "state": "IL",
+    "lat": 41.785999,
+    "lon": -87.752403,
+    "elevation_ft": 620
+  },
+  {
+    "icao": "KORD",
+    "name": "Chicago O'Hare International Airport",
+    "city": "Chicago",
+    "state": "IL",
+    "lat": 41.9786,
+    "lon": -87.9048,
+    "elevation_ft": 680,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KCVG",
+    "name": "Cincinnati Northern Kentucky International Airport",
+    "city": "Cincinnati / Covington",
+    "state": "KY",
+    "lat": 39.048801,
+    "lon": -84.667801,
+    "elevation_ft": 896
+  },
+  {
+    "icao": "KCOS",
+    "name": "City of Colorado Springs Municipal Airport",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "lat": 38.805801,
+    "lon": -104.700996,
+    "elevation_ft": 6187
+  },
+  {
+    "icao": "KCLE",
+    "name": "Cleveland Hopkins International Airport",
+    "city": "Cleveland",
+    "state": "OH",
+    "lat": 41.411701,
+    "lon": -81.8498,
+    "elevation_ft": 791
+  },
+  {
+    "icao": "KDFW",
+    "name": "Dallas Fort Worth International Airport",
+    "city": "Dallas-Fort Worth",
+    "state": "TX",
+    "lat": 32.896801,
+    "lon": -97.038002,
+    "elevation_ft": 607,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KDAL",
+    "name": "Dallas Love Field",
+    "city": "Dallas",
+    "state": "TX",
+    "lat": 32.844776,
+    "lon": -96.847653,
+    "elevation_ft": 487
+  },
+  {
+    "icao": "KDEN",
+    "name": "Denver International Airport",
+    "city": "Denver",
+    "state": "CO",
+    "lat": 39.860027,
+    "lon": -104.673792,
+    "elevation_ft": 5431,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KDSM",
+    "name": "Des Moines International Airport",
+    "city": "Des Moines",
+    "state": "IA",
+    "lat": 41.534027,
+    "lon": -93.656719,
+    "elevation_ft": 958
+  },
+  {
+    "icao": "KDTW",
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "city": "Detroit",
+    "state": "MI",
+    "lat": 42.21377,
+    "lon": -83.353786,
+    "elevation_ft": 645
+  },
+  {
+    "icao": "KELP",
+    "name": "El Paso International Airport",
+    "city": "El Paso",
+    "state": "TX",
+    "lat": 31.809908,
+    "lon": -106.375607,
+    "elevation_ft": 3959
+  },
+  {
+    "icao": "KOMA",
+    "name": "Eppley Airfield",
+    "city": "Omaha",
+    "state": "NE",
+    "lat": 41.3032,
+    "lon": -95.894096,
+    "elevation_ft": 984
+  },
+  {
+    "icao": "KFLL",
+    "name": "Fort Lauderdale Hollywood International Airport",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.072599,
+    "lon": -80.152702,
+    "elevation_ft": 9
+  },
+  {
+    "icao": "KROC",
+    "name": "Frederick Douglass Greater Rochester International Airport",
+    "city": "Rochester",
+    "state": "NY",
+    "lat": 43.1189,
+    "lon": -77.672401,
+    "elevation_ft": 559
+  },
+  {
+    "icao": "KFAT",
+    "name": "Fresno Yosemite International Airport",
+    "city": "Fresno",
+    "state": "CA",
+    "lat": 36.775767,
+    "lon": -119.718018,
+    "elevation_ft": 336
+  },
+  {
+    "icao": "KMKE",
+    "name": "General Mitchell International Airport",
+    "city": "Milwaukee",
+    "state": "WI",
+    "lat": 42.947201,
+    "lon": -87.896599,
+    "elevation_ft": 723
+  },
+  {
+    "icao": "KIAH",
+    "name": "George Bush Intercontinental Airport",
+    "city": "Houston",
+    "state": "TX",
+    "lat": 29.9844,
+    "lon": -95.3414,
+    "elevation_ft": 97
+  },
+  {
+    "icao": "KGRR",
+    "name": "Gerald R. Ford International Airport",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "lat": 42.880798,
+    "lon": -85.522797,
+    "elevation_ft": 794
+  },
+  {
+    "icao": "KLAS",
+    "name": "Harry Reid International Airport",
+    "city": "Las Vegas",
+    "state": "NV",
+    "lat": 36.083361,
+    "lon": -115.151817,
+    "elevation_ft": 2181,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KATL",
+    "name": "Hartsfield Jackson Atlanta International Airport",
+    "city": "Atlanta",
+    "state": "GA",
+    "lat": 33.6367,
+    "lon": -84.428101,
+    "elevation_ft": 1026,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KBUR",
+    "name": "Hollywood Burbank/Bob Hope Airport",
+    "city": "Burbank",
+    "state": "CA",
+    "lat": 34.202834,
+    "lon": -118.35805,
+    "elevation_ft": 778
+  },
+  {
+    "icao": "KIND",
+    "name": "Indianapolis International Airport",
+    "city": "Indianapolis",
+    "state": "IN",
+    "lat": 39.7173,
+    "lon": -86.294403,
+    "elevation_ft": 797
+  },
+  {
+    "icao": "KJAX",
+    "name": "Jacksonville International Airport",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.492469,
+    "lon": -81.687813,
+    "elevation_ft": 30
+  },
+  {
+    "icao": "KJFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "state": "NY",
+    "lat": 40.639447,
+    "lon": -73.779317,
+    "elevation_ft": 13,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KCMH",
+    "name": "John Glenn Columbus International Airport",
+    "city": "Columbus",
+    "state": "OH",
+    "lat": 39.998001,
+    "lon": -82.891899,
+    "elevation_ft": 815
+  },
+  {
+    "icao": "KSNA",
+    "name": "John Wayne Orange County International Airport",
+    "city": "Santa Ana",
+    "state": "CA",
+    "lat": 33.675063,
+    "lon": -117.869281,
+    "elevation_ft": 56
+  },
+  {
+    "icao": "KMCI",
+    "name": "Kansas City International Airport",
+    "city": "Kansas City",
+    "state": "MO",
+    "lat": 39.301699,
+    "lon": -94.713893,
+    "elevation_ft": 1026
+  },
+  {
+    "icao": "KLGA",
+    "name": "LaGuardia Airport",
+    "city": "New York",
+    "state": "NY",
+    "lat": 40.777199,
+    "lon": -73.872597,
+    "elevation_ft": 21
+  },
+  {
+    "icao": "KLGB",
+    "name": "Long Beach International Airport",
+    "city": "Long Beach",
+    "state": "CA",
+    "lat": 33.816523,
+    "lon": -118.149891,
+    "elevation_ft": 60
+  },
+  {
+    "icao": "KLAX",
+    "name": "Los Angeles International Airport",
+    "city": "Los Angeles",
+    "state": "CA",
+    "lat": 33.942501,
+    "lon": -118.407997,
+    "elevation_ft": 125,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KMSY",
+    "name": "Louis Armstrong New Orleans International Airport",
+    "city": "New Orleans",
+    "state": "LA",
+    "lat": 29.993401,
+    "lon": -90.264673,
+    "elevation_ft": 4
+  },
+  {
+    "icao": "KSDF",
+    "name": "Louisville Muhammad Ali International Airport",
+    "city": "Louisville",
+    "state": "KY",
+    "lat": 38.1706,
+    "lon": -85.735076,
+    "elevation_ft": 501
+  },
+  {
+    "icao": "KTYS",
+    "name": "McGhee Tyson Airport",
+    "city": "Knoxville/Maryville",
+    "state": "TN",
+    "lat": 35.811001,
+    "lon": -83.994003,
+    "elevation_ft": 981
+  },
+  {
+    "icao": "KMEM",
+    "name": "Memphis International Airport",
+    "city": "Memphis",
+    "state": "TN",
+    "lat": 35.043845,
+    "lon": -89.97634,
+    "elevation_ft": 341,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KMIA",
+    "name": "Miami International Airport",
+    "city": "Miami",
+    "state": "FL",
+    "lat": 25.796011,
+    "lon": -80.289751,
+    "elevation_ft": 8,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KMSP",
+    "name": "Minneapolis–Saint Paul International Airport / Wold–Chamberlain Field",
+    "city": "Minneapolis",
+    "state": "MN",
+    "lat": 44.880081,
+    "lon": -93.221741,
+    "elevation_ft": 841
+  },
+  {
+    "icao": "KMYR",
+    "name": "Myrtle Beach International Airport",
+    "city": "Myrtle Beach",
+    "state": "SC",
+    "lat": 33.679699,
+    "lon": -78.928299,
+    "elevation_ft": 25
+  },
+  {
+    "icao": "KBNA",
+    "name": "Nashville International Airport",
+    "city": "Nashville",
+    "state": "TN",
+    "lat": 36.1245,
+    "lon": -86.6782,
+    "elevation_ft": 599
+  },
+  {
+    "icao": "KEWR",
+    "name": "Newark Liberty International Airport",
+    "city": "Newark",
+    "state": "NJ",
+    "lat": 40.6894,
+    "lon": -74.170545,
+    "elevation_ft": 18
+  },
+  {
+    "icao": "KORF",
+    "name": "Norfolk International Airport",
+    "city": "Norfolk",
+    "state": "VA",
+    "lat": 36.895341,
+    "lon": -76.201,
+    "elevation_ft": 26
+  },
+  {
+    "icao": "KSJC",
+    "name": "Norman Y. Mineta San Jose International Airport",
+    "city": "San Jose",
+    "state": "CA",
+    "lat": 37.362452,
+    "lon": -121.929188,
+    "elevation_ft": 62
+  },
+  {
+    "icao": "KOKC",
+    "name": "OKC Will Rogers World Airport",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "lat": 35.393388,
+    "lon": -97.598248,
+    "elevation_ft": 1295
+  },
+  {
+    "icao": "KONT",
+    "name": "Ontario International Airport",
+    "city": "Ontario",
+    "state": "CA",
+    "lat": 34.056,
+    "lon": -117.600998,
+    "elevation_ft": 944
+  },
+  {
+    "icao": "KMCO",
+    "name": "Orlando International Airport",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.429399490356445,
+    "lon": -81.30899810791016,
+    "elevation_ft": 96
+  },
+  {
+    "icao": "KSFB",
+    "name": "Orlando Sanford International Airport",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.774277,
+    "lon": -81.234626,
+    "elevation_ft": 55
+  },
+  {
+    "icao": "KPBI",
+    "name": "Palm Beach International Airport",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "lat": 26.683201,
+    "lon": -80.095596,
+    "elevation_ft": 19
+  },
+  {
+    "icao": "KPSP",
+    "name": "Palm Springs International Airport",
+    "city": "Palm Springs",
+    "state": "CA",
+    "lat": 33.8297,
+    "lon": -116.507004,
+    "elevation_ft": 477
+  },
+  {
+    "icao": "KPNS",
+    "name": "Pensacola International Airport",
+    "city": "Pensacola",
+    "state": "FL",
+    "lat": 30.472718,
+    "lon": -87.186639,
+    "elevation_ft": 121
+  },
+  {
+    "icao": "KPHL",
+    "name": "Philadelphia International Airport",
+    "city": "Philadelphia",
+    "state": "PA",
+    "lat": 39.871899,
+    "lon": -75.241096,
+    "elevation_ft": 36
+  },
+  {
+    "icao": "KPHX",
+    "name": "Phoenix Sky Harbor International Airport",
+    "city": "Phoenix",
+    "state": "AZ",
+    "lat": 33.435302,
+    "lon": -112.005905,
+    "elevation_ft": 1135
+  },
+  {
+    "icao": "KGSO",
+    "name": "Piedmont Triad International Airport",
+    "city": "Greensboro",
+    "state": "NC",
+    "lat": 36.09937,
+    "lon": -79.937262,
+    "elevation_ft": 925
+  },
+  {
+    "icao": "KPIT",
+    "name": "Pittsburgh International Airport",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "lat": 40.491501,
+    "lon": -80.232903,
+    "elevation_ft": 1203
+  },
+  {
+    "icao": "KPDX",
+    "name": "Portland International Airport",
+    "city": "Portland",
+    "state": "OR",
+    "lat": 45.588699,
+    "lon": -122.598,
+    "elevation_ft": 31
+  },
+  {
+    "icao": "KPWM",
+    "name": "Portland International Jetport",
+    "city": "Portland",
+    "state": "ME",
+    "lat": 43.646198,
+    "lon": -70.309303,
+    "elevation_ft": 76
+  },
+  {
+    "icao": "KRDU",
+    "name": "Raleigh-Durham International Airport",
+    "city": "Raleigh/Durham",
+    "state": "NC",
+    "lat": 35.878659,
+    "lon": -78.7873,
+    "elevation_ft": 435
+  },
+  {
+    "icao": "KRNO",
+    "name": "Reno Tahoe International Airport",
+    "city": "Reno",
+    "state": "NV",
+    "lat": 39.4991,
+    "lon": -119.767998,
+    "elevation_ft": 4415
+  },
+  {
+    "icao": "KPVD",
+    "name": "Rhode Island T. F. Green International Airport",
+    "city": "Providence/Warwick",
+    "state": "RI",
+    "lat": 41.725038,
+    "lon": -71.425668,
+    "elevation_ft": 55
+  },
+  {
+    "icao": "KRIC",
+    "name": "Richmond International Airport",
+    "city": "Richmond",
+    "state": "VA",
+    "lat": 37.505199,
+    "lon": -77.319702,
+    "elevation_ft": 167
+  },
+  {
+    "icao": "KDCA",
+    "name": "Ronald Reagan Washington National Airport",
+    "city": "Washington",
+    "state": "DC",
+    "lat": 38.8521,
+    "lon": -77.037697,
+    "elevation_ft": 15
+  },
+  {
+    "icao": "KSMF",
+    "name": "Sacramento International Airport",
+    "city": "Sacramento",
+    "state": "CA",
+    "lat": 38.6954,
+    "lon": -121.591003,
+    "elevation_ft": 27
+  },
+  {
+    "icao": "KSLC",
+    "name": "Salt Lake City International Airport",
+    "city": "Salt Lake City",
+    "state": "UT",
+    "lat": 40.78886,
+    "lon": -111.979866,
+    "elevation_ft": 4227
+  },
+  {
+    "icao": "KSAT",
+    "name": "San Antonio International Airport",
+    "city": "San Antonio",
+    "state": "TX",
+    "lat": 29.533701,
+    "lon": -98.469803,
+    "elevation_ft": 809
+  },
+  {
+    "icao": "KSBD",
+    "name": "San Bernardino International Airport",
+    "city": "San Bernardino",
+    "state": "CA",
+    "lat": 34.096717,
+    "lon": -117.236596,
+    "elevation_ft": 1159
+  },
+  {
+    "icao": "KSAN",
+    "name": "San Diego International Airport",
+    "city": "San Diego",
+    "state": "CA",
+    "lat": 32.733601,
+    "lon": -117.190002,
+    "elevation_ft": 17
+  },
+  {
+    "icao": "KOAK",
+    "name": "San Francisco Bay Oakland International Airport",
+    "city": "Oakland",
+    "state": "CA",
+    "lat": 37.720085,
+    "lon": -122.221184,
+    "elevation_ft": 9
+  },
+  {
+    "icao": "KSFO",
+    "name": "San Francisco International Airport",
+    "city": "San Francisco",
+    "state": "CA",
+    "lat": 37.619806,
+    "lon": -122.374821,
+    "elevation_ft": 13,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KSRQ",
+    "name": "Sarasota Bradenton International Airport",
+    "city": "Sarasota/Bradenton",
+    "state": "FL",
+    "lat": 27.394631,
+    "lon": -82.554359,
+    "elevation_ft": 30
+  },
+  {
+    "icao": "KSAV",
+    "name": "Savannah Hilton Head International Airport",
+    "city": "Savannah",
+    "state": "GA",
+    "lat": 32.126591,
+    "lon": -81.19998,
+    "elevation_ft": 50
+  },
+  {
+    "icao": "KSEA",
+    "name": "Seattle–Tacoma International Airport",
+    "city": "Seattle",
+    "state": "WA",
+    "lat": 47.447943,
+    "lon": -122.310276,
+    "elevation_ft": 433,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
+  },
+  {
+    "icao": "KRSW",
+    "name": "Southwest Florida International Airport",
+    "city": "Fort Myers",
+    "state": "FL",
+    "lat": 26.534685,
+    "lon": -81.752816,
+    "elevation_ft": 30
+  },
+  {
+    "icao": "KGEG",
+    "name": "Spokane International Airport",
+    "city": "Spokane",
+    "state": "WA",
+    "lat": 47.6199,
+    "lon": -117.533997,
+    "elevation_ft": 2376
+  },
+  {
+    "icao": "KSTL",
+    "name": "St. Louis Lambert International Airport",
+    "city": "St Louis",
+    "state": "MO",
+    "lat": 38.748697,
+    "lon": -90.370003,
+    "elevation_ft": 618
+  },
+  {
+    "icao": "KPIE",
+    "name": "St. Petersburg Clearwater International Airport",
+    "city": "Pinellas Park",
+    "state": "FL",
+    "lat": 27.9102,
+    "lon": -82.687401,
+    "elevation_ft": 11
+  },
+  {
+    "icao": "KSYR",
+    "name": "Syracuse Hancock International Airport",
+    "city": "Syracuse",
+    "state": "NY",
+    "lat": 43.11119842529297,
+    "lon": -76.1063003540039,
+    "elevation_ft": 421
+  },
+  {
+    "icao": "KTPA",
+    "name": "Tampa International Airport",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.9755,
+    "lon": -82.533203,
+    "elevation_ft": 26
+  },
+  {
+    "icao": "KTUS",
+    "name": "Tucson International Airport",
+    "city": "Tucson",
+    "state": "AZ",
+    "lat": 32.115004,
+    "lon": -110.938053,
+    "elevation_ft": 2643
+  },
+  {
+    "icao": "KTUL",
+    "name": "Tulsa International Airport",
+    "city": "Tulsa",
+    "state": "OK",
+    "lat": 36.197084,
+    "lon": -95.886225,
+    "elevation_ft": 677
+  },
+  {
+    "icao": "KIAD",
+    "name": "Washington Dulles International Airport",
+    "city": "Dulles",
+    "state": "VA",
+    "lat": 38.9445,
+    "lon": -77.455803,
+    "elevation_ft": 312
+  },
+  {
+    "icao": "KHOU",
+    "name": "William P. Hobby Airport",
+    "city": "Houston",
+    "state": "TX",
+    "lat": 29.645336,
+    "lon": -95.276812,
+    "elevation_ft": 46
+  },
+  {
+    "icao": "KABR",
+    "name": "Aberdeen Regional Airport",
+    "city": "Aberdeen",
+    "state": "SD",
+    "lat": 45.449100494384766,
+    "lon": -98.42179870605469,
+    "elevation_ft": 1302
+  },
+  {
+    "icao": "KABI",
+    "name": "Abilene Regional Airport",
+    "city": "Abilene",
+    "state": "TX",
+    "lat": 32.4113006592,
+    "lon": -99.68190002440001,
+    "elevation_ft": 1791
+  },
+  {
+    "icao": "KSPI",
+    "name": "Abraham Lincoln Capital Airport",
+    "city": "Springfield",
+    "state": "IL",
+    "lat": 39.844101,
+    "lon": -89.677902,
+    "elevation_ft": 598
+  },
+  {
+    "icao": "KARA",
+    "name": "Acadiana Regional Airport",
+    "city": "New Iberia",
+    "state": "LA",
+    "lat": 30.0378,
+    "lon": -91.883904,
+    "elevation_ft": 24
+  },
+  {
+    "icao": "KADH",
+    "name": "Ada Regional Airport",
+    "city": "Ada",
+    "state": "OK",
+    "lat": 34.805214,
+    "lon": -96.671988,
+    "elevation_ft": 1016
+  },
+  {
+    "icao": "KSLK",
+    "name": "Adirondack Regional Airport",
+    "city": "Saranac Lake",
+    "state": "NY",
+    "lat": 44.38691,
+    "lon": -74.204629,
+    "elevation_ft": 1663
+  },
+  {
+    "icao": "KCAK",
+    "name": "Akron Canton Regional Airport",
+    "city": "Akron",
+    "state": "OH",
+    "lat": 40.916099548339844,
+    "lon": -81.44219970703125,
+    "elevation_ft": 1228
+  },
+  {
+    "icao": "KAKR",
+    "name": "Akron Fulton International Airport",
+    "city": "Akron",
+    "state": "OH",
+    "lat": 41.037355,
+    "lon": -81.46784,
+    "elevation_ft": 1067
+  },
+  {
+    "icao": "KALM",
+    "name": "Alamogordo White Sands Regional Airport",
+    "city": "Alamogordo",
+    "state": "NM",
+    "lat": 32.837818,
+    "lon": -105.993149,
+    "elevation_ft": 4200
+  },
+  {
+    "icao": "KOAJ",
+    "name": "Albert J Ellis Airport",
+    "city": "Richlands",
+    "state": "NC",
+    "lat": 34.829201,
+    "lon": -77.612099,
+    "elevation_ft": 94
+  },
+  {
+    "icao": "KAEX",
+    "name": "Alexandria International Airport",
+    "city": "Alexandria",
+    "state": "LA",
+    "lat": 31.325828,
+    "lon": -92.546702,
+    "elevation_ft": 89
+  },
+  {
+    "icao": "KALI",
+    "name": "Alice International Airport",
+    "city": "Alice",
+    "state": "TX",
+    "lat": 27.7409,
+    "lon": -98.026901,
+    "elevation_ft": 178
+  },
+  {
+    "icao": "KAGC",
+    "name": "Allegheny County Airport",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "lat": 40.354401,
+    "lon": -79.930199,
+    "elevation_ft": 1252
+  },
+  {
+    "icao": "KAIA",
+    "name": "Alliance Municipal Airport",
+    "city": "Alliance",
+    "state": "NE",
+    "lat": 42.052543,
+    "lon": -102.803965,
+    "elevation_ft": 3931
+  },
+  {
+    "icao": "KAPN",
+    "name": "Alpena County Regional Airport",
+    "city": "Alpena",
+    "state": "MI",
+    "lat": 45.0780983,
+    "lon": -83.56030273,
+    "elevation_ft": 690
+  },
+  {
+    "icao": "KAOO",
+    "name": "Altoona Blair County Airport",
+    "city": "Altoona",
+    "state": "PA",
+    "lat": 40.296398,
+    "lon": -78.32,
+    "elevation_ft": 1503
+  },
+  {
+    "icao": "KLTS",
+    "name": "Altus Air Force Base",
+    "city": "Altus",
+    "state": "OK",
+    "lat": 34.667099,
+    "lon": -99.266701,
+    "elevation_ft": 1382
+  },
+  {
+    "icao": "KAND",
+    "name": "Anderson Regional Airport",
+    "city": "Anderson",
+    "state": "SC",
+    "lat": 34.4945983887,
+    "lon": -82.70939636230001,
+    "elevation_ft": 782
+  },
+  {
+    "icao": "KLFK",
+    "name": "Angelina County Airport",
+    "city": "Lufkin",
+    "state": "TX",
+    "lat": 31.2339992523,
+    "lon": -94.75,
+    "elevation_ft": 296
+  },
+  {
+    "icao": "KANB",
+    "name": "Anniston Regional Airport",
+    "city": "Anniston",
+    "state": "AL",
+    "lat": 33.5882,
+    "lon": -85.8581,
+    "elevation_ft": 612
+  },
+  {
+    "icao": "KATW",
+    "name": "Appleton International Airport",
+    "city": "Appleton",
+    "state": "WI",
+    "lat": 44.258515,
+    "lon": -88.519,
+    "elevation_ft": 918
+  },
+  {
+    "icao": "KBYH",
+    "name": "Arkansas International Airport",
+    "city": "Blytheville",
+    "state": "AR",
+    "lat": 35.9642982483,
+    "lon": -89.94400024410001,
+    "elevation_ft": 254
+  },
+  {
+    "icao": "KAWO",
+    "name": "Arlington Municipal Airport",
+    "city": "Arlington",
+    "state": "WA",
+    "lat": 48.161448,
+    "lon": -122.158442,
+    "elevation_ft": 142
+  },
+  {
+    "icao": "KLBE",
+    "name": "Arnold Palmer Regional Airport",
+    "city": "Latrobe",
+    "state": "PA",
+    "lat": 40.275902,
+    "lon": -79.4048,
+    "elevation_ft": 1199
+  },
+  {
+    "icao": "KAVL",
+    "name": "Asheville Regional Airport",
+    "city": "Asheville",
+    "state": "NC",
+    "lat": 35.435488,
+    "lon": -82.541853,
+    "elevation_ft": 2165
+  },
+  {
+    "icao": "KASE",
+    "name": "Aspen-Pitkin County Airport (Sardy Field)",
+    "city": "Aspen",
+    "state": "CO",
+    "lat": 39.223202,
+    "lon": -106.869003,
+    "elevation_ft": 7820
+  },
+  {
+    "icao": "KAST",
+    "name": "Astoria Regional Airport",
+    "city": "Astoria",
+    "state": "OR",
+    "lat": 46.158000946,
+    "lon": -123.878997803,
+    "elevation_ft": 15
+  },
+  {
+    "icao": "KAHN",
+    "name": "Athens Ben Epps Airport",
+    "city": "Athens",
+    "state": "GA",
+    "lat": 33.948842,
+    "lon": -83.325634,
+    "elevation_ft": 808
+  },
+  {
+    "icao": "KACY",
+    "name": "Atlantic City International Airport",
+    "city": "Atlantic City",
+    "state": "NJ",
+    "lat": 39.456201,
+    "lon": -74.577511,
+    "elevation_ft": 75
+  },
+  {
+    "icao": "KAGS",
+    "name": "Augusta Regional At Bush Field",
+    "city": "Augusta",
+    "state": "GA",
+    "lat": 33.3699,
+    "lon": -81.9645,
+    "elevation_ft": 144
+  },
+  {
+    "icao": "KAUG",
+    "name": "Augusta State Airport",
+    "city": "Augusta",
+    "state": "ME",
+    "lat": 44.320598602299995,
+    "lon": -69.7973022461,
+    "elevation_ft": 352
+  },
+  {
+    "icao": "KUAO",
+    "name": "Aurora State Airport",
+    "city": "Aurora",
+    "state": "OR",
+    "lat": 45.247100830078125,
+    "lon": -122.7699966430664,
+    "elevation_ft": 200
+  },
+  {
+    "icao": "KEDC",
+    "name": "Austin Executive Airport",
+    "city": "Pflugerville",
+    "state": "TX",
+    "lat": 30.398049,
+    "lon": -97.566909,
+    "elevation_ft": 620
+  },
+  {
+    "icao": "KGRB",
+    "name": "Austin Straubel International Airport",
+    "city": "Green Bay",
+    "state": "WI",
+    "lat": 44.483459,
+    "lon": -88.130805,
+    "elevation_ft": 695
+  },
+  {
+    "icao": "KBKE",
+    "name": "Baker City Municipal Airport",
+    "city": "Baker City",
+    "state": "OR",
+    "lat": 44.837299346900004,
+    "lon": -117.808998108,
+    "elevation_ft": 3373
+  },
+  {
+    "icao": "KL45",
+    "name": "Bakersfield International Airport",
+    "city": "Bakersfield",
+    "state": "CA",
+    "lat": 35.324799,
+    "lon": -118.996002,
+    "elevation_ft": 378
+  },
+  {
+    "icao": "KBGR",
+    "name": "Bangor International Airport",
+    "city": "Bangor",
+    "state": "ME",
+    "lat": 44.806364,
+    "lon": -68.826668,
+    "elevation_ft": 192
+  },
+  {
+    "icao": "KPAH",
+    "name": "Barkley Regional Airport",
+    "city": "Paducah",
+    "state": "KY",
+    "lat": 37.06079864501953,
+    "lon": -88.7738037109375,
+    "elevation_ft": 410
+  },
+  {
+    "icao": "KBAD",
+    "name": "Barksdale Air Force Base",
+    "city": "Bossier City",
+    "state": "LA",
+    "lat": 32.501801,
+    "lon": -93.662697,
+    "elevation_ft": 166
+  },
+  {
+    "icao": "KDAG",
+    "name": "Barstow Daggett Airport",
+    "city": "Daggett",
+    "state": "CA",
+    "lat": 34.85369873,
+    "lon": -116.7870026,
+    "elevation_ft": 1930
+  },
+  {
+    "icao": "KBTR",
+    "name": "Baton Rouge Metropolitan Airport",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "lat": 30.533199,
+    "lon": -91.149597,
+    "elevation_ft": 70
+  },
+  {
+    "icao": "KBTL",
+    "name": "Battle Creek Executive Airport at Kellogg Field",
+    "city": "Battle Creek",
+    "state": "MI",
+    "lat": 42.307301,
+    "lon": -85.251503,
+    "elevation_ft": 952
+  },
+  {
+    "icao": "KBDE",
+    "name": "Baudette International Airport",
+    "city": "Baudette",
+    "state": "MN",
+    "lat": 48.728401,
+    "lon": -94.612198,
+    "elevation_ft": 1086
+  },
+  {
+    "icao": "KBAB",
+    "name": "Beale Air Force Base",
+    "city": "Beale Air Force Base",
+    "state": "CA",
+    "lat": 39.136101,
+    "lon": -121.436996,
+    "elevation_ft": 113
+  },
+  {
+    "icao": "KNBC",
+    "name": "Beaufort MCAS - Merritt Field",
+    "city": "Beaufort",
+    "state": "SC",
+    "lat": 32.4774017334,
+    "lon": -80.723197937,
+    "elevation_ft": 37
+  },
+  {
+    "icao": "KDRI",
+    "name": "Beauregard Regional Airport",
+    "city": "DeRidder",
+    "state": "LA",
+    "lat": 30.831699,
+    "lon": -93.339897,
+    "elevation_ft": 202
+  },
+  {
+    "icao": "KBVI",
+    "name": "Beaver County Airport",
+    "city": "Beaver Falls",
+    "state": "PA",
+    "lat": 40.772499,
+    "lon": -80.391403,
+    "elevation_ft": 1253
+  },
+  {
+    "icao": "KBLI",
+    "name": "Bellingham International Airport",
+    "city": "Bellingham",
+    "state": "WA",
+    "lat": 48.79280090332031,
+    "lon": -122.53800201416016,
+    "elevation_ft": 170
+  },
+  {
+    "icao": "KBJI",
+    "name": "Bemidji Regional Airport",
+    "city": "Bemidji",
+    "state": "MN",
+    "lat": 47.50939941,
+    "lon": -94.93370056,
+    "elevation_ft": 1391
+  },
+  {
+    "icao": "KBTM",
+    "name": "Bert Mooney Airport",
+    "city": "Butte",
+    "state": "MT",
+    "lat": 45.95479965209961,
+    "lon": -112.49700164794922,
+    "elevation_ft": 5550
+  },
+  {
+    "icao": "KBVY",
+    "name": "Beverly Regional Airport",
+    "city": "Beverly / Danvers",
+    "state": "MA",
+    "lat": 42.584202,
+    "lon": -70.916496,
+    "elevation_ft": 107
+  },
+  {
+    "icao": "KBYS",
+    "name": "Bicycle Lake Army Air Field",
+    "city": "Fort Irwin/Barstow",
+    "state": "CA",
+    "lat": 35.2804985046,
+    "lon": -116.629997253,
+    "elevation_ft": 2350
+  },
+  {
+    "icao": "KBIF",
+    "name": "Biggs Army Air Field (Fort Bliss)",
+    "city": "Fort Bliss/El Paso",
+    "state": "TX",
+    "lat": 31.84950066,
+    "lon": -106.3799973,
+    "elevation_ft": 3946
+  },
+  {
+    "icao": "KLIT",
+    "name": "Bill & Hillary Clinton National Airport/Adams Field",
+    "city": "Little Rock",
+    "state": "AR",
+    "lat": 34.729222,
+    "lon": -92.223591,
+    "elevation_ft": 262
+  },
+  {
+    "icao": "KBIL",
+    "name": "Billings Logan International Airport",
+    "city": "Billings",
+    "state": "MT",
+    "lat": 45.808932,
+    "lon": -108.541242,
+    "elevation_ft": 3652
+  },
+  {
+    "icao": "KDUG",
+    "name": "Bisbee Douglas International Airport",
+    "city": "Douglas Bisbee",
+    "state": "AZ",
+    "lat": 31.464139,
+    "lon": -109.60456,
+    "elevation_ft": 4154
+  },
+  {
+    "icao": "KFNT",
+    "name": "Bishop International Airport",
+    "city": "Flint",
+    "state": "MI",
+    "lat": 42.969294,
+    "lon": -83.743355,
+    "elevation_ft": 782
+  },
+  {
+    "icao": "KBIS",
+    "name": "Bismarck Municipal Airport",
+    "city": "Bismarck",
+    "state": "ND",
+    "lat": 46.772734,
+    "lon": -100.746874,
+    "elevation_ft": 1661
+  },
+  {
+    "icao": "KLEX",
+    "name": "Blue Grass Airport",
+    "city": "Lexington",
+    "state": "KY",
+    "lat": 38.035066,
+    "lon": -84.606738,
+    "elevation_ft": 979
+  },
+  {
+    "icao": "KBLH",
+    "name": "Blythe Airport",
+    "city": "Blythe",
+    "state": "CA",
+    "lat": 33.6192016602,
+    "lon": -114.717002869,
+    "elevation_ft": 399
+  },
+  {
+    "icao": "KCEW",
+    "name": "Bob Sikes Airport",
+    "city": "Crestview",
+    "state": "FL",
+    "lat": 30.778799057,
+    "lon": -86.522102356,
+    "elevation_ft": 213
+  },
+  {
+    "icao": "KBCT",
+    "name": "Boca Raton Airport",
+    "city": "Boca Raton",
+    "state": "FL",
+    "lat": 26.3785,
+    "lon": -80.107697,
+    "elevation_ft": 13
+  },
+  {
+    "icao": "KHRO",
+    "name": "Boone County Airport",
+    "city": "Harrison",
+    "state": "AR",
+    "lat": 36.26150131225586,
+    "lon": -93.15470123291016,
+    "elevation_ft": 1365
+  },
+  {
+    "icao": "KBVU",
+    "name": "Boulder City Municipal Airport",
+    "city": "Boulder City",
+    "state": "NV",
+    "lat": 35.947161,
+    "lon": -114.858799,
+    "elevation_ft": 2201
+  },
+  {
+    "icao": "KHQM",
+    "name": "Bowerman Airport",
+    "city": "Hoquiam",
+    "state": "WA",
+    "lat": 46.971199035599994,
+    "lon": -123.93699646,
+    "elevation_ft": 18
+  },
+  {
+    "icao": "KBWG",
+    "name": "Bowling Green Warren County Regional Airport",
+    "city": "Bowling Green",
+    "state": "KY",
+    "lat": 36.964500427199994,
+    "lon": -86.41970062259999,
+    "elevation_ft": 547
+  },
+  {
+    "icao": "KLOU",
+    "name": "Bowman Field",
+    "city": "Louisville",
+    "state": "KY",
+    "lat": 38.2280006409,
+    "lon": -85.6636962891,
+    "elevation_ft": 546
+  },
+  {
+    "icao": "KBZN",
+    "name": "Bozeman Yellowstone International Airport",
+    "city": "Bozeman",
+    "state": "MT",
+    "lat": 45.778853,
+    "lon": -111.153711,
+    "elevation_ft": 4473
+  },
+  {
+    "icao": "KBFD",
+    "name": "Bradford Regional Airport",
+    "city": "Bradford",
+    "state": "PA",
+    "lat": 41.8031005859375,
+    "lon": -78.64009857177734,
+    "elevation_ft": 2143
+  },
+  {
+    "icao": "KBRD",
+    "name": "Brainerd Lakes Regional Airport",
+    "city": "Brainerd",
+    "state": "MN",
+    "lat": 46.402861,
+    "lon": -94.129727,
+    "elevation_ft": 1232
+  },
+  {
+    "icao": "KBBG",
+    "name": "Branson Airport",
+    "city": "Branson",
+    "state": "MO",
+    "lat": 36.532082,
+    "lon": -93.200544,
+    "elevation_ft": 1302
+  },
+  {
+    "icao": "KPWT",
+    "name": "Bremerton National Airport",
+    "city": "Bremerton",
+    "state": "WA",
+    "lat": 47.490200042725,
+    "lon": -122.76499938965,
+    "elevation_ft": 444
+  },
+  {
+    "icao": "KSDM",
+    "name": "Brown Field Municipal Airport",
+    "city": "San Diego",
+    "state": "CA",
+    "lat": 32.572639,
+    "lon": -116.980019,
+    "elevation_ft": 526
+  },
+  {
+    "icao": "KBRO",
+    "name": "Brownsville South Padre Island International Airport",
+    "city": "Brownsville",
+    "state": "TX",
+    "lat": 25.907238,
+    "lon": -97.425235,
+    "elevation_ft": 22
+  },
+  {
+    "icao": "KBXM",
+    "name": "Brunswick Executive Airport",
+    "city": "Brunswick",
+    "state": "ME",
+    "lat": 43.89220047,
+    "lon": -69.93859863,
+    "elevation_ft": 72
+  },
+  {
+    "icao": "KBQK",
+    "name": "Brunswick Golden Isles Airport",
+    "city": "Brunswick",
+    "state": "GA",
+    "lat": 31.258801,
+    "lon": -81.466499,
+    "elevation_ft": 26
+  },
+  {
+    "icao": "KBCE",
+    "name": "Bryce Canyon Airport",
+    "city": "Bryce Canyon",
+    "state": "UT",
+    "lat": 37.706401825,
+    "lon": -112.144996643,
+    "elevation_ft": 7590
+  },
+  {
+    "icao": "KCCR",
+    "name": "Buchanan Field",
+    "city": "Concord",
+    "state": "CA",
+    "lat": 37.9897,
+    "lon": -122.056999,
+    "elevation_ft": 26
+  },
+  {
+    "icao": "KBKF",
+    "name": "Buckley Space Force Base",
+    "city": "Aurora",
+    "state": "CO",
+    "lat": 39.701698,
+    "lon": -104.751999,
+    "elevation_ft": 5662
+  },
+  {
+    "icao": "KBKL",
+    "name": "Burke Lakefront Airport",
+    "city": "Cleveland",
+    "state": "OH",
+    "lat": 41.51750183105469,
+    "lon": -81.68329620361328,
+    "elevation_ft": 583
+  },
+  {
+    "icao": "KBYI",
+    "name": "Burley Municipal Airport",
+    "city": "Burley",
+    "state": "ID",
+    "lat": 42.542598724399994,
+    "lon": -113.772003174,
+    "elevation_ft": 4150
+  },
+  {
+    "icao": "KBNO",
+    "name": "Burns Municipal Airport",
+    "city": "Burns",
+    "state": "OR",
+    "lat": 43.590463,
+    "lon": -118.955154,
+    "elevation_ft": 4148
+  },
+  {
+    "icao": "KFCS",
+    "name": "Butts AAF (Fort Carson) Air Field",
+    "city": "Fort Carson",
+    "state": "CO",
+    "lat": 38.67839813,
+    "lon": -104.7570038,
+    "elevation_ft": 5838
+  },
+  {
+    "icao": "KOZR",
+    "name": "Cairns AAF (Fort Rucker) Air Field",
+    "city": "Fort Rucker/Ozark",
+    "state": "AL",
+    "lat": 31.27569962,
+    "lon": -85.71340179,
+    "elevation_ft": 301
+  },
+  {
+    "icao": "KL71",
+    "name": "California City Municipal Airport",
+    "city": "California City",
+    "state": "CA",
+    "lat": 35.151377,
+    "lon": -118.016059,
+    "elevation_ft": 2454
+  },
+  {
+    "icao": "KACV",
+    "name": "California Redwood Coast-Humboldt County Airport",
+    "city": "Arcata/Eureka",
+    "state": "CA",
+    "lat": 40.978101,
+    "lon": -124.109,
+    "elevation_ft": 221
+  },
+  {
+    "icao": "KCMA",
+    "name": "Camarillo International Airport",
+    "city": "Camarillo",
+    "state": "CA",
+    "lat": 34.213699,
+    "lon": -119.094002,
+    "elevation_ft": 77
+  },
+  {
+    "icao": "KNFG",
+    "name": "Camp Pendleton MCAS (Munn Field) Airport",
+    "city": "Oceanside",
+    "state": "CA",
+    "lat": 33.30130005,
+    "lon": -117.3550034,
+    "elevation_ft": 78
+  },
+  {
+    "icao": "KHOP",
+    "name": "Campbell Army Airfield (Fort Campbell)",
+    "city": "Fort Campbell",
+    "state": "KY",
+    "lat": 36.674154,
+    "lon": -87.48974,
+    "elevation_ft": 573
+  },
+  {
+    "icao": "KCVS",
+    "name": "Cannon Air Force Base",
+    "city": "Clovis",
+    "state": "NM",
+    "lat": 34.382801,
+    "lon": -103.321999,
+    "elevation_ft": 4295
+  },
+  {
+    "icao": "KCNY",
+    "name": "Canyonlands Regional Airport",
+    "city": "Moab",
+    "state": "UT",
+    "lat": 38.755001,
+    "lon": -109.754997,
+    "elevation_ft": 4557
+  },
+  {
+    "icao": "KXMR",
+    "name": "Cape Canaveral SFS Skid Strip",
+    "city": "Cocoa Beach",
+    "state": "FL",
+    "lat": 28.4676,
+    "lon": -80.566597,
+    "elevation_ft": 10
+  },
+  {
+    "icao": "KHYA",
+    "name": "Cape Cod Gateway Airport",
+    "city": "Hyannis",
+    "state": "MA",
+    "lat": 41.6693,
+    "lon": -70.280403,
+    "elevation_ft": 54
+  },
+  {
+    "icao": "KCGI",
+    "name": "Cape Girardeau Regional Airport",
+    "city": "Cape Girardeau",
+    "state": "MO",
+    "lat": 37.2253,
+    "lon": -89.570801,
+    "elevation_ft": 342
+  },
+  {
+    "icao": "KWWD",
+    "name": "Cape May County Airport",
+    "city": "Wildwood",
+    "state": "NJ",
+    "lat": 39.008499145500004,
+    "lon": -74.9083023071,
+    "elevation_ft": 23
+  },
+  {
+    "icao": "KLAN",
+    "name": "Capital Region International Airport",
+    "city": "Lansing",
+    "state": "MI",
+    "lat": 42.777582,
+    "lon": -84.585721,
+    "elevation_ft": 861
+  },
+  {
+    "icao": "KCAR",
+    "name": "Caribou Municipal Airport",
+    "city": "Caribou",
+    "state": "ME",
+    "lat": 46.871498,
+    "lon": -68.017899,
+    "elevation_ft": 626
+  },
+  {
+    "icao": "KCXP",
+    "name": "Carson Airport",
+    "city": "Carson City",
+    "state": "NV",
+    "lat": 39.194331,
+    "lon": -119.734312,
+    "elevation_ft": 4697
+  },
+  {
+    "icao": "KCPR",
+    "name": "Casper-Natrona County International Airport",
+    "city": "Casper",
+    "state": "WY",
+    "lat": 42.907381,
+    "lon": -106.461609,
+    "elevation_ft": 5350
+  },
+  {
+    "icao": "KMER",
+    "name": "Castle Airport",
+    "city": "Merced",
+    "state": "CA",
+    "lat": 37.38050079,
+    "lon": -120.5680008,
+    "elevation_ft": 191
+  },
+  {
+    "icao": "KCNM",
+    "name": "Cavern City Air Terminal",
+    "city": "Carlsbad",
+    "state": "NM",
+    "lat": 32.337501525878906,
+    "lon": -104.26300048828125,
+    "elevation_ft": 3295
+  },
+  {
+    "icao": "KVQQ",
+    "name": "Cecil Airport",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.2187,
+    "lon": -81.876701,
+    "elevation_ft": 81
+  },
+  {
+    "icao": "KCDC",
+    "name": "Cedar City Regional Airport",
+    "city": "Cedar City",
+    "state": "UT",
+    "lat": 37.70100021362305,
+    "lon": -113.0989990234375,
+    "elevation_ft": 5622
+  },
+  {
+    "icao": "KAPA",
+    "name": "Centennial Airport",
+    "city": "Denver",
+    "state": "CO",
+    "lat": 39.57009888,
+    "lon": -104.848999,
+    "elevation_ft": 5885
+  },
+  {
+    "icao": "KBMI",
+    "name": "Central Illinois Regional Airport at Bloomington-Normal",
+    "city": "Bloomington/Normal",
+    "state": "IL",
+    "lat": 40.4771,
+    "lon": -88.915901,
+    "elevation_ft": 871
+  },
+  {
+    "icao": "KRGA",
+    "name": "Central Kentucky Regional Airport",
+    "city": "Richmond",
+    "state": "KY",
+    "lat": 37.630798,
+    "lon": -84.332298,
+    "elevation_ft": 1002
+  },
+  {
+    "icao": "KGRI",
+    "name": "Central Nebraska Regional Airport",
+    "city": "Grand Island",
+    "state": "NE",
+    "lat": 40.967498779296875,
+    "lon": -98.30960083007812,
+    "elevation_ft": 1847
+  },
+  {
+    "icao": "KCWA",
+    "name": "Central Wisconsin Airport",
+    "city": "Mosinee",
+    "state": "WI",
+    "lat": 44.777448,
+    "lon": -89.670238,
+    "elevation_ft": 1277
+  },
+  {
+    "icao": "KRIW",
+    "name": "Central Wyoming Regional Airport",
+    "city": "Riverton",
+    "state": "WY",
+    "lat": 43.064201,
+    "lon": -108.459999,
+    "elevation_ft": 5525
+  },
+  {
+    "icao": "KCDR",
+    "name": "Chadron Municipal Airport",
+    "city": "Chadron",
+    "state": "NE",
+    "lat": 42.837601,
+    "lon": -103.095001,
+    "elevation_ft": 3297
+  },
+  {
+    "icao": "KYKN",
+    "name": "Chan Gurney Municipal Airport",
+    "city": "Yankton",
+    "state": "SD",
+    "lat": 42.916698455811,
+    "lon": -97.385902404785,
+    "elevation_ft": 1306
+  },
+  {
+    "icao": "KAXN",
+    "name": "Chandler Field",
+    "city": "Alexandria",
+    "state": "MN",
+    "lat": 45.866299,
+    "lon": -95.394699,
+    "elevation_ft": 1425
+  },
+  {
+    "icao": "KCNU",
+    "name": "Chanute Martin Johnson Airport",
+    "city": "Chanute",
+    "state": "KS",
+    "lat": 37.668173,
+    "lon": -95.486727,
+    "elevation_ft": 1002
+  },
+  {
+    "icao": "KMKC",
+    "name": "Charles B. Wheeler Downtown Airport",
+    "city": "Kansas City",
+    "state": "MO",
+    "lat": 39.123199,
+    "lon": -94.592796,
+    "elevation_ft": 759
+  },
+  {
+    "icao": "KSTS",
+    "name": "Charles M. Schulz Sonoma County Airport",
+    "city": "Santa Rosa",
+    "state": "CA",
+    "lat": 38.50899887,
+    "lon": -122.8130035,
+    "elevation_ft": 128
+  },
+  {
+    "icao": "KCHO",
+    "name": "Charlottesville Albemarle Airport",
+    "city": "Charlottesville",
+    "state": "VA",
+    "lat": 38.13859939575195,
+    "lon": -78.4529037475586,
+    "elevation_ft": 639
+  },
+  {
+    "icao": "KCHA",
+    "name": "Chattanooga Metropolitan Airport (Lovell Field)",
+    "city": "Chattanooga",
+    "state": "TN",
+    "lat": 35.035301,
+    "lon": -85.203796,
+    "elevation_ft": 683
+  },
+  {
+    "icao": "KJHW",
+    "name": "Chautauqua County-Jamestown Airport",
+    "city": "Jamestown",
+    "state": "NY",
+    "lat": 42.15425,
+    "lon": -79.254008,
+    "elevation_ft": 1723
+  },
+  {
+    "icao": "KTVC",
+    "name": "Cherry Capital Airport",
+    "city": "Traverse City",
+    "state": "MI",
+    "lat": 44.741402,
+    "lon": -85.582199,
+    "elevation_ft": 624
+  },
+  {
+    "icao": "KNKT",
+    "name": "Cherry Point MCAS / Cunningham Field/",
+    "city": "Cherry Point",
+    "state": "NC",
+    "lat": 34.900902,
+    "lon": -76.880699,
+    "elevation_ft": 29
+  },
+  {
+    "icao": "KCYS",
+    "name": "Cheyenne Regional Jerry Olson Field",
+    "city": "Cheyenne",
+    "state": "WY",
+    "lat": 41.155701,
+    "lon": -104.811997,
+    "elevation_ft": 6159
+  },
+  {
+    "icao": "KPWK",
+    "name": "Chicago Executive Airport",
+    "city": "Chicago/Prospect Heights/Wheeling",
+    "state": "IL",
+    "lat": 42.114222,
+    "lon": -87.901494,
+    "elevation_ft": 647
+  },
+  {
+    "icao": "KRFD",
+    "name": "Chicago Rockford International Airport",
+    "city": "Chicago/Rockford",
+    "state": "IL",
+    "lat": 42.1954,
+    "lon": -89.097198,
+    "elevation_ft": 742
+  },
+  {
+    "icao": "KCDS",
+    "name": "Childress Municipal Airport",
+    "city": "Childress",
+    "state": "TX",
+    "lat": 34.4337997437,
+    "lon": -100.288002014,
+    "elevation_ft": 1954
+  },
+  {
+    "icao": "KNID",
+    "name": "China Lake Naws (Armitage Field) Airport",
+    "city": "China Lake",
+    "state": "CA",
+    "lat": 35.6853981,
+    "lon": -117.6920013,
+    "elevation_ft": 2283
+  },
+  {
+    "icao": "KCIU",
+    "name": "Chippewa County International Airport",
+    "city": "Kincheloe",
+    "state": "MI",
+    "lat": 46.242038,
+    "lon": -84.462082,
+    "elevation_ft": 800
+  },
+  {
+    "icao": "KEAU",
+    "name": "Chippewa Valley Regional Airport",
+    "city": "Eau Claire",
+    "state": "WI",
+    "lat": 44.86579895019531,
+    "lon": -91.48429870605469,
+    "elevation_ft": 913
+  },
+  {
+    "icao": "KLUK",
+    "name": "Cincinnati Municipal Airport Lunken Field",
+    "city": "Cincinnati",
+    "state": "OH",
+    "lat": 39.102357,
+    "lon": -84.418945,
+    "elevation_ft": 483
+  },
+  {
+    "icao": "KCVN",
+    "name": "Clovis Municipal Airport",
+    "city": "Clovis",
+    "state": "NM",
+    "lat": 34.426594,
+    "lon": -103.078794,
+    "elevation_ft": 4216
+  },
+  {
+    "icao": "KEWN",
+    "name": "Coastal Carolina Regional Airport",
+    "city": "New Bern",
+    "state": "NC",
+    "lat": 35.0730018616,
+    "lon": -77.04290008539999,
+    "elevation_ft": 18
+  },
+  {
+    "icao": "KRYY",
+    "name": "Cobb County International Airport-McCollum Field",
+    "city": "Atlanta",
+    "state": "GA",
+    "lat": 34.01316,
+    "lon": -84.59721,
+    "elevation_ft": 1040
+  },
+  {
+    "icao": "KCOE",
+    "name": "Coeur D'Alene Airport - Pappy Boyington Field",
+    "city": "Coeur d'Alene",
+    "state": "ID",
+    "lat": 47.7743,
+    "lon": -116.82,
+    "elevation_ft": 2320
+  },
+  {
+    "icao": "KDET",
+    "name": "Coleman A. Young Municipal Airport",
+    "city": "Detroit",
+    "state": "MI",
+    "lat": 42.40919876,
+    "lon": -83.00990295,
+    "elevation_ft": 626
+  },
+  {
+    "icao": "KDLS",
+    "name": "Columbia Gorge Regional Airport",
+    "city": "Dallesport / The Dalles",
+    "state": "OR",
+    "lat": 45.620979,
+    "lon": -121.170777,
+    "elevation_ft": 247
+  },
+  {
+    "icao": "KCAE",
+    "name": "Columbia Metropolitan Airport",
+    "city": "Columbia",
+    "state": "SC",
+    "lat": 33.938172,
+    "lon": -81.123022,
+    "elevation_ft": 236
+  },
+  {
+    "icao": "KCOU",
+    "name": "Columbia Regional Airport",
+    "city": "Columbia",
+    "state": "MO",
+    "lat": 38.8181,
+    "lon": -92.219597,
+    "elevation_ft": 889
+  },
+  {
+    "icao": "KCBM",
+    "name": "Columbus Air Force Base",
+    "city": "Columbus",
+    "state": "MS",
+    "lat": 33.643799,
+    "lon": -88.443802,
+    "elevation_ft": 219
+  },
+  {
+    "icao": "KCSG",
+    "name": "Columbus Airport",
+    "city": "Columbus",
+    "state": "GA",
+    "lat": 32.516415,
+    "lon": -84.939602,
+    "elevation_ft": 397
+  },
+  {
+    "icao": "KBAK",
+    "name": "Columbus Municipal Airport",
+    "city": "Columbus",
+    "state": "IN",
+    "lat": 39.262386,
+    "lon": -85.895576,
+    "elevation_ft": 656
+  },
+  {
+    "icao": "KOLU",
+    "name": "Columbus Municipal Airport",
+    "city": "Columbus",
+    "state": "NE",
+    "lat": 41.448145,
+    "lon": -97.340174,
+    "elevation_ft": 1447
+  },
+  {
+    "icao": "KCON",
+    "name": "Concord Municipal Airport",
+    "city": "Concord",
+    "state": "NH",
+    "lat": 43.20270157,
+    "lon": -71.50229645,
+    "elevation_ft": 342
+  },
+  {
+    "icao": "KJQF",
+    "name": "Concord-Padgett Regional Airport",
+    "city": "Concord",
+    "state": "NC",
+    "lat": 35.387798,
+    "lon": -80.709099,
+    "elevation_ft": 705
+  },
+  {
+    "icao": "KCXO",
+    "name": "Conroe-North Houston Regional Airport",
+    "city": "Houston",
+    "state": "TX",
+    "lat": 30.351801,
+    "lon": -95.414497,
+    "elevation_ft": 245
+  },
+  {
+    "icao": "KCRP",
+    "name": "Corpus Christi International Airport",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "lat": 27.770399,
+    "lon": -97.501198,
+    "elevation_ft": 44
+  },
+  {
+    "icao": "KCEZ",
+    "name": "Cortez Municipal Airport",
+    "city": "Cortez",
+    "state": "CO",
+    "lat": 37.303001,
+    "lon": -108.627998,
+    "elevation_ft": 5918
+  },
+  {
+    "icao": "KCVO",
+    "name": "Corvallis Municipal Airport",
+    "city": "Corvallis",
+    "state": "OR",
+    "lat": 44.49720001,
+    "lon": -123.2900009,
+    "elevation_ft": 250
+  },
+  {
+    "icao": "KPRX",
+    "name": "Cox Field",
+    "city": "Paris",
+    "state": "TX",
+    "lat": 33.636600494385,
+    "lon": -95.450798034668,
+    "elevation_ft": 547
+  },
+  {
+    "icao": "KLMT",
+    "name": "Crater Lake-Klamath Regional Airport",
+    "city": "Klamath Falls",
+    "state": "OR",
+    "lat": 42.156101,
+    "lon": -121.733002,
+    "elevation_ft": 4095
+  },
+  {
+    "icao": "KCSV",
+    "name": "Crossville Memorial Airport Whitson Field",
+    "city": "Crossville",
+    "state": "TN",
+    "lat": 35.95131,
+    "lon": -85.08499,
+    "elevation_ft": 1881
+  },
+  {
+    "icao": "KBBD",
+    "name": "Curtis Field",
+    "city": "Brady",
+    "state": "TX",
+    "lat": 31.178931,
+    "lon": -99.324732,
+    "elevation_ft": 1827
+  },
+  {
+    "icao": "KCTB",
+    "name": "Cut Bank International Airport",
+    "city": "Cut Bank",
+    "state": "MT",
+    "lat": 48.608657,
+    "lon": -112.378183,
+    "elevation_ft": 3854
+  },
+  {
+    "icao": "KCGF",
+    "name": "Cuyahoga County Airport",
+    "city": "Cleveland",
+    "state": "OH",
+    "lat": 41.5651016235,
+    "lon": -81.4863967896,
+    "elevation_ft": 879
+  },
+  {
+    "icao": "KDHT",
+    "name": "Dalhart Municipal Airport",
+    "city": "Dalhart",
+    "state": "TX",
+    "lat": 36.0225982666,
+    "lon": -102.54699707,
+    "elevation_ft": 3991
+  },
+  {
+    "icao": "KDXR",
+    "name": "Danbury Municipal Airport",
+    "city": "Danbury",
+    "state": "CT",
+    "lat": 41.371656,
+    "lon": -73.482227,
+    "elevation_ft": 458
+  },
+  {
+    "icao": "KMSN",
+    "name": "Dane County Regional Truax Field",
+    "city": "Madison",
+    "state": "WI",
+    "lat": 43.1399,
+    "lon": -89.337502,
+    "elevation_ft": 887
+  },
+  {
+    "icao": "KDNL",
+    "name": "Daniel Field",
+    "city": "Augusta",
+    "state": "GA",
+    "lat": 33.4664993286,
+    "lon": -82.0393981934,
+    "elevation_ft": 423
+  },
+  {
+    "icao": "KDAN",
+    "name": "Danville Regional Airport",
+    "city": "Danville",
+    "state": "VA",
+    "lat": 36.572899,
+    "lon": -79.336098,
+    "elevation_ft": 571
+  },
+  {
+    "icao": "KDMA",
+    "name": "Davis Monthan Air Force Base",
+    "city": "Tucson",
+    "state": "AZ",
+    "lat": 32.1665000916,
+    "lon": -110.883003235,
+    "elevation_ft": 2704
+  },
+  {
+    "icao": "KDAA",
+    "name": "Davison Army Air Field",
+    "city": "Fort Belvoir",
+    "state": "VA",
+    "lat": 38.715000152600005,
+    "lon": -77.1809997559,
+    "elevation_ft": 73
+  },
+  {
+    "icao": "KGDV",
+    "name": "Dawson Community Airport",
+    "city": "Glendive",
+    "state": "MT",
+    "lat": 47.137658,
+    "lon": -104.80691,
+    "elevation_ft": 2458
+  },
+  {
+    "icao": "KDAB",
+    "name": "Daytona Beach International Airport",
+    "city": "Daytona Beach",
+    "state": "FL",
+    "lat": 29.18255,
+    "lon": -81.059464,
+    "elevation_ft": 34
+  },
+  {
+    "icao": "KDEC",
+    "name": "Decatur Airport",
+    "city": "Decatur",
+    "state": "IL",
+    "lat": 39.834598541259766,
+    "lon": -88.8656997680664,
+    "elevation_ft": 682
+  },
+  {
+    "icao": "KPDK",
+    "name": "DeKalb Peachtree Airport",
+    "city": "Atlanta",
+    "state": "GA",
+    "lat": 33.87633,
+    "lon": -84.30213,
+    "elevation_ft": 1003
+  },
+  {
+    "icao": "KDRT",
+    "name": "Del Rio International Airport",
+    "city": "Del Rio",
+    "state": "TX",
+    "lat": 29.3742008209,
+    "lon": -100.927001953,
+    "elevation_ft": 1002
+  },
+  {
+    "icao": "KMIE",
+    "name": "Delaware County Johnson Field",
+    "city": "Muncie",
+    "state": "IN",
+    "lat": 40.242298,
+    "lon": -85.395897,
+    "elevation_ft": 937
+  },
+  {
+    "icao": "KESC",
+    "name": "Delta County Airport",
+    "city": "Escanaba",
+    "state": "MI",
+    "lat": 45.723199,
+    "lon": -87.088623,
+    "elevation_ft": 609
+  },
+  {
+    "icao": "KDMN",
+    "name": "Deming Municipal Airport",
+    "city": "Deming",
+    "state": "NM",
+    "lat": 32.262298584,
+    "lon": -107.721000671,
+    "elevation_ft": 4314
+  },
+  {
+    "icao": "KLOL",
+    "name": "Derby Field",
+    "city": "Lovelock",
+    "state": "NV",
+    "lat": 40.0663986206,
+    "lon": -118.565002441,
+    "elevation_ft": 3904
+  },
+  {
+    "icao": "KDRA",
+    "name": "Desert Rock Airport",
+    "city": "Mercury",
+    "state": "NV",
+    "lat": 36.6194,
+    "lon": -116.032997,
+    "elevation_ft": 3314
+  },
+  {
+    "icao": "KDTS",
+    "name": "Destin Executive Airport",
+    "city": "Destin",
+    "state": "FL",
+    "lat": 30.400101,
+    "lon": -86.471497,
+    "elevation_ft": 23
+  },
+  {
+    "icao": "KVPS",
+    "name": "Destin-Fort Walton Beach Airport",
+    "city": "Valparaiso",
+    "state": "FL",
+    "lat": 30.481315,
+    "lon": -86.515839,
+    "elevation_ft": 87
+  },
+  {
+    "icao": "KDVL",
+    "name": "Devils Lake Regional Airport",
+    "city": "Devils Lake",
+    "state": "ND",
+    "lat": 48.115454,
+    "lon": -98.908796,
+    "elevation_ft": 1456
+  },
+  {
+    "icao": "KDIK",
+    "name": "Dickinson Theodore Roosevelt Regional Airport",
+    "city": "Dickinson",
+    "state": "ND",
+    "lat": 46.797533,
+    "lon": -102.801905,
+    "elevation_ft": 2592
+  },
+  {
+    "icao": "KEEN",
+    "name": "Dillant Hopkins Airport",
+    "city": "Keene",
+    "state": "NH",
+    "lat": 42.898399,
+    "lon": -72.270798,
+    "elevation_ft": 488
+  },
+  {
+    "icao": "KMGE",
+    "name": "Dobbins Air Reserve Base",
+    "city": "Marietta",
+    "state": "GA",
+    "lat": 33.915401,
+    "lon": -84.516296,
+    "elevation_ft": 1068
+  },
+  {
+    "icao": "KDDC",
+    "name": "Dodge City Regional Airport",
+    "city": "Dodge City",
+    "state": "KS",
+    "lat": 37.76340103149414,
+    "lon": -99.9655990600586,
+    "elevation_ft": 2594
+  },
+  {
+    "icao": "KDHN",
+    "name": "Dothan Regional Airport",
+    "city": "Dothan",
+    "state": "AL",
+    "lat": 31.321300506591797,
+    "lon": -85.44960021972656,
+    "elevation_ft": 401
+  },
+  {
+    "icao": "KAEG",
+    "name": "Double Eagle II Airport",
+    "city": "Albuquerque",
+    "state": "NM",
+    "lat": 35.145199,
+    "lon": -106.794998,
+    "elevation_ft": 5837
+  },
+  {
+    "icao": "KDOV",
+    "name": "Dover Civil Air Terminal/Dover Air Force Base",
+    "city": "Dover",
+    "state": "DE",
+    "lat": 39.129501,
+    "lon": -75.466003,
+    "elevation_ft": 24
+  },
+  {
+    "icao": "KFYV",
+    "name": "Drake Field",
+    "city": "Fayetteville",
+    "state": "AR",
+    "lat": 36.00510025024414,
+    "lon": -94.17009735107422,
+    "elevation_ft": 1251
+  },
+  {
+    "icao": "KTPL",
+    "name": "Draughon Miller Central Texas Regional Airport",
+    "city": "Temple",
+    "state": "TX",
+    "lat": 31.1525,
+    "lon": -97.407799,
+    "elevation_ft": 682
+  },
+  {
+    "icao": "KDUJ",
+    "name": "DuBois Regional Airport",
+    "city": "Dubois",
+    "state": "PA",
+    "lat": 41.17829895,
+    "lon": -78.8986969,
+    "elevation_ft": 1817
+  },
+  {
+    "icao": "KDBQ",
+    "name": "Dubuque Regional Airport",
+    "city": "Dubuque",
+    "state": "IA",
+    "lat": 42.402,
+    "lon": -90.709503,
+    "elevation_ft": 1077
+  },
+  {
+    "icao": "KEGI",
+    "name": "Duke Field",
+    "city": "Crestview",
+    "state": "FL",
+    "lat": 30.65040016,
+    "lon": -86.52290344,
+    "elevation_ft": 191
+  },
+  {
+    "icao": "KDLH",
+    "name": "Duluth International Airport",
+    "city": "Duluth",
+    "state": "MN",
+    "lat": 46.841873,
+    "lon": -92.198746,
+    "elevation_ft": 1428
+  },
+  {
+    "icao": "KDPA",
+    "name": "Dupage Airport",
+    "city": "Chicago/West Chicago",
+    "state": "IL",
+    "lat": 41.90779877,
+    "lon": -88.24859619,
+    "elevation_ft": 759
+  },
+  {
+    "icao": "KDRO",
+    "name": "Durango La Plata County Airport",
+    "city": "Durango",
+    "state": "CO",
+    "lat": 37.151501,
+    "lon": -107.753998,
+    "elevation_ft": 6685
+  },
+  {
+    "icao": "KDUA",
+    "name": "Durant Regional Airport - Eaker Field",
+    "city": "Durant",
+    "state": "OK",
+    "lat": 33.939675,
+    "lon": -96.395072,
+    "elevation_ft": 699
+  },
+  {
+    "icao": "KPOU",
+    "name": "Dutchess County Airport",
+    "city": "Poughkeepsie",
+    "state": "NY",
+    "lat": 41.6265983581543,
+    "lon": -73.88420104980469,
+    "elevation_ft": 165
+  },
+  {
+    "icao": "KDYS",
+    "name": "Dyess Air Force Base",
+    "city": "Abilene",
+    "state": "TX",
+    "lat": 32.420799,
+    "lon": -99.854599,
+    "elevation_ft": 1789
+  },
+  {
+    "icao": "KEGE",
+    "name": "Eagle County Regional Airport",
+    "city": "Eagle",
+    "state": "CO",
+    "lat": 39.64260101,
+    "lon": -106.9179993,
+    "elevation_ft": 6548
+  },
+  {
+    "icao": "KGGG",
+    "name": "East Texas Regional Airport",
+    "city": "Longview",
+    "state": "TX",
+    "lat": 32.38399887084961,
+    "lon": -94.71150207519531,
+    "elevation_ft": 365
+  },
+  {
+    "icao": "KPDT",
+    "name": "Eastern Oregon Regional Airport at Pendleton",
+    "city": "Pendleton",
+    "state": "OR",
+    "lat": 45.695099,
+    "lon": -118.841003,
+    "elevation_ft": 1497
+  },
+  {
+    "icao": "KBIH",
+    "name": "Eastern Sierra Regional Airport",
+    "city": "Bishop",
+    "state": "CA",
+    "lat": 37.3731,
+    "lon": -118.363998,
+    "elevation_ft": 4124
+  },
+  {
+    "icao": "KMRB",
+    "name": "Eastern WV Regional Airport/Shepherd Field",
+    "city": "Martinsburg",
+    "state": "WV",
+    "lat": 39.40190125,
+    "lon": -77.98459625,
+    "elevation_ft": 565
+  },
+  {
+    "icao": "KCLL",
+    "name": "Easterwood Field",
+    "city": "College Station",
+    "state": "TX",
+    "lat": 30.5886,
+    "lon": -96.3638,
+    "elevation_ft": 320
+  },
+  {
+    "icao": "KMPV",
+    "name": "Edward F Knapp State Airport",
+    "city": "Barre/Montpelier",
+    "state": "VT",
+    "lat": 44.20349884,
+    "lon": -72.56230164,
+    "elevation_ft": 1166
+  },
+  {
+    "icao": "KEDW",
+    "name": "Edwards Air Force Base",
+    "city": "Edwards",
+    "state": "CA",
+    "lat": 34.910781,
+    "lon": -117.886391,
+    "elevation_ft": 2312
+  },
+  {
+    "icao": "KNJK",
+    "name": "El Centro NAF Airport (Vraciu Field)",
+    "city": "El Centro",
+    "state": "CA",
+    "lat": 32.829201,
+    "lon": -115.671996,
+    "elevation_ft": -42
+  },
+  {
+    "icao": "KECG",
+    "name": "Elizabeth City Regional Airport & Coast Guard Air Station",
+    "city": "Elizabeth City",
+    "state": "NC",
+    "lat": 36.260601,
+    "lon": -76.174599,
+    "elevation_ft": 11
+  },
+  {
+    "icao": "KEKN",
+    "name": "Elkins-Randolph County Regional Airport",
+    "city": "Elkins",
+    "state": "WV",
+    "lat": 38.889759,
+    "lon": -79.857651,
+    "elevation_ft": 1987
+  },
+  {
+    "icao": "KEKO",
+    "name": "Elko Regional Airport",
+    "city": "Elko",
+    "state": "NV",
+    "lat": 40.82490158081055,
+    "lon": -115.79199981689453,
+    "elevation_ft": 5140
+  },
+  {
+    "icao": "KEFD",
+    "name": "Ellington Airport",
+    "city": "Houston",
+    "state": "TX",
+    "lat": 29.607299804700002,
+    "lon": -95.1587982178,
+    "elevation_ft": 32
+  },
+  {
+    "icao": "KRCA",
+    "name": "Ellsworth Air Force Base",
+    "city": "Rapid City",
+    "state": "SD",
+    "lat": 44.14500046,
+    "lon": -103.1039963,
+    "elevation_ft": 3276
+  },
+  {
+    "icao": "KELM",
+    "name": "Elmira Corning Regional Airport",
+    "city": "Elmira/Corning",
+    "state": "NY",
+    "lat": 42.1599006652832,
+    "lon": -76.8916015625,
+    "elevation_ft": 954
+  },
+  {
+    "icao": "KELY",
+    "name": "Ely Airport Yelland Field",
+    "city": "Ely",
+    "state": "NV",
+    "lat": 39.29970169,
+    "lon": -114.8420029,
+    "elevation_ft": 6259
+  },
+  {
+    "icao": "KELO",
+    "name": "Ely Municipal Airport",
+    "city": "Ely",
+    "state": "MN",
+    "lat": 47.82450104,
+    "lon": -91.83070374,
+    "elevation_ft": 1456
+  },
+  {
+    "icao": "KERI",
+    "name": "Erie International Tom Ridge Field",
+    "city": "Erie",
+    "state": "PA",
+    "lat": 42.083127,
+    "lon": -80.173867,
+    "elevation_ft": 732
+  },
+  {
+    "icao": "KPCW",
+    "name": "Erie-Ottawa International Airport",
+    "city": "Port Clinton",
+    "state": "OH",
+    "lat": 41.515647,
+    "lon": -82.868328,
+    "elevation_ft": 590
+  },
+  {
+    "icao": "KESF",
+    "name": "Esler Army Airfield / Esler Regional Airport",
+    "city": "Alexandria",
+    "state": "LA",
+    "lat": 31.394266,
+    "lon": -92.294082,
+    "elevation_ft": 112
+  },
+  {
+    "icao": "KEUG",
+    "name": "Eugene Airport",
+    "city": "Eugene",
+    "state": "OR",
+    "lat": 44.124599,
+    "lon": -123.211998,
+    "elevation_ft": 374
+  },
+  {
+    "icao": "KTOL",
+    "name": "Eugene F. Kranz Toledo Express Airport",
+    "city": "Toledo",
+    "state": "OH",
+    "lat": 41.5868,
+    "lon": -83.8078,
+    "elevation_ft": 683
+  },
+  {
+    "icao": "KEVW",
+    "name": "Evanston-Uinta County Airport-Burns Field",
+    "city": "Evanston",
+    "state": "WY",
+    "lat": 41.27479935,
+    "lon": -111.0350037,
+    "elevation_ft": 7143
+  },
+  {
+    "icao": "KEVV",
+    "name": "Evansville Regional Airport",
+    "city": "Evansville",
+    "state": "IN",
+    "lat": 38.0369987488,
+    "lon": -87.5324020386,
+    "elevation_ft": 418
+  },
+  {
+    "icao": "KSKA",
+    "name": "Fairchild Air Force Base",
+    "city": "Spokane",
+    "state": "WA",
+    "lat": 47.615101,
+    "lon": -117.655998,
+    "elevation_ft": 2461
+  },
+  {
+    "icao": "KNFL",
+    "name": "Fallon Naval Air Station",
+    "city": "Fallon",
+    "state": "NV",
+    "lat": 39.41659927,
+    "lon": -118.7009964,
+    "elevation_ft": 3934
+  },
+  {
+    "icao": "KINL",
+    "name": "Falls International Airport",
+    "city": "International Falls",
+    "state": "MN",
+    "lat": 48.566200256347656,
+    "lon": -93.4030990600586,
+    "elevation_ft": 1185
+  },
+  {
+    "icao": "KFAY",
+    "name": "Fayetteville Regional Airport - Grannis Field",
+    "city": "Fayetteville",
+    "state": "NC",
+    "lat": 34.991199,
+    "lon": -78.880302,
+    "elevation_ft": 189
+  },
+  {
+    "icao": "KFAF",
+    "name": "Felker Army Air Field",
+    "city": "Newport News (Fort Eustis)",
+    "state": "VA",
+    "lat": 37.1325,
+    "lon": -76.608803,
+    "elevation_ft": 12
+  },
+  {
+    "icao": "KSFF",
+    "name": "Felts Field",
+    "city": "Spokane",
+    "state": "WA",
+    "lat": 47.682899,
+    "lon": -117.321925,
+    "elevation_ft": 1953
+  },
+  {
+    "icao": "KFDY",
+    "name": "Findlay Airport",
+    "city": "Findlay",
+    "state": "OH",
+    "lat": 41.013500213600004,
+    "lon": -83.66870117190001,
+    "elevation_ft": 813
+  },
+  {
+    "icao": "KFLG",
+    "name": "Flagstaff Pulliam Airport",
+    "city": "Flagstaff",
+    "state": "AZ",
+    "lat": 35.139757,
+    "lon": -111.669826,
+    "elevation_ft": 7014
+  },
+  {
+    "icao": "KFLO",
+    "name": "Florence Regional Airport",
+    "city": "Florence",
+    "state": "SC",
+    "lat": 34.18539810180664,
+    "lon": -79.7238998413086,
+    "elevation_ft": 146
+  },
+  {
+    "icao": "KMTH",
+    "name": "Florida Keys Marathon International Airport",
+    "city": "Marathon",
+    "state": "FL",
+    "lat": 24.726006,
+    "lon": -81.05138,
+    "elevation_ft": 5
+  },
+  {
+    "icao": "KGFL",
+    "name": "Floyd Bennett Memorial Airport",
+    "city": "Glens Falls",
+    "state": "NY",
+    "lat": 43.3412017822,
+    "lon": -73.6102981567,
+    "elevation_ft": 328
+  },
+  {
+    "icao": "KIMT",
+    "name": "Ford Airport",
+    "city": "Kingsford",
+    "state": "MI",
+    "lat": 45.81911,
+    "lon": -88.114557,
+    "elevation_ft": 1182
+  },
+  {
+    "icao": "KFOD",
+    "name": "Fort Dodge Regional Airport",
+    "city": "Fort Dodge",
+    "state": "IA",
+    "lat": 42.552624,
+    "lon": -94.191237,
+    "elevation_ft": 1156
+  },
+  {
+    "icao": "KFXE",
+    "name": "Fort Lauderdale Executive Airport",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "lat": 26.1972999573,
+    "lon": -80.1707000732,
+    "elevation_ft": 13
+  },
+  {
+    "icao": "KFME",
+    "name": "Fort Meade Executive Airport",
+    "city": "Fort Meade(Odenton)",
+    "state": "MD",
+    "lat": 39.0854,
+    "lon": -76.759399,
+    "elevation_ft": 150
+  },
+  {
+    "icao": "KFSM",
+    "name": "Fort Smith Regional Airport",
+    "city": "Fort Smith",
+    "state": "AR",
+    "lat": 35.336601,
+    "lon": -94.367401,
+    "elevation_ft": 469
+  },
+  {
+    "icao": "KFST",
+    "name": "Fort Stockton Pecos County Airport",
+    "city": "Fort Stockton",
+    "state": "TX",
+    "lat": 30.9157009125,
+    "lon": -102.916000366,
+    "elevation_ft": 3011
+  },
+  {
+    "icao": "KFWA",
+    "name": "Fort Wayne International Airport",
+    "city": "Fort Wayne",
+    "state": "IN",
+    "lat": 40.978896,
+    "lon": -85.194465,
+    "elevation_ft": 814
+  },
+  {
+    "icao": "KFTW",
+    "name": "Fort Worth Meacham International Airport",
+    "city": "Fort Worth",
+    "state": "TX",
+    "lat": 32.819919,
+    "lon": -97.360818,
+    "elevation_ft": 710
+  },
+  {
+    "icao": "KFMN",
+    "name": "Four Corners Regional Airport",
+    "city": "Farmington",
+    "state": "NM",
+    "lat": 36.741199,
+    "lon": -108.230003,
+    "elevation_ft": 5506
+  },
+  {
+    "icao": "KFHR",
+    "name": "Friday Harbor Airport",
+    "city": "Friday Harbor",
+    "state": "WA",
+    "lat": 48.523654,
+    "lon": -123.024645,
+    "elevation_ft": 113
+  },
+  {
+    "icao": "KSUN",
+    "name": "Friedman Memorial Airport",
+    "city": "Hailey",
+    "state": "ID",
+    "lat": 43.50439835,
+    "lon": -114.2959976,
+    "elevation_ft": 5318
+  },
+  {
+    "icao": "KFTY",
+    "name": "Fulton County Airport Brown Field",
+    "city": "Atlanta",
+    "state": "GA",
+    "lat": 33.7790985107,
+    "lon": -84.5214004517,
+    "elevation_ft": 841
+  },
+  {
+    "icao": "KGNV",
+    "name": "Gainesville Regional Airport",
+    "city": "Gainesville",
+    "state": "FL",
+    "lat": 29.6900997162,
+    "lon": -82.2717971802,
+    "elevation_ft": 152
+  },
+  {
+    "icao": "KGUP",
+    "name": "Gallup Municipal Airport",
+    "city": "Gallup",
+    "state": "NM",
+    "lat": 35.511653,
+    "lon": -108.788166,
+    "elevation_ft": 6472
+  },
+  {
+    "icao": "KGCK",
+    "name": "Garden City Regional Airport",
+    "city": "Garden City",
+    "state": "KS",
+    "lat": 37.9275016785,
+    "lon": -100.723999023,
+    "elevation_ft": 2891
+  },
+  {
+    "icao": "KRIL",
+    "name": "Garfield County Regional Airport",
+    "city": "Rifle",
+    "state": "CO",
+    "lat": 39.526299,
+    "lon": -107.726997,
+    "elevation_ft": 5548
+  },
+  {
+    "icao": "KGYY",
+    "name": "Gary/Chicago International Airport",
+    "city": "Gary",
+    "state": "IN",
+    "lat": 41.617087,
+    "lon": -87.413206,
+    "elevation_ft": 591
+  },
+  {
+    "icao": "KPIA",
+    "name": "General Wayne A. Downing Peoria International Airport",
+    "city": "Peoria",
+    "state": "IL",
+    "lat": 40.663841,
+    "lon": -89.692631,
+    "elevation_ft": 660
+  },
+  {
+    "icao": "KWJF",
+    "name": "General William J Fox Airfield",
+    "city": "Lancaster",
+    "state": "CA",
+    "lat": 34.7411,
+    "lon": -118.219002,
+    "elevation_ft": 2351
+  },
+  {
+    "icao": "KGPI",
+    "name": "Glacier Park International Airport",
+    "city": "Kalispell",
+    "state": "MT",
+    "lat": 48.310501,
+    "lon": -114.255997,
+    "elevation_ft": 2977
+  },
+  {
+    "icao": "KGGW",
+    "name": "Glasgow Valley County Airport Wokal Field",
+    "city": "Glasgow",
+    "state": "MT",
+    "lat": 48.212502,
+    "lon": -106.614998,
+    "elevation_ft": 2296
+  },
+  {
+    "icao": "KFTK",
+    "name": "Godman Army Air Field",
+    "city": "Fort Knox",
+    "state": "KY",
+    "lat": 37.907100677500004,
+    "lon": -85.9720993042,
+    "elevation_ft": 756
+  },
+  {
+    "icao": "KGTR",
+    "name": "Golden Triangle Regional Airport",
+    "city": "Columbus/W Point/Starkville",
+    "state": "MS",
+    "lat": 33.450298,
+    "lon": -88.5914,
+    "elevation_ft": 264
+  },
+  {
+    "icao": "KGLD",
+    "name": "Goodland Municipal Airport",
+    "city": "Goodland",
+    "state": "KS",
+    "lat": 39.370701,
+    "lon": -101.699753,
+    "elevation_ft": 3656
+  },
+  {
+    "icao": "KGCN",
+    "name": "Grand Canyon National Park Airport",
+    "city": "Grand Canyon - Tusayan",
+    "state": "AZ",
+    "lat": 35.9524,
+    "lon": -112.147003,
+    "elevation_ft": 6609
+  },
+  {
+    "icao": "KRDR",
+    "name": "Grand Forks Air Force Base",
+    "city": "Grand Forks",
+    "state": "ND",
+    "lat": 47.961101532,
+    "lon": -97.4011993408,
+    "elevation_ft": 913
+  },
+  {
+    "icao": "KGFK",
+    "name": "Grand Forks International Airport",
+    "city": "Grand Forks",
+    "state": "ND",
+    "lat": 47.949299,
+    "lon": -97.176102,
+    "elevation_ft": 845
+  },
+  {
+    "icao": "KGJT",
+    "name": "Grand Junction Regional Airport",
+    "city": "Grand Junction",
+    "state": "CO",
+    "lat": 39.126663,
+    "lon": -108.529387,
+    "elevation_ft": 4858
+  },
+  {
+    "icao": "KCRE",
+    "name": "Grand Strand Airport",
+    "city": "North Myrtle Beach",
+    "state": "SC",
+    "lat": 33.8116989136,
+    "lon": -78.72389984130001,
+    "elevation_ft": 32
+  },
+  {
+    "icao": "KSVC",
+    "name": "Grant County Airport",
+    "city": "Silver City",
+    "state": "NM",
+    "lat": 32.636701,
+    "lon": -108.154736,
+    "elevation_ft": 5446
+  },
+  {
+    "icao": "KMWH",
+    "name": "Grant County International Airport",
+    "city": "Moses Lake",
+    "state": "WA",
+    "lat": 47.20769882,
+    "lon": -119.3199997,
+    "elevation_ft": 1189
+  },
+  {
+    "icao": "KGRF",
+    "name": "Gray Army Air Field",
+    "city": "Fort Lewis/Tacoma",
+    "state": "WA",
+    "lat": 47.07920074,
+    "lon": -122.5810013,
+    "elevation_ft": 300
+  },
+  {
+    "icao": "KGTF",
+    "name": "Great Falls International Airport",
+    "city": "Great Falls",
+    "state": "MT",
+    "lat": 47.481998,
+    "lon": -111.371002,
+    "elevation_ft": 3680
+  },
+  {
+    "icao": "KBGM",
+    "name": "Greater Binghamton/Edwin A Link field",
+    "city": "Binghamton",
+    "state": "NY",
+    "lat": 42.20869827,
+    "lon": -75.97979736,
+    "elevation_ft": 1636
+  },
+  {
+    "icao": "KIKK",
+    "name": "Greater Kankakee Airport",
+    "city": "Kankakee",
+    "state": "IL",
+    "lat": 41.07139968869999,
+    "lon": -87.8462982178,
+    "elevation_ft": 630
+  },
+  {
+    "icao": "KLWB",
+    "name": "Greenbrier Valley Airport",
+    "city": "Lewisburg",
+    "state": "WV",
+    "lat": 37.857914,
+    "lon": -80.400438,
+    "elevation_ft": 2302
+  },
+  {
+    "icao": "KGMU",
+    "name": "Greenville Downtown Airport",
+    "city": "Greenville",
+    "state": "SC",
+    "lat": 34.847903,
+    "lon": -82.350217,
+    "elevation_ft": 1048
+  },
+  {
+    "icao": "KGSP",
+    "name": "Greenville-Spartanburg International Airport",
+    "city": "Greenville/Greer/Spartanburg",
+    "state": "SC",
+    "lat": 34.895699,
+    "lon": -82.218903,
+    "elevation_ft": 964
+  },
+  {
+    "icao": "KGWO",
+    "name": "Greenwood–Leflore Airport",
+    "city": "Greenwood",
+    "state": "MS",
+    "lat": 33.495025,
+    "lon": -90.088204,
+    "elevation_ft": 162
+  },
+  {
+    "icao": "KRME",
+    "name": "Griffiss International Airport",
+    "city": "Rome",
+    "state": "NY",
+    "lat": 43.23379898,
+    "lon": -75.40699768,
+    "elevation_ft": 504
+  },
+  {
+    "icao": "KGUS",
+    "name": "Grissom Air Reserve Base",
+    "city": "Peru",
+    "state": "IN",
+    "lat": 40.648102,
+    "lon": -86.1521,
+    "elevation_ft": 812
+  },
+  {
+    "icao": "KGON",
+    "name": "Groton New London Airport",
+    "city": "Groton",
+    "state": "CT",
+    "lat": 41.330101,
+    "lon": -72.045097,
+    "elevation_ft": 9
+  },
+  {
+    "icao": "KGPT",
+    "name": "Gulfport Biloxi International Airport",
+    "city": "Gulfport",
+    "state": "MS",
+    "lat": 30.405582,
+    "lon": -89.069836,
+    "elevation_ft": 28
+  },
+  {
+    "icao": "KGUC",
+    "name": "Gunnison Crested Butte Regional Airport",
+    "city": "Gunnison",
+    "state": "CO",
+    "lat": 38.534672,
+    "lon": -106.934566,
+    "elevation_ft": 7680
+  },
+  {
+    "icao": "KGUY",
+    "name": "Guymon Municipal Airport",
+    "city": "Guymon",
+    "state": "OK",
+    "lat": 36.6851005554,
+    "lon": -101.508003235,
+    "elevation_ft": 3123
+  },
+  {
+    "icao": "KHGR",
+    "name": "Hagerstown Regional Richard A Henson Field",
+    "city": "Hagerstown",
+    "state": "MD",
+    "lat": 39.708771,
+    "lon": -77.728014,
+    "elevation_ft": 703
+  },
+  {
+    "icao": "KBHB",
+    "name": "Hancock County-Bar Harbor Airport",
+    "city": "Bar Harbor",
+    "state": "ME",
+    "lat": 44.45000076,
+    "lon": -68.3615036,
+    "elevation_ft": 83
+  },
+  {
+    "icao": "KMDT",
+    "name": "Harrisburg International Airport",
+    "city": "Harrisburg",
+    "state": "PA",
+    "lat": 40.192838,
+    "lon": -76.762333,
+    "elevation_ft": 310
+  },
+  {
+    "icao": "KHFD",
+    "name": "Hartford Brainard Airport",
+    "city": "Hartford",
+    "state": "CT",
+    "lat": 41.736698150635,
+    "lon": -72.649398803711,
+    "elevation_ft": 18
+  },
+  {
+    "icao": "KHBG",
+    "name": "Hattiesburg Bobby L Chain Municipal Airport",
+    "city": "Hattiesburg",
+    "state": "MS",
+    "lat": 31.26479912,
+    "lon": -89.25279999,
+    "elevation_ft": 151
+  },
+  {
+    "icao": "KPIB",
+    "name": "Hattiesburg Laurel Regional Airport",
+    "city": "Moselle",
+    "state": "MS",
+    "lat": 31.4671,
+    "lon": -89.337097,
+    "elevation_ft": 298
+  },
+  {
+    "icao": "KHVR",
+    "name": "Havre City County Airport",
+    "city": "Havre",
+    "state": "MT",
+    "lat": 48.541387,
+    "lon": -109.762859,
+    "elevation_ft": 2591
+  },
+  {
+    "icao": "KHYS",
+    "name": "Hays Regional Airport",
+    "city": "Hays",
+    "state": "KS",
+    "lat": 38.844521,
+    "lon": -99.273148,
+    "elevation_ft": 1999
+  },
+  {
+    "icao": "KFAR",
+    "name": "Hector International Airport",
+    "city": "Fargo",
+    "state": "ND",
+    "lat": 46.9207,
+    "lon": -96.815804,
+    "elevation_ft": 902
+  },
+  {
+    "icao": "KHLN",
+    "name": "Helena Regional Airport",
+    "city": "Helena",
+    "state": "MT",
+    "lat": 46.6068,
+    "lon": -111.983002,
+    "elevation_ft": 3877
+  },
+  {
+    "icao": "KFSI",
+    "name": "Henry Post Army Air Field",
+    "city": "Fort Sill",
+    "state": "OK",
+    "lat": 34.649799,
+    "lon": -98.402199,
+    "elevation_ft": 1189
+  },
+  {
+    "icao": "KHKY",
+    "name": "Hickory Regional Airport",
+    "city": "Hickory",
+    "state": "NC",
+    "lat": 35.74110031,
+    "lon": -81.38950348,
+    "elevation_ft": 1190
+  },
+  {
+    "icao": "KHIF",
+    "name": "Hill Air Force Base",
+    "city": "Ogden",
+    "state": "UT",
+    "lat": 41.12403,
+    "lon": -111.973086,
+    "elevation_ft": 4789
+  },
+  {
+    "icao": "KHXD",
+    "name": "Hilton Head Airport",
+    "city": "Hilton Head Island",
+    "state": "SC",
+    "lat": 32.2244,
+    "lon": -80.697502,
+    "elevation_ft": 19
+  },
+  {
+    "icao": "KHBR",
+    "name": "Hobart Regional Airport",
+    "city": "Hobart",
+    "state": "OK",
+    "lat": 34.991317,
+    "lon": -99.051313,
+    "elevation_ft": 1563
+  },
+  {
+    "icao": "KHMN",
+    "name": "Holloman Air Force Base",
+    "city": "Alamogordo",
+    "state": "NM",
+    "lat": 32.852501,
+    "lon": -106.107002,
+    "elevation_ft": 4093
+  },
+  {
+    "icao": "KHST",
+    "name": "Homestead Air Reserve Base",
+    "city": "Homestead",
+    "state": "FL",
+    "lat": 25.4886,
+    "lon": -80.383598,
+    "elevation_ft": 5
+  },
+  {
+    "icao": "KXTA",
+    "name": "Homey (Area 51) Airport",
+    "city": "Groom Lake",
+    "state": "NV",
+    "lat": 37.23500061035156,
+    "lon": -115.81099700927734,
+    "elevation_ft": 4462
+  },
+  {
+    "icao": "KCMX",
+    "name": "Houghton County Memorial Airport",
+    "city": "Hancock",
+    "state": "MI",
+    "lat": 47.168399810791016,
+    "lon": -88.48909759521484,
+    "elevation_ft": 1095
+  },
+  {
+    "icao": "KHUL",
+    "name": "Houlton International Airport",
+    "city": "Houlton",
+    "state": "ME",
+    "lat": 46.1231002808,
+    "lon": -67.792098999,
+    "elevation_ft": 489
+  },
+  {
+    "icao": "KLND",
+    "name": "Hunt Field",
+    "city": "Lander",
+    "state": "WY",
+    "lat": 42.815201,
+    "lon": -108.730003,
+    "elevation_ft": 5586
+  },
+  {
+    "icao": "KSVN",
+    "name": "Hunter Army Air Field",
+    "city": "Savannah",
+    "state": "GA",
+    "lat": 32.00999832,
+    "lon": -81.14569855,
+    "elevation_ft": 41
+  },
+  {
+    "icao": "KHSV",
+    "name": "Huntsville International Airport",
+    "city": "Huntsville",
+    "state": "AL",
+    "lat": 34.636244,
+    "lon": -86.774378,
+    "elevation_ft": 629
+  },
+  {
+    "icao": "KUTS",
+    "name": "Huntsville Regional Airport",
+    "city": "Huntsville",
+    "state": "TX",
+    "lat": 30.7469005585,
+    "lon": -95.5871963501,
+    "elevation_ft": 363
+  },
+  {
+    "icao": "KHRT",
+    "name": "Hurlburt Field",
+    "city": "Mary Esther",
+    "state": "FL",
+    "lat": 30.427799,
+    "lon": -86.689301,
+    "elevation_ft": 38
+  },
+  {
+    "icao": "KHON",
+    "name": "Huron Regional Airport",
+    "city": "Huron",
+    "state": "SD",
+    "lat": 44.385201,
+    "lon": -98.2285,
+    "elevation_ft": 1289
+  },
+  {
+    "icao": "KHUT",
+    "name": "Hutchinson Municipal Airport",
+    "city": "Hutchinson",
+    "state": "KS",
+    "lat": 38.0654983521,
+    "lon": -97.86060333250002,
+    "elevation_ft": 1543
+  },
+  {
+    "icao": "KIDA",
+    "name": "Idaho Falls Regional Airport",
+    "city": "Idaho Falls",
+    "state": "ID",
+    "lat": 43.514599,
+    "lon": -112.070999,
+    "elevation_ft": 4744
+  },
+  {
+    "icao": "KBDR",
+    "name": "Igor I Sikorsky Memorial Airport",
+    "city": "Bridgeport",
+    "state": "CT",
+    "lat": 41.163502,
+    "lon": -73.126198,
+    "elevation_ft": 9
+  },
+  {
+    "icao": "KIPL",
+    "name": "Imperial County Airport",
+    "city": "Imperial",
+    "state": "CA",
+    "lat": 32.83539,
+    "lon": -115.574026,
+    "elevation_ft": -54
+  },
+  {
+    "icao": "KITH",
+    "name": "Ithaca Tompkins Regional Airport",
+    "city": "Ithaca",
+    "state": "NY",
+    "lat": 42.49100112915039,
+    "lon": -76.4583969116211,
+    "elevation_ft": 1099
+  },
+  {
+    "icao": "KBPT",
+    "name": "Jack Brooks Regional Airport",
+    "city": "Beaumont/Port Arthur",
+    "state": "TX",
+    "lat": 29.9508,
+    "lon": -94.020699,
+    "elevation_ft": 15
+  },
+  {
+    "icao": "KCEC",
+    "name": "Jack Mc Namara Field Airport",
+    "city": "Crescent City",
+    "state": "CA",
+    "lat": 41.778929,
+    "lon": -124.236403,
+    "elevation_ft": 61
+  },
+  {
+    "icao": "KHHR",
+    "name": "Jack Northrop Field Hawthorne Municipal Airport",
+    "city": "Hawthorne",
+    "state": "CA",
+    "lat": 33.922798,
+    "lon": -118.334999,
+    "elevation_ft": 66
+  },
+  {
+    "icao": "KJXN",
+    "name": "Jackson County Airport/Reynolds Field",
+    "city": "Jackson",
+    "state": "MI",
+    "lat": 42.260509,
+    "lon": -84.463019,
+    "elevation_ft": 1001
+  },
+  {
+    "icao": "KJAC",
+    "name": "Jackson Hole Airport",
+    "city": "Jackson",
+    "state": "WY",
+    "lat": 43.6073,
+    "lon": -110.737999,
+    "elevation_ft": 6451
+  },
+  {
+    "icao": "KJAN",
+    "name": "Jackson-Medgar Wiley Evers International Airport",
+    "city": "Jackson",
+    "state": "MS",
+    "lat": 32.311199,
+    "lon": -90.075897,
+    "elevation_ft": 346
+  },
+  {
+    "icao": "KCRG",
+    "name": "Jacksonville Executive at Craig Airport",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.3362998962,
+    "lon": -81.51439666750001,
+    "elevation_ft": 41
+  },
+  {
+    "icao": "KNIP",
+    "name": "Jacksonville Naval Air Station (Towers Field)",
+    "city": "Jacksonville",
+    "state": "FL",
+    "lat": 30.2358,
+    "lon": -81.680603,
+    "elevation_ft": 21
+  },
+  {
+    "icao": "KTRM",
+    "name": "Jacqueline Cochran Regional Airport",
+    "city": "Palm Springs",
+    "state": "CA",
+    "lat": 33.62670135498,
+    "lon": -116.16000366211,
+    "elevation_ft": -115
+  },
+  {
+    "icao": "KDAY",
+    "name": "James M. Cox Dayton International Airport",
+    "city": "Dayton",
+    "state": "OH",
+    "lat": 39.902401,
+    "lon": -84.219398,
+    "elevation_ft": 1009
+  },
+  {
+    "icao": "KJMS",
+    "name": "Jamestown Regional Airport",
+    "city": "Jamestown",
+    "state": "ND",
+    "lat": 46.92969894,
+    "lon": -98.67819977,
+    "elevation_ft": 1500
+  },
+  {
+    "icao": "KCUB",
+    "name": "Jim Hamilton L.B. Owens Airport",
+    "city": "Columbia",
+    "state": "SC",
+    "lat": 33.970500946,
+    "lon": -80.9952011108,
+    "elevation_ft": 193
+  },
+  {
+    "icao": "KJST",
+    "name": "John Murtha Johnstown Cambria County Airport",
+    "city": "Johnstown",
+    "state": "PA",
+    "lat": 40.31610107421875,
+    "lon": -78.83390045166016,
+    "elevation_ft": 2284
+  },
+  {
+    "icao": "KJNX",
+    "name": "Johnston Regional Airport",
+    "city": "Smithfield",
+    "state": "NC",
+    "lat": 35.540901,
+    "lon": -78.390297,
+    "elevation_ft": 164
+  },
+  {
+    "icao": "KADW",
+    "name": "Joint Base Andrews",
+    "city": "Camp Springs",
+    "state": "MD",
+    "lat": 38.810799,
+    "lon": -76.866997,
+    "elevation_ft": 280
+  },
+  {
+    "icao": "KJBR",
+    "name": "Jonesboro Municipal Airport",
+    "city": "Jonesboro",
+    "state": "AR",
+    "lat": 35.83169937133789,
+    "lon": -90.64640045166016,
+    "elevation_ft": 262
+  },
+  {
+    "icao": "KJLN",
+    "name": "Joplin Regional Airport",
+    "city": "Joplin",
+    "state": "MO",
+    "lat": 37.151798,
+    "lon": -94.498299,
+    "elevation_ft": 981
+  },
+  {
+    "icao": "KTWF",
+    "name": "Joslin Field Magic Valley Regional Airport",
+    "city": "Twin Falls",
+    "state": "ID",
+    "lat": 42.4818,
+    "lon": -114.487999,
+    "elevation_ft": 4154
+  },
+  {
+    "icao": "KJKL",
+    "name": "Julian Carroll Airport",
+    "city": "Jackson",
+    "state": "KY",
+    "lat": 37.59389877319336,
+    "lon": -83.31729888916016,
+    "elevation_ft": 1381
+  },
+  {
+    "icao": "KAZO",
+    "name": "Kalamazoo/Battle Creek International Airport",
+    "city": "Kalamazoo",
+    "state": "MI",
+    "lat": 42.232105,
+    "lon": -85.549637,
+    "elevation_ft": 874
+  },
+  {
+    "icao": "KOFK",
+    "name": "Karl Stefan Memorial Airport",
+    "city": "Norfolk",
+    "state": "NE",
+    "lat": 41.985500335693,
+    "lon": -97.435096740723,
+    "elevation_ft": 1573
+  },
+  {
+    "icao": "KEAR",
+    "name": "Kearney Regional Airport",
+    "city": "Kearney",
+    "state": "NE",
+    "lat": 40.727001,
+    "lon": -99.006798,
+    "elevation_ft": 2131
+  },
+  {
+    "icao": "KBIX",
+    "name": "Keesler Air Force Base",
+    "city": "Biloxi",
+    "state": "MS",
+    "lat": 30.4104003906,
+    "lon": -88.92440032959999,
+    "elevation_ft": 33
+  },
+  {
+    "icao": "KENW",
+    "name": "Kenosha Regional Airport",
+    "city": "Kenosha",
+    "state": "WI",
+    "lat": 42.59569931,
+    "lon": -87.92780304,
+    "elevation_ft": 742
+  },
+  {
+    "icao": "KMEI",
+    "name": "Key Field / Meridian Regional Airport",
+    "city": "Meridian",
+    "state": "MS",
+    "lat": 32.3326,
+    "lon": -88.7519,
+    "elevation_ft": 297
+  },
+  {
+    "icao": "KEYW",
+    "name": "Key West International Airport",
+    "city": "Key West",
+    "state": "FL",
+    "lat": 24.556119,
+    "lon": -81.759579,
+    "elevation_ft": 3
+  },
+  {
+    "icao": "KGRK",
+    "name": "Killeen Regional Airport / Robert Gray Army Airfield",
+    "city": "Fort Cavazos",
+    "state": "TX",
+    "lat": 31.0672,
+    "lon": -97.828903,
+    "elevation_ft": 1015
+  },
+  {
+    "icao": "KJCT",
+    "name": "Kimble County Airport",
+    "city": "Junction",
+    "state": "TX",
+    "lat": 30.5112991333,
+    "lon": -99.7634963989,
+    "elevation_ft": 1749
+  },
+  {
+    "icao": "KBFI",
+    "name": "King County International Airport - Boeing Field",
+    "city": "Seattle",
+    "state": "WA",
+    "lat": 47.527042,
+    "lon": -122.29995,
+    "elevation_ft": 21
+  },
+  {
+    "icao": "KIGM",
+    "name": "Kingman Airport",
+    "city": "Kingman",
+    "state": "AZ",
+    "lat": 35.259499,
+    "lon": -113.938004,
+    "elevation_ft": 3449
+  },
+  {
+    "icao": "KNQI",
+    "name": "Kingsville Naval Air Station",
+    "city": "Kingsville",
+    "state": "TX",
+    "lat": 27.5072002411,
+    "lon": -97.8097000122,
+    "elevation_ft": 50
+  },
+  {
+    "icao": "KISO",
+    "name": "Kinston Regional Jetport At Stallings Field",
+    "city": "Kinston",
+    "state": "NC",
+    "lat": 35.331401825,
+    "lon": -77.60880279540001,
+    "elevation_ft": 93
+  },
+  {
+    "icao": "KIRK",
+    "name": "Kirksville Regional Airport",
+    "city": "Kirksville",
+    "state": "MO",
+    "lat": 40.09349822998047,
+    "lon": -92.5448989868164,
+    "elevation_ft": 966
+  },
+  {
+    "icao": "KISM",
+    "name": "Kissimmee Gateway Airport",
+    "city": "Orlando",
+    "state": "FL",
+    "lat": 28.2898006439,
+    "lon": -81.4371032715,
+    "elevation_ft": 82
+  },
+  {
+    "icao": "KRKD",
+    "name": "Knox County Regional Airport",
+    "city": "Rockland",
+    "state": "ME",
+    "lat": 44.060101,
+    "lon": -69.099197,
+    "elevation_ft": 56
+  },
+  {
+    "icao": "KOLF",
+    "name": "L M Clayton Airport",
+    "city": "Wolf Point",
+    "state": "MT",
+    "lat": 48.094501,
+    "lon": -105.574997,
+    "elevation_ft": 1986
+  },
+  {
+    "icao": "KLSE",
+    "name": "La Crosse Regional Airport",
+    "city": "La Crosse",
+    "state": "WI",
+    "lat": 43.879002,
+    "lon": -91.256699,
+    "elevation_ft": 655
+  },
+  {
+    "icao": "KSKF",
+    "name": "Lackland Air Force Base",
+    "city": "San Antonio",
+    "state": "TX",
+    "lat": 29.38419914,
+    "lon": -98.58110046,
+    "elevation_ft": 691
+  },
+  {
+    "icao": "KLFT",
+    "name": "Lafayette Regional Airport",
+    "city": "Lafayette",
+    "state": "LA",
+    "lat": 30.205299,
+    "lon": -91.987602,
+    "elevation_ft": 42
+  },
+  {
+    "icao": "KLCH",
+    "name": "Lake Charles Regional Airport",
+    "city": "Lake Charles",
+    "state": "LA",
+    "lat": 30.126100540161133,
+    "lon": -93.22329711914062,
+    "elevation_ft": 15
+  },
+  {
+    "icao": "KW63",
+    "name": "Lake Country Regional Airport",
+    "city": "Clarksville",
+    "state": "VA",
+    "lat": 36.595798,
+    "lon": -78.560097,
+    "elevation_ft": 421
+  },
+  {
+    "icao": "KSME",
+    "name": "Lake Cumberland Regional Airport",
+    "city": "Somerset",
+    "state": "KY",
+    "lat": 37.053398132299996,
+    "lon": -84.6158981323,
+    "elevation_ft": 927
+  },
+  {
+    "icao": "KHII",
+    "name": "Lake Havasu City Airport",
+    "city": "Lake Havasu City",
+    "state": "AZ",
+    "lat": 34.570506,
+    "lon": -114.357745,
+    "elevation_ft": 783
+  },
+  {
+    "icao": "KTVL",
+    "name": "Lake Tahoe Airport",
+    "city": "South Lake Tahoe",
+    "state": "CA",
+    "lat": 38.89390182495117,
+    "lon": -119.99500274658203,
+    "elevation_ft": 6264
+  },
+  {
+    "icao": "KNEW",
+    "name": "Lakefront Airport",
+    "city": "New Orleans",
+    "state": "LA",
+    "lat": 30.042400360107,
+    "lon": -90.028297424316,
+    "elevation_ft": 8
+  },
+  {
+    "icao": "KNEL",
+    "name": "Lakehurst Maxfield Field Airport",
+    "city": "Lakehurst",
+    "state": "NJ",
+    "lat": 40.03329849,
+    "lon": -74.353302,
+    "elevation_ft": 101
+  },
+  {
+    "icao": "KLAL",
+    "name": "Lakeland Linder International Airport",
+    "city": "Lakeland",
+    "state": "FL",
+    "lat": 27.989267,
+    "lon": -82.020715,
+    "elevation_ft": 142
+  },
+  {
+    "icao": "KLNS",
+    "name": "Lancaster Airport",
+    "city": "Lancaster",
+    "state": "PA",
+    "lat": 40.121700286865234,
+    "lon": -76.29609680175781,
+    "elevation_ft": 403
+  },
+  {
+    "icao": "KLFI",
+    "name": "Langley Air Force Base",
+    "city": "Hampton",
+    "state": "VA",
+    "lat": 37.082901,
+    "lon": -76.360497,
+    "elevation_ft": 11
+  },
+  {
+    "icao": "KLAR",
+    "name": "Laramie Regional Airport",
+    "city": "Laramie",
+    "state": "WY",
+    "lat": 41.31209945678711,
+    "lon": -105.67500305175781,
+    "elevation_ft": 7284
+  },
+  {
+    "icao": "KLRD",
+    "name": "Laredo International Airport",
+    "city": "Laredo",
+    "state": "TX",
+    "lat": 27.5438,
+    "lon": -99.461601,
+    "elevation_ft": 508
+  },
+  {
+    "icao": "KLRU",
+    "name": "Las Cruces International Airport",
+    "city": "Las Cruces",
+    "state": "NM",
+    "lat": 32.289398,
+    "lon": -106.921997,
+    "elevation_ft": 4456
+  },
+  {
+    "icao": "KLVS",
+    "name": "Las Vegas Municipal Airport",
+    "city": "Las Vegas",
+    "state": "NM",
+    "lat": 35.654202,
+    "lon": -105.141998,
+    "elevation_ft": 6877
+  },
+  {
+    "icao": "KDLF",
+    "name": "Laughlin Air Force Base",
+    "city": "Del Rio",
+    "state": "TX",
+    "lat": 29.359501,
+    "lon": -100.778002,
+    "elevation_ft": 1082
+  },
+  {
+    "icao": "KIFP",
+    "name": "Laughlin Bullhead International Airport",
+    "city": "Bullhead City",
+    "state": "AZ",
+    "lat": 35.154726,
+    "lon": -114.559322,
+    "elevation_ft": 701
+  },
+  {
+    "icao": "KBED",
+    "name": "Laurence G Hanscom Field",
+    "city": "Bedford",
+    "state": "MA",
+    "lat": 42.470001,
+    "lon": -71.289001,
+    "elevation_ft": 133
+  },
+  {
+    "icao": "KLWM",
+    "name": "Lawrence Municipal Airport",
+    "city": "Lawrence",
+    "state": "MA",
+    "lat": 42.717201232899995,
+    "lon": -71.1233978271,
+    "elevation_ft": 148
+  },
+  {
+    "icao": "KLSF",
+    "name": "Lawson Army Air Field",
+    "city": "Fort Benning",
+    "state": "GA",
+    "lat": 32.332546,
+    "lon": -84.988003,
+    "elevation_ft": 232
+  },
+  {
+    "icao": "KLAW",
+    "name": "Lawton Fort Sill Regional Airport",
+    "city": "Lawton",
+    "state": "OK",
+    "lat": 34.567699,
+    "lon": -98.416603,
+    "elevation_ft": 1110
+  },
+  {
+    "icao": "KHOB",
+    "name": "Lea County Regional Airport",
+    "city": "Hobbs",
+    "state": "NM",
+    "lat": 32.6875,
+    "lon": -103.217003,
+    "elevation_ft": 3661
+  },
+  {
+    "icao": "KLEB",
+    "name": "Lebanon Municipal Airport",
+    "city": "Lebanon",
+    "state": "NH",
+    "lat": 43.626098632799994,
+    "lon": -72.30419921880001,
+    "elevation_ft": 603
+  },
+  {
+    "icao": "KLEE",
+    "name": "Leesburg International Airport",
+    "city": "Leesburg",
+    "state": "FL",
+    "lat": 28.82309914,
+    "lon": -81.80870056,
+    "elevation_ft": 76
+  },
+  {
+    "icao": "KABE",
+    "name": "Lehigh Valley International Airport",
+    "city": "Allentown/Bethlehem",
+    "state": "PA",
+    "lat": 40.651773,
+    "lon": -75.442797,
+    "elevation_ft": 393
+  },
+  {
+    "icao": "KSMN",
+    "name": "Lemhi County Airport",
+    "city": "Salmon",
+    "state": "ID",
+    "lat": 45.122233,
+    "lon": -113.88196,
+    "elevation_ft": 4043
+  },
+  {
+    "icao": "KNLC",
+    "name": "Lemoore Naval Air Station (Reeves Field) Airport",
+    "city": "Lemoore",
+    "state": "CA",
+    "lat": 36.33300018,
+    "lon": -119.9520035,
+    "elevation_ft": 232
+  },
+  {
+    "icao": "KLWS",
+    "name": "Lewiston Nez Perce County Airport",
+    "city": "Lewiston",
+    "state": "ID",
+    "lat": 46.3745002746582,
+    "lon": -117.01499938964844,
+    "elevation_ft": 1442
+  },
+  {
+    "icao": "KLWT",
+    "name": "Lewistown Municipal Airport",
+    "city": "Lewistown",
+    "state": "MT",
+    "lat": 47.048429,
+    "lon": -109.466143,
+    "elevation_ft": 4170
+  },
+  {
+    "icao": "KLBL",
+    "name": "Liberal Mid-America Regional Airport",
+    "city": "Liberal",
+    "state": "KS",
+    "lat": 37.0442009,
+    "lon": -100.9599991,
+    "elevation_ft": 2885
+  },
+  {
+    "icao": "KLNK",
+    "name": "Lincoln Airport",
+    "city": "Lincoln",
+    "state": "NE",
+    "lat": 40.844882,
+    "lon": -96.76178,
+    "elevation_ft": 1219
+  },
+  {
+    "icao": "KLRF",
+    "name": "Little Rock Air Force Base",
+    "city": "Jacksonville",
+    "state": "AR",
+    "lat": 34.916900634799994,
+    "lon": -92.14969635010002,
+    "elevation_ft": 311
+  },
+  {
+    "icao": "KLGU",
+    "name": "Logan-Cache Airport",
+    "city": "Logan",
+    "state": "UT",
+    "lat": 41.7911987305,
+    "lon": -111.851997375,
+    "elevation_ft": 4457
+  },
+  {
+    "icao": "KLOZ",
+    "name": "London-Corbin Airport/Magee Field",
+    "city": "London",
+    "state": "KY",
+    "lat": 37.0821990967,
+    "lon": -84.08489990230001,
+    "elevation_ft": 1212
+  },
+  {
+    "icao": "KISP",
+    "name": "Long Island MacArthur Airport",
+    "city": "Islip",
+    "state": "NY",
+    "lat": 40.796324,
+    "lon": -73.101703,
+    "elevation_ft": 99
+  },
+  {
+    "icao": "KSLI",
+    "name": "Los Alamitos Army Air Field",
+    "city": "Los Alamitos",
+    "state": "CA",
+    "lat": 33.790864,
+    "lon": -118.050342,
+    "elevation_ft": 32
+  },
+  {
+    "icao": "KLBB",
+    "name": "Lubbock Preston Smith International Airport",
+    "city": "Lubbock",
+    "state": "TX",
+    "lat": 33.663601,
+    "lon": -101.822998,
+    "elevation_ft": 3282
+  },
+  {
+    "icao": "KLUF",
+    "name": "Luke Air Force Base",
+    "city": "Glendale",
+    "state": "AZ",
+    "lat": 33.535,
+    "lon": -112.383003,
+    "elevation_ft": 1085
+  },
+  {
+    "icao": "KLBT",
+    "name": "Lumberton Regional Airport",
+    "city": "Lumberton",
+    "state": "NC",
+    "lat": 34.610773,
+    "lon": -79.05943,
+    "elevation_ft": 126
+  },
+  {
+    "icao": "KLYH",
+    "name": "Lynchburg Regional Airport - Preston Glenn Field",
+    "city": "Lynchburg",
+    "state": "VA",
+    "lat": 37.326698,
+    "lon": -79.200401,
+    "elevation_ft": 938
+  },
+  {
+    "icao": "KMCF",
+    "name": "MacDill Air Force Base",
+    "city": "Tampa",
+    "state": "FL",
+    "lat": 27.8493,
+    "lon": -82.521202,
+    "elevation_ft": 14
+  },
+  {
+    "icao": "KMMH",
+    "name": "Mammoth Yosemite Airport",
+    "city": "Mammoth Lakes",
+    "state": "CA",
+    "lat": 37.625381,
+    "lon": -118.84306,
+    "elevation_ft": 7135
+  },
+  {
+    "icao": "KHEF",
+    "name": "Manassas Regional Airport/Harry P. Davis Field",
+    "city": "Manassas",
+    "state": "VA",
+    "lat": 38.721401,
+    "lon": -77.515404,
+    "elevation_ft": 192
+  },
+  {
+    "icao": "KMHT",
+    "name": "Manchester-Boston Regional Airport",
+    "city": "Manchester",
+    "state": "NH",
+    "lat": 42.932598,
+    "lon": -71.435699,
+    "elevation_ft": 266
+  },
+  {
+    "icao": "KMHK",
+    "name": "Manhattan Regional Airport",
+    "city": "Manhattan",
+    "state": "KS",
+    "lat": 39.14099884033203,
+    "lon": -96.6707992553711,
+    "elevation_ft": 1057
+  },
+  {
+    "icao": "KMFD",
+    "name": "Mansfield Lahm Regional Airport",
+    "city": "Mansfield",
+    "state": "OH",
+    "lat": 40.82139968869999,
+    "lon": -82.5166015625,
+    "elevation_ft": 1297
+  },
+  {
+    "icao": "KRIV",
+    "name": "March Air Reserve Base",
+    "city": "Riverside",
+    "state": "CA",
+    "lat": 33.880699,
+    "lon": -117.259003,
+    "elevation_ft": 1536
+  },
+  {
+    "icao": "KSAW",
+    "name": "Marquette/Sawyer International Airport",
+    "city": "Gwinn",
+    "state": "MI",
+    "lat": 46.351498,
+    "lon": -87.395884,
+    "elevation_ft": 1221
+  },
+  {
+    "icao": "KFRI",
+    "name": "Marshall Army Air Field",
+    "city": "Fort Riley (Junction City)",
+    "state": "KS",
+    "lat": 39.053021,
+    "lon": -96.764202,
+    "elevation_ft": 1065
+  },
+  {
+    "icao": "KMTN",
+    "name": "Martin State Airport",
+    "city": "Baltimore",
+    "state": "MD",
+    "lat": 39.325699,
+    "lon": -76.413803,
+    "elevation_ft": 21
+  },
+  {
+    "icao": "KMCW",
+    "name": "Mason City Municipal Airport",
+    "city": "Mason City",
+    "state": "IA",
+    "lat": 43.159801,
+    "lon": -93.329716,
+    "elevation_ft": 1213
+  },
+  {
+    "icao": "KMSS",
+    "name": "Massena International Airport Richards Field",
+    "city": "Massena",
+    "state": "NY",
+    "lat": 44.936157,
+    "lon": -74.844304,
+    "elevation_ft": 215
+  },
+  {
+    "icao": "KMXF",
+    "name": "Maxwell Air Force Base",
+    "city": "Montgomery",
+    "state": "AL",
+    "lat": 32.3829,
+    "lon": -86.365799,
+    "elevation_ft": 171
+  },
+  {
+    "icao": "KMBS",
+    "name": "MBS International Airport",
+    "city": "Freeland",
+    "state": "MI",
+    "lat": 43.533181,
+    "lon": -84.083104,
+    "elevation_ft": 668
+  },
+  {
+    "icao": "KMLC",
+    "name": "Mc Alester Regional Airport",
+    "city": "Mc Alester",
+    "state": "OK",
+    "lat": 34.882401,
+    "lon": -95.783501,
+    "elevation_ft": 770
+  },
+  {
+    "icao": "KMMT",
+    "name": "Mc Entire Joint National Guard Base",
+    "city": "Eastover",
+    "state": "SC",
+    "lat": 33.92079926,
+    "lon": -80.80130005,
+    "elevation_ft": 254
+  },
+  {
+    "icao": "KWRI",
+    "name": "Mc Guire Air Force Base",
+    "city": "Wrightstown",
+    "state": "NJ",
+    "lat": 40.0155983,
+    "lon": -74.59169769,
+    "elevation_ft": 131
+  },
+  {
+    "icao": "KMFE",
+    "name": "McAllen Miller International Airport",
+    "city": "McAllen",
+    "state": "TX",
+    "lat": 26.176141,
+    "lon": -98.237965,
+    "elevation_ft": 107
+  },
+  {
+    "icao": "KNCA",
+    "name": "MCAS New River / McCutcheon Field",
+    "city": "Jacksonville",
+    "state": "NC",
+    "lat": 34.708401,
+    "lon": -77.439697,
+    "elevation_ft": 26
+  },
+  {
+    "icao": "KMYL",
+    "name": "McCall Municipal Airport",
+    "city": "McCall",
+    "state": "ID",
+    "lat": 44.888837,
+    "lon": -116.101112,
+    "elevation_ft": 5024
+  },
+  {
+    "icao": "KTCM",
+    "name": "McChord Air Force Base",
+    "city": "Tacoma",
+    "state": "WA",
+    "lat": 47.137699,
+    "lon": -122.475998,
+    "elevation_ft": 322
+  },
+  {
+    "icao": "KMCC",
+    "name": "McClellan Airfield",
+    "city": "Sacramento",
+    "state": "CA",
+    "lat": 38.667599,
+    "lon": -121.401001,
+    "elevation_ft": 77
+  },
+  {
+    "icao": "KCRQ",
+    "name": "McClellan-Palomar Airport",
+    "city": "Carlsbad",
+    "state": "CA",
+    "lat": 33.1283,
+    "lon": -117.279999,
+    "elevation_ft": 331
+  },
+  {
+    "icao": "KMCB",
+    "name": "McComb-Pike County Airport / John E Lewis Field",
+    "city": "McComb",
+    "state": "MS",
+    "lat": 31.178499,
+    "lon": -90.471901,
+    "elevation_ft": 413
+  },
+  {
+    "icao": "KIAB",
+    "name": "McConnell Air Force Base",
+    "city": "Wichita",
+    "state": "KS",
+    "lat": 37.621899,
+    "lon": -97.268204,
+    "elevation_ft": 1371
+  },
+  {
+    "icao": "KMCK",
+    "name": "McCook Ben Nelson Regional Airport",
+    "city": "McCook",
+    "state": "NE",
+    "lat": 40.207787,
+    "lon": -100.592794,
+    "elevation_ft": 2583
+  },
+  {
+    "icao": "KMKL",
+    "name": "McKellar-Sipes Regional Airport",
+    "city": "Jackson",
+    "state": "TN",
+    "lat": 35.599899,
+    "lon": -88.915604,
+    "elevation_ft": 434
+  },
+  {
+    "icao": "KMMV",
+    "name": "McMinnville Municipal Airport",
+    "city": "McMinnville",
+    "state": "OR",
+    "lat": 45.194401,
+    "lon": -123.136002,
+    "elevation_ft": 163
+  },
+  {
+    "icao": "KBFL",
+    "name": "Meadows Field",
+    "city": "Bakersfield",
+    "state": "CA",
+    "lat": 35.433601,
+    "lon": -119.056999,
+    "elevation_ft": 510
+  },
+  {
+    "icao": "KMLB",
+    "name": "Melbourne Orlando International Airport",
+    "city": "Melbourne",
+    "state": "FL",
+    "lat": 28.102009,
+    "lon": -80.641088,
+    "elevation_ft": 33
+  },
+  {
+    "icao": "KHOT",
+    "name": "Memorial Field Airport",
+    "city": "Hot Springs",
+    "state": "AR",
+    "lat": 34.4788,
+    "lon": -93.096262,
+    "elevation_ft": 540
+  }
+]

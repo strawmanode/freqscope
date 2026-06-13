@@ -1,0 +1,57 @@
+{
+  "KATL": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KORD": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KLAX": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KJFK": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KSFO": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KDFW": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KDEN": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KLAS": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KMIA": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KSEA": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  },
+  "KMEM": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER"
+  }
+}

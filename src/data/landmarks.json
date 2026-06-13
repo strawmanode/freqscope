@@ -1,0 +1,142 @@
+[
+  {
+    "id": "pentagon",
+    "name": "PENTAGON",
+    "lat": 38.8719,
+    "lon": -77.0563,
+    "category": "military"
+  },
+  {
+    "id": "white-house",
+    "name": "WHITE HOUSE",
+    "lat": 38.8977,
+    "lon": -77.0365,
+    "category": "presidential"
+  },
+  {
+    "id": "us-capitol",
+    "name": "US CAPITOL",
+    "lat": 38.8899,
+    "lon": -77.0091,
+    "category": "government"
+  },
+  {
+    "id": "lincoln-memorial",
+    "name": "LINCOLN MEM",
+    "lat": 38.8893,
+    "lon": -77.0502,
+    "category": "landmark"
+  },
+  {
+    "id": "cia-hq",
+    "name": "CIA HQ",
+    "lat": 38.9517,
+    "lon": -77.1467,
+    "category": "military"
+  },
+  {
+    "id": "camp-david",
+    "name": "CAMP DAVID",
+    "lat": 39.648,
+    "lon": -77.4668,
+    "category": "presidential"
+  },
+  {
+    "id": "norfolk-naval",
+    "name": "NORFOLK NAVSTA",
+    "lat": 36.9465,
+    "lon": -76.328,
+    "category": "military"
+  },
+  {
+    "id": "mar-a-lago",
+    "name": "MAR-A-LAGO",
+    "lat": 26.677,
+    "lon": -80.037,
+    "category": "presidential"
+  },
+  {
+    "id": "kennedy-space-center",
+    "name": "KENNEDY SPC CTR",
+    "lat": 28.5729,
+    "lon": -80.649,
+    "category": "landmark"
+  },
+  {
+    "id": "statue-of-liberty",
+    "name": "STATUE OF LIBERTY",
+    "lat": 40.6892,
+    "lon": -74.0445,
+    "category": "landmark"
+  },
+  {
+    "id": "un-headquarters",
+    "name": "UN HQ",
+    "lat": 40.7489,
+    "lon": -73.968,
+    "category": "government"
+  },
+  {
+    "id": "one-wtc",
+    "name": "ONE WTC",
+    "lat": 40.7127,
+    "lon": -74.0134,
+    "category": "landmark"
+  },
+  {
+    "id": "cheyenne-mountain",
+    "name": "CHEYENNE MTN",
+    "lat": 38.745,
+    "lon": -104.846,
+    "category": "military"
+  },
+  {
+    "id": "area-51",
+    "name": "AREA 51",
+    "lat": 37.235,
+    "lon": -115.811,
+    "category": "military"
+  },
+  {
+    "id": "buckingham-palace",
+    "name": "BUCKINGHAM PALACE",
+    "lat": 51.5014,
+    "lon": -0.1419,
+    "category": "presidential"
+  },
+  {
+    "id": "kremlin",
+    "name": "KREMLIN",
+    "lat": 55.752,
+    "lon": 37.6175,
+    "category": "government"
+  },
+  {
+    "id": "golden-gate",
+    "name": "GOLDEN GATE",
+    "lat": 37.8199,
+    "lon": -122.4783,
+    "category": "landmark"
+  },
+  {
+    "id": "hollywood-sign",
+    "name": "HOLLYWOOD SIGN",
+    "lat": 34.1341,
+    "lon": -118.3215,
+    "category": "landmark"
+  },
+  {
+    "id": "us-mint-denver",
+    "name": "US MINT",
+    "lat": 39.7395,
+    "lon": -104.9747,
+    "category": "government"
+  },
+  {
+    "id": "fort-knox",
+    "name": "FORT KNOX",
+    "lat": 37.892,
+    "lon": -85.9477,
+    "category": "military"
+  }
+]
