@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useFeedSetup } from '../components/setup/FeedSetupProvider'
+import { useFeedSetup } from '../components/setup/useFeedSetup'
 import airportsData from '../data/airports.json'
 import { getAirspace } from '../lib/airspace'
 import { formatTempFahrenheit, parseMetarBatch, type MetarBrief } from '../lib/metarBrief'

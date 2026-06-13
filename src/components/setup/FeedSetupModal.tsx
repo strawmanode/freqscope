@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { notifyFeedConfigUpdated, saveFeedConfig } from '../../lib/feedConfig'
 
@@ -23,13 +23,6 @@ export function FeedSetupModal({
   const [contact, setContact] = useState(initialContact)
   const [error, setError] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
-
-  useEffect(() => {
-    if (!open) return
-    setApplication(initialApplication)
-    setContact(initialContact)
-    setError(null)
-  }, [open, initialApplication, initialContact])
 
   if (!open) return null
 

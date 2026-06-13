@@ -3,12 +3,12 @@ import {
   AircraftFeedConfigurationError,
   AircraftFeedRateLimitError,
   fetchAircraftInBoundingBox,
-} from '../lib/aircraftFeed'
+} from './aircraftFeed'
 import {
   FeedConfigurationError,
   applyFeedConfig,
   getFeedConfigStatus,
-} from '../lib/feedConfig'
+} from './feedConfig'
 import {
   parseTfrScheduleHtml,
   parseTfrScheduleText,

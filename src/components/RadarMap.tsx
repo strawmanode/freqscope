@@ -25,13 +25,12 @@ import {
   type ScreenSpaceEventHandler,
 } from 'cesium'
 import { aircraftModelHeadingFromTrack, resolveAircraftModel } from '../lib/aircraftModels'
-import { useFeedSetup } from './setup/FeedSetupProvider'
+import { useFeedSetup } from './setup/useFeedSetup'
 import { isSafari } from '../lib/browser'
 import type { Airport } from '../types'
 import { getEffectiveActiveRunwayEnds } from '../lib/activeRunways'
 import type { EnrichedAircraft, RichAircraftState } from '../types/aircraft'
 import type { MetarData } from './console/StatusPanel'
-import { clearHistory } from '../lib/aircraftHistory'
 import { getAirspace, getArtcc } from '../lib/airspace'
 import { enrichAircraftStates } from '../lib/enrichAircraft'
 import { bboxAround, destinationPoint, fetchRadiusForFilter, haversineNm } from '../lib/geo'
@@ -331,7 +330,7 @@ export function RadarMap({
       window.clearInterval(interval)
     }
   }, [airport.lat, airport.lon, altFilter, tfrVisible])
-  const [selectedAircraft, setSelectedAircraft] = useState<SelectedAircraft | null>(null)
+  const [selectedIcao, setSelectedIcao] = useState<string | null>(null)
   const onAircraftSelectRef = useRef(onAircraftSelect)
   useEffect(() => {
     onAircraftSelectRef.current = onAircraftSelect
@@ -350,9 +349,7 @@ export function RadarMap({
   }, [onFlyToRef])
   const [mapInitError, setMapInitError] = useState<string | null>(null)
   const [viewerReady, setViewerReady] = useState(false)
-  const [enriched, setEnriched] = useState<EnrichedAircraft[]>([])
   const [viewportBounds, setViewportBounds] = useState<ViewportBounds | null>(null)
-  const [activeRwyKey, setActiveRwyKey] = useState('')
   const [isTilted, setIsTilted] = useState(true)
   const isTiltedRef = useRef(isTilted)
   useEffect(() => {
@@ -373,6 +370,49 @@ export function RadarMap({
     bbox,
     altFilter,
   })
+
+  const enriched = useMemo(() => {
+    if (states.length === 0) return []
+    return enrichAircraftStates(
+      states,
+      allRunways[airport.icao] ?? [],
+      airport.icao,
+      airport.lat,
+      airport.lon,
+      airport.elevation_ft,
+      metarData,
+    )
+  }, [states, airport.icao, airport.lat, airport.lon, airport.elevation_ft, metarData])
+
+  const activeRwyKey = useMemo(() => {
+    const eff = getEffectiveActiveRunwayEnds(
+      airport.icao,
+      allRunways[airport.icao] ?? [],
+      metarData,
+    )
+    return `${eff.source}:${[...eff.ends].sort().join(',')}`
+  }, [airport.icao, metarData])
+
+  const liveSelectedIcao = useMemo(() => {
+    if (!selectedIcao) return null
+    return states.some((state) => state.icao24 === selectedIcao) ? selectedIcao : null
+  }, [selectedIcao, states])
+
+  const selectedAircraft = useMemo(() => {
+    if (!liveSelectedIcao) return null
+    const state = states.find((entry) => entry.icao24 === liveSelectedIcao)
+    if (!state) return null
+    const enrichedAc = enriched.find((entry) => entry.icao24 === liveSelectedIcao)
+    return toSelectedAircraft(state, enrichedAc, airport)
+  }, [liveSelectedIcao, states, enriched, airport])
+
+  useEffect(() => {
+    selectedIcaoRef.current = liveSelectedIcao
+  }, [liveSelectedIcao])
+
+  useEffect(() => {
+    onAircraftSelectRef.current?.(selectedAircraft)
+  }, [selectedAircraft])
 
   const reportedCount = useMemo(() => {
     const visibleStates = dedupeStatesByIcao(states)
@@ -403,37 +443,11 @@ export function RadarMap({
       if (isVfrTarget(s, airport, airspaceCfg)) return false
       return true
     }).length
-  }, [states, filter, altFilter, callsignFilter, typeFilters, airport, metarData, activeRwyKey, viewportBounds])
+  }, [states, filter, altFilter, callsignFilter, typeFilters, airport, metarData, viewportBounds])
 
   useEffect(() => {
     onAircraftCountChange?.(reportedCount)
   }, [reportedCount, onAircraftCountChange])
-
-  useEffect(() => {
-    selectedIcaoRef.current = null
-    setSelectedAircraft(null)
-    onAircraftSelectRef.current?.(null)
-    clearHistory()
-    setEnriched([])
-    drPosByIcaoRef.current.clear()
-    setJRings(new Map())
-  }, [airport.icao])
-
-  useEffect(() => {
-    const icao = selectedIcaoRef.current
-    if (!icao) return
-    const state = states.find((s) => s.icao24 === icao)
-    if (!state) {
-      selectedIcaoRef.current = null
-      setSelectedAircraft(null)
-      onAircraftSelectRef.current?.(null)
-      return
-    }
-    const enrichedAc = enriched.find((e) => e.icao24 === icao)
-    const selected = toSelectedAircraft(state, enrichedAc, airport)
-    setSelectedAircraft(selected)
-    onAircraftSelectRef.current?.(selected)
-  }, [states, enriched, airport])
 
   useEffect(() => {
     const container = containerRef.current
@@ -551,9 +565,8 @@ export function RadarMap({
           const clearSelection = () => {
             const prev = selectedIcaoRef.current
             selectedIcaoRef.current = null
+            setSelectedIcao(null)
             retintDatablock(prev)
-            setSelectedAircraft(null)
-            onAircraftSelectRef.current?.(null)
             updateSelectionRing(overlayLayerRef.current, null)
             releaseCamera()
             viewer.scene.requestRender()
@@ -563,15 +576,9 @@ export function RadarMap({
             releaseCamera()
             const prev = selectedIcaoRef.current
             selectedIcaoRef.current = entityId
+            setSelectedIcao(entityId)
             retintDatablock(prev)
             retintDatablock(entityId)
-            const selected = toSelectedAircraft(
-              state,
-              enrichedByIcaoRef.current.get(entityId),
-              airport,
-            )
-            setSelectedAircraft(selected)
-            onAircraftSelectRef.current?.(selected)
             updateSelectionRing(
               overlayLayerRef.current,
               Cartesian3.fromDegrees(
@@ -696,6 +703,7 @@ export function RadarMap({
 
     scheduleMount()
 
+    const trailFixes = trailFixesRef.current
     return () => {
       cancelled = true
       removePostRenderListener?.()
@@ -708,12 +716,12 @@ export function RadarMap({
       airspaceLayerRef.current = null
       overlayLayerRef.current = null
       landmarksLayerRef.current = null
-      trailFixesRef.current.clear()
+      trailFixes.clear()
       statesByIcaoRef.current.clear()
       setViewportBounds(null)
       setViewerReady(false)
     }
-  }, [airport.lat, airport.lon, airport.icao])
+  }, [airport])
 
   useEffect(() => {
     if (!viewerReady) return
@@ -722,32 +730,6 @@ export function RadarMap({
     applyRadarTheme(viewer, radarTheme)
     viewer.scene.requestRender()
   }, [radarTheme, viewerReady])
-
-  useEffect(() => {
-    if (states.length === 0) {
-      setEnriched([])
-      return
-    }
-    setEnriched(
-      enrichAircraftStates(
-        states,
-        allRunways[airport.icao] ?? [],
-        airport.icao,
-        airport.lat,
-        airport.lon,
-        airport.elevation_ft,
-        metarData,
-      ),
-    )
-    // Re-render the runway layer when the detected config changes (string key
-    // keeps this a no-op render-wise while the config is stable)
-    const eff = getEffectiveActiveRunwayEnds(
-      airport.icao,
-      allRunways[airport.icao] ?? [],
-      metarData,
-    )
-    setActiveRwyKey(`${eff.source}:${[...eff.ends].sort().join(',')}`)
-  }, [states, airport.icao, airport.lat, airport.lon, airport.elevation_ft, metarData])
 
   useEffect(() => {
     recordTrailFixes(states, trailFixesRef.current, airport.elevation_ft)
@@ -796,7 +778,7 @@ export function RadarMap({
       duration: 0.8,
     })
     viewer.scene.requestRender()
-  }, [airport.icao, airport.lat, airport.lon])
+  }, [airport.icao, airport.lat, airport.lon, rangeNm])
 
   const handleTiltToggle = () => {
     const viewer = viewerRef.current
@@ -844,7 +826,7 @@ export function RadarMap({
     if (!viewerReady) return
     renderRangeRings(overlayLayerRef.current, airport, getRadarTheme(radarTheme).rangeRingColor)
     viewerRef.current?.scene.requestRender()
-  }, [airport.icao, airport.lat, airport.lon, radarTheme, viewerReady])
+  }, [airport, radarTheme, viewerReady])
 
   useEffect(() => {
     if (!viewerReady) return
@@ -868,7 +850,7 @@ export function RadarMap({
     if (!viewerReady) return
     renderTowerAirspace(airspaceLayerRef.current, airport, getAirspace(airport.icao), animationPreset, radarTheme)
     viewerRef.current?.scene.requestRender()
-  }, [airport.icao, airport.lat, airport.lon, airport.elevation_ft, animationPreset, viewerReady, radarTheme])
+  }, [airport, animationPreset, viewerReady, radarTheme])
 
   useEffect(() => {
     if (!viewerReady) return
@@ -887,7 +869,7 @@ export function RadarMap({
     }
     renderClassBAirspace(airspaceLayerRef.current, airport, getAirspace(airport.icao), animationPreset, radarTheme)
     viewerRef.current?.scene.requestRender()
-  }, [airport.icao, airport.lat, airport.lon, airport.elevation_ft, altFilter, animationPreset, viewerReady, radarTheme])
+  }, [airport, altFilter, animationPreset, viewerReady, radarTheme])
 
   useEffect(() => {
     if (!viewerReady) return
@@ -1353,7 +1335,7 @@ export function RadarMap({
     )
 
     viewerRef.current?.scene.requestRender()
-  }, [states, enriched, filter, altFilter, callsignFilter, typeFilters, airport.icao, airport.lat, airport.lon, airport.elevation_ft, metarData, activeRwyKey, rangeNm, trailConfig, viewerReady, jRings, radarTheme, viewportBounds])
+  }, [states, enriched, filter, altFilter, callsignFilter, typeFilters, airport, metarData, activeRwyKey, rangeNm, trailConfig, viewerReady, jRings, radarTheme, viewportBounds])
 
   // Dead-reckoning animator: between feed updates, advance each target along
   // its track at its last groundspeed so motion is continuous instead of stepped.
@@ -1501,8 +1483,7 @@ export function RadarMap({
           onToggleJRing={() => cycleJRing(selectedAircraft.icao24)}
           onClose={() => {
             selectedIcaoRef.current = null
-            setSelectedAircraft(null)
-            onAircraftSelectRef.current?.(null)
+            setSelectedIcao(null)
             updateSelectionRing(overlayLayerRef.current, null)
             const viewer = viewerRef.current
             if (viewer) {

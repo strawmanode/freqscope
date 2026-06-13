@@ -77,6 +77,7 @@ export function RadarBezel({
 
       <div id="scope">
         <RadarMap
+          key={airport.icao}
           airport={airport}
           rangeNm={rangeNm}
           filter={filter}

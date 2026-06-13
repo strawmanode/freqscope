@@ -5,7 +5,7 @@ import { DisplayFilters } from '../components/console/DisplayFilters'
 import { LiveAtcModule } from '../components/console/LiveAtcModule'
 import { PositionHeader } from '../components/console/PositionHeader'
 import { RadarBezel } from '../components/console/RadarBezel'
-import { LayersDropdown } from '../components/console/LayersPanel'
+import { LayersBar } from '../components/console/LayersPanel'
 import { RangePanel } from '../components/console/RangePanel'
 import { StatusPanel, type Advisory, type MetarData, type SigmetData } from '../components/console/StatusPanel'
 import { TopBar } from '../components/console/TopBar'
@@ -333,29 +333,32 @@ function parseRawMetar(raw: string): MetarData {
   }
 }
 
-export function Scope() {
-  const { icao: icaoParam } = useParams<{ icao: string }>()
+function ScopeConsole({ airport }: { airport: Airport }) {
   const navigate = useNavigate()
-  const airport = useMemo(
-    () =>
-      icaoParam
-        ? airports.find((a) => a.icao === icaoParam.toUpperCase())
-        : undefined,
-    [icaoParam],
-  )
+  const initialAltFilter = airport.defaults?.altFilter ?? 'TWR'
+  const initialTrafficFilter = airport.defaults?.trafficFilter ?? 'AIR'
 
   const consoleRef = useRef<HTMLDivElement>(null)
   const resetViewRef = useRef<(() => void) | null>(null)
   const flyToIcaoRef = useRef<((icao: string) => void) | null>(null)
-  const positionStartRef = useRef(Date.now())
-  const prevAltFilterRef = useRef<AltFilter>('TWR')
-  const posTimeRef = useRef<Record<AltFilter, number>>({ TWR: 0, TRACON: 0, CTR: 0, ALL: 0 })
+  const positionSessionRef = useRef({
+    altFilter: initialAltFilter,
+    filterStartedAt: 0,
+    accumulated: { TWR: 0, TRACON: 0, CTR: 0, ALL: 0 } as Record<AltFilter, number>,
+  })
   const trackedTargetsRef = useRef(new Set<string>())
   const emergSeenRef = useRef(new Set<string>())
 
   const [rangeNm, setRangeNm] = useState(20)
-  const [trafficFilter, setTrafficFilter] = useState<AircraftFilter>('AIR')
-  const [altFilter, setAltFilter] = useState<AltFilter>('TWR')
+  const [trafficFilter, setTrafficFilter] = useState<AircraftFilter>(initialTrafficFilter)
+  const [altFilter, setAltFilter] = useState<AltFilter>(initialAltFilter)
+  const [positionElapsed, setPositionElapsed] = useState('00:00:00')
+  const [positionTimes, setPositionTimes] = useState<Record<AltFilter, number>>({
+    TWR: 0,
+    TRACON: 0,
+    CTR: 0,
+    ALL: 0,
+  })
   const [callsignFilter, setCallsignFilter] = useState<CallsignFilter>('ID')
   const [aircraftCount, setAircraftCount] = useState(0)
   const [, setSelectedAircraft] = useState<SelectedAircraft | null>(null)
@@ -409,6 +412,37 @@ export function Scope() {
   }, [])
 
   useEffect(() => {
+    const session = positionSessionRef.current
+    if (session.filterStartedAt === 0) {
+      session.filterStartedAt = Date.now()
+    }
+
+    const tick = () => {
+      const session = positionSessionRef.current
+      const now = Date.now()
+      setPositionElapsed(formatElapsed(now - session.filterStartedAt))
+      setPositionTimes({
+        ...session.accumulated,
+        [session.altFilter]:
+          session.accumulated[session.altFilter] + (now - session.filterStartedAt),
+      })
+    }
+
+    tick()
+    const id = window.setInterval(tick, 1000)
+    return () => window.clearInterval(id)
+  }, [])
+
+  useEffect(() => {
+    const session = positionSessionRef.current
+    if (session.altFilter === altFilter) return
+    const now = Date.now()
+    session.accumulated[session.altFilter] += now - session.filterStartedAt
+    session.altFilter = altFilter
+    session.filterStartedAt = now
+  }, [altFilter])
+
+  useEffect(() => {
     const fit = () => {
       // visualViewport tracks the real visible area on mobile (rotation,
       // URL-bar collapse); window.inner* can report stale values mid-rotation
@@ -459,8 +493,6 @@ export function Scope() {
   }, [])
 
   useEffect(() => {
-    if (!airport) return
-
     let cancelled = false
 
     const fetchMetar = async () => {
@@ -480,17 +512,15 @@ export function Scope() {
       }
     }
 
-    setMetarData(null)
-    fetchMetar()
+    void fetchMetar()
     const id = window.setInterval(fetchMetar, METAR_POLL_MS)
     return () => {
       cancelled = true
       window.clearInterval(id)
     }
-  }, [airport?.icao])
+  }, [airport.icao])
 
   useEffect(() => {
-    if (!airport) return
     let cancelled = false
     const fetchSigmet = async () => {
       try {
@@ -502,35 +532,13 @@ export function Scope() {
         if (!cancelled) setSigmetData(null)
       }
     }
-    setSigmetData(null)
-    fetchSigmet()
+    void fetchSigmet()
     const id = window.setInterval(fetchSigmet, METAR_POLL_MS)
     return () => {
       cancelled = true
       window.clearInterval(id)
     }
-  }, [airport?.icao])
-
-  useEffect(() => {
-    if (!airport) return
-
-    const defaults = airport.defaults
-
-    if (defaults?.altFilter) {
-      setAltFilter(defaults.altFilter)
-    }
-    if (defaults?.trafficFilter) {
-      setTrafficFilter(defaults.trafficFilter)
-    }
-  }, [airport?.icao])
-
-  // Bank elapsed time on the previous position, then reset the timer
-  useEffect(() => {
-    const now = Date.now()
-    posTimeRef.current[prevAltFilterRef.current] += now - positionStartRef.current
-    prevAltFilterRef.current = altFilter
-    positionStartRef.current = now
-  }, [altFilter])
+  }, [airport.icao, airport.lat, airport.lon])
 
   const handleAircraftSelect = useCallback((ac: SelectedAircraft | null) => {
     setSelectedAircraft(ac)
@@ -556,17 +564,10 @@ export function Scope() {
     setAckedEmerg((prev) => (prev[icao24] ? prev : { ...prev, [icao24]: Date.now() }))
   }, [])
 
-  if (!airport) {
-    return <Navigate to="/" replace />
-  }
-
   const airspace = getAirspace(airport.icao)
   const twrCeil = airspace.twr_ceil_ft.toLocaleString()
   const traconCeil = airspace.tracon_ceil_ft.toLocaleString()
   const zuluStr = formatZulu(zuluNow)
-  const positionElapsed = formatElapsed(zuluNow.getTime() - positionStartRef.current)
-  const positionTimes: Record<AltFilter, number> = { ...posTimeRef.current }
-  positionTimes[altFilter] += zuluNow.getTime() - positionStartRef.current
   const effectiveRwy = getEffectiveActiveRunwayEnds(
     airport.icao,
     runwaysByIcao[airport.icao] ?? [],
@@ -606,28 +607,7 @@ export function Scope() {
             emergAcked: Object.keys(ackedEmerg).length,
             positionTimes,
           }}
-        >
-          <LayersDropdown
-            airspaceVisible={airspaceVisible}
-            onAirspaceToggle={() => setAirspaceVisible((v) => !v)}
-            landmarksVisible={landmarksVisible}
-            onLandmarksToggle={() => setLandmarksVisible((v) => !v)}
-            suaMoaVisible={suaMoaVisible}
-            suaRestrictedVisible={suaRestrictedVisible}
-            suaWarningVisible={suaWarningVisible}
-            suaAlertVisible={suaAlertVisible}
-            tfrVisible={tfrVisible}
-            onSuaMoaToggle={() => setSuaMoaVisible((v) => !v)}
-            onSuaRestrictedToggle={() => setSuaRestrictedVisible((v) => !v)}
-            onSuaWarningToggle={() => setSuaWarningVisible((v) => !v)}
-            onSuaAlertToggle={() => setSuaAlertVisible((v) => !v)}
-            onTfrToggle={() => setTfrVisible((v) => !v)}
-            animationPreset={animationPreset}
-            onPresetChange={setAnimationPreset}
-            radarTheme={radarTheme}
-            onThemeChange={setRadarTheme}
-          />
-        </PositionHeader>
+        />
 
         <div className="main-area">
           <StatusPanel
@@ -686,6 +666,27 @@ export function Scope() {
             onTrafficChange={setTrafficFilter}
             onAltFilterChange={setAltFilter}
             onCallsignFilterChange={setCallsignFilter}
+          />
+
+          <LayersBar
+            airspaceVisible={airspaceVisible}
+            onAirspaceToggle={() => setAirspaceVisible((v) => !v)}
+            landmarksVisible={landmarksVisible}
+            onLandmarksToggle={() => setLandmarksVisible((v) => !v)}
+            suaMoaVisible={suaMoaVisible}
+            suaRestrictedVisible={suaRestrictedVisible}
+            suaWarningVisible={suaWarningVisible}
+            suaAlertVisible={suaAlertVisible}
+            tfrVisible={tfrVisible}
+            onSuaMoaToggle={() => setSuaMoaVisible((v) => !v)}
+            onSuaRestrictedToggle={() => setSuaRestrictedVisible((v) => !v)}
+            onSuaWarningToggle={() => setSuaWarningVisible((v) => !v)}
+            onSuaAlertToggle={() => setSuaAlertVisible((v) => !v)}
+            onTfrToggle={() => setTfrVisible((v) => !v)}
+            animationPreset={animationPreset}
+            onPresetChange={setAnimationPreset}
+            radarTheme={radarTheme}
+            onThemeChange={setRadarTheme}
           />
 
           <LiveAtcModule
@@ -1499,4 +1500,21 @@ export function Scope() {
       )}
     </>
   )
+}
+
+export function Scope() {
+  const { icao: icaoParam } = useParams<{ icao: string }>()
+  const airport = useMemo(
+    () =>
+      icaoParam
+        ? airports.find((entry) => entry.icao === icaoParam.toUpperCase())
+        : undefined,
+    [icaoParam],
+  )
+
+  if (!airport) {
+    return <Navigate to="/" replace />
+  }
+
+  return <ScopeConsole key={airport.icao} airport={airport} />
 }

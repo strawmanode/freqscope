@@ -70,6 +70,15 @@ const LIVEATC_GROUPS: LiveAtcGroup[] = [
   },
 ]
 
+const GROUP_SHORT_LABELS: Record<string, string> = {
+  atis: 'ATIS',
+  clearance: 'CLR',
+  ground: 'GND',
+  tower: 'TWR',
+  tracon: 'APP',
+  center: 'CTR',
+}
+
 function groupAirportFrequencies(frequencies: Frequency[]) {
   return LIVEATC_GROUPS.map((group) => ({
     ...group,
@@ -87,7 +96,6 @@ export function LiveAtcModule({ icao, airportName, frequencies }: LiveAtcModuleP
   const [open, setOpen] = useState(false)
   const liveAtcUrl = useMemo(() => liveAtcSearchUrl(icao), [icao])
   const groups = useMemo(() => groupAirportFrequencies(frequencies), [frequencies])
-  const preview = groups.slice(0, 4).map((group) => group.label).join(' / ')
 
   return (
     <>
@@ -96,12 +104,22 @@ export function LiveAtcModule({ icao, airportName, frequencies }: LiveAtcModuleP
         <div className="liveatc-module">
           <div className="liveatc-readout">
             <div className="liveatc-kicker">LIVEATC HANDOFF</div>
-            <div className="liveatc-airport">{icao}</div>
-            <div className="liveatc-name" title={airportName}>
-              {airportName}
+            <div className="liveatc-headline">
+              <span className="liveatc-airport">{icao}</span>
+              <span className="liveatc-name" title={airportName}>
+                {airportName}
+              </span>
             </div>
-            <div className="liveatc-preview" title={preview}>
-              {preview || 'NO LOCAL FREQUENCIES'}
+            <div className="liveatc-chips">
+              {groups.length > 0 ? (
+                groups.map((group) => (
+                  <span key={group.key} className="liveatc-chip" title={group.label}>
+                    {GROUP_SHORT_LABELS[group.key] ?? group.label}
+                  </span>
+                ))
+              ) : (
+                <span className="liveatc-chip liveatc-chip-empty">NO LOCAL FREQUENCIES</span>
+              )}
             </div>
           </div>
           <div className="liveatc-actions">
