@@ -38,6 +38,8 @@ asar: true
 
 mac:
   category: public.app-category.education
+  # Stable name so README can link to /releases/latest/download/FreqScope-mac.dmg
+  artifactName: FreqScope-mac.${ext}
   # Universal binary runs natively on both Apple Silicon and Intel Macs.
   target:
     - target: dmg
@@ -49,6 +51,7 @@ mac:
   identity: null
 
 win:
+  artifactName: FreqScope-win.${ext}
   target:
     - target: nsis
       arch: x64
@@ -60,6 +63,7 @@ nsis:
 
 linux:
   category: Education
+  artifactName: FreqScope-linux.${ext}
   target:
     - target: AppImage
       arch: x64
