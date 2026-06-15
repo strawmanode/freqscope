@@ -4,7 +4,7 @@
 
 Search any major US airport and watch real aircraft move through a three-dimensional scope built on a real globe. The airspace around the field — tower, TRACON, and center volumes, special-use areas, and active TFRs — is drawn as 3D shells you can tilt, orbit, and look inside, with traffic flying through them. One click opens a credited **Listen** handoff to [LiveATC.net](https://www.liveatc.net/), so you can watch the picture and hear the controllers at the same time.
 
-<img src="screenshots/scope.png" width="900" alt="FreqScope radar scope">
+<a href="./screenshots/scope.png"><img src="screenshots/scope.png" width="900" alt="FreqScope radar scope"></a>
 
 ## Why FreqScope
 
@@ -26,19 +26,25 @@ FreqScope takes something most people only ever glimpse in a control room and ma
 
 ## Screenshots
 
-<img src="screenshots/search.png" width="900" alt="Airport search">
+<a href="./screenshots/search.png"><img src="screenshots/search.png" width="900" alt="Airport search"></a>
 
 ## Get started
 
 ### Desktop app (no terminal required)
 
-Download the installer for your platform ([all releases](https://github.com/strawmanode/freqscope/releases)):
+Download the installer for your platform from
+[GitHub Releases](https://github.com/strawmanode/freqscope/releases):
 
-| Platform | Download |
-| -------- | -------- |
-| **macOS** (Apple Silicon & Intel) | [DMG](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.dmg) · [ZIP](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.zip) |
-| **Windows** (x64) | [Installer](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-win.exe) |
-| **Linux** (x64) | [AppImage](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-linux.AppImage) |
+| Platform | Installer |
+| -------- | --------- |
+| **macOS** (Apple Silicon & Intel) | `FreqScope-mac.dmg` or `FreqScope-mac.zip` |
+| **Windows** (x64) | `FreqScope-win.exe` |
+| **Linux** (x64) | `FreqScope-linux.AppImage` |
+
+> Installers are uploaded when a version tag is published (e.g. `v0.1.0`). If
+> Releases is empty, push a tag and wait for the
+> [Build desktop app](https://github.com/strawmanode/freqscope/actions/workflows/release.yml)
+> workflow to finish, then publish the draft release.
 
 Open the app and, on first run, enter your name and email when prompted — that's
 all the live aircraft feed needs. No Node, no terminal, no commands.
