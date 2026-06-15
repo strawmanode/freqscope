@@ -104,12 +104,34 @@ binary (Apple Silicon + Intel), **Windows x64** (NSIS), and **Linux x64**
 (AppImage). Adjust the `arch` entries in `electron-builder.yml` to add others
 (e.g. Windows arm64).
 
-### Code signing
+### Opening FreqScope on macOS (unsigned build)
 
-Unsigned builds run fine locally but trigger an "unidentified developer"
-warning. On macOS, right-click the app → **Open** the first time to bypass it;
-on Windows, click **More info → Run anyway** on the SmartScreen prompt. For
-distribution without warnings, sign the builds:
+Unsigned builds run fine but macOS Gatekeeper may show:
+
+> **Apple can't check app for malicious software**
+
+That happens because the app is not signed with an Apple Developer ID yet — not
+because macOS detected anything wrong with FreqScope specifically.
+
+**To open the app the first time:**
+
+1. Try to open **FreqScope** once (from the DMG or Applications). macOS will block it.
+2. Open **System Settings** → **Privacy & Security**.
+3. Under **Security**, find the message about FreqScope being blocked.
+4. Click **Open Anyway** (this button is available for about an hour after you try to open the app).
+5. Enter your Mac login password and confirm.
+
+The app is saved as a security exception and opens normally after that.
+
+On older macOS versions, **right-click** the app → **Open** the first time may
+also work.
+
+### Windows SmartScreen (unsigned build)
+
+Windows may show **Windows protected your PC** (SmartScreen). Click
+**More info** → **Run anyway** for the first launch.
+
+### Code signing
 
 - **macOS** — an Apple Developer ID certificate plus notarization. Provide
   `CSC_LINK`, `CSC_KEY_PASSWORD`, and the Apple notarization credentials to

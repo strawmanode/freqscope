@@ -35,10 +35,9 @@ jobs:
           npm run build
           npm run build:electron
 
-      # electron-builder publishes the installers AND the update metadata
-      # (latest.yml / latest-mac.yml / latest-linux.yml + .blockmap files) that
-      # electron-updater needs. On a tag push it uploads to the matching draft
-      # release; review and publish it to make the update available.
+      # electron-builder uploads installers to a draft GitHub Release (one per
+      # tag). The publish job below makes it public so /releases/latest/download/
+      # links and the README download table work.
       - name: Package and publish
         run: npx electron-builder --publish always
         env:
@@ -60,3 +59,14 @@ jobs:
             release/*.yml
             release/*.blockmap
           if-no-files-found: ignore
+
+  publish:
+    name: Publish release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release edit "${GITHUB_REF_NAME}" --draft=false

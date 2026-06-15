@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](package.json)
-[![Release](https://img.shields.io/github/v/release/strawmanode/freqscope)](https://github.com/strawmanode/freqscope/releases)
+[![Version](https://img.shields.io/github/v/tag/strawmanode/freqscope?label=version)](https://github.com/strawmanode/freqscope/releases)
 
 **See live air traffic on a true 3D radar scope — and hear the controllers working it.**
 
@@ -34,8 +34,26 @@ Installers for macOS, Windows, and Linux are published on
 On first launch, enter your name and email when prompted — that's all the live
 aircraft feed needs.
 
-> macOS and Windows may warn that the app is from an unidentified developer until
-> builds are code-signed. See [SETUP.md § Desktop app](SETUP.md#desktop-app).
+<details>
+<summary><strong>macOS: “Apple can’t check app for malicious software”?</strong></summary>
+
+FreqScope is not code-signed yet, so macOS Gatekeeper blocks the first launch.
+This is expected for early releases built outside the Mac App Store.
+
+1. Try to open **FreqScope** once (double-click or from the DMG). macOS will block it.
+2. Open **System Settings** → **Privacy & Security**.
+3. Scroll to **Security** — you should see a message about FreqScope being blocked.
+4. Click **Open Anyway** (this option appears for about an hour after you try to open the app).
+5. Enter your Mac login password and confirm.
+
+FreqScope is then saved as an exception and opens normally from then on. Full
+notes (Windows SmartScreen, code signing plans) are in
+[SETUP.md § Desktop app](SETUP.md#opening-freqscope-on-macos-unsigned-build).
+
+</details>
+
+> **Windows** may show a similar SmartScreen warning until builds are signed.
+> See [SETUP.md](SETUP.md#windows-smartscreen-unsigned-build).
 
 ---
 
