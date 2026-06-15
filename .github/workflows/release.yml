@@ -1,0 +1,59 @@
+name: Build desktop app
+
+# Builds the FreqScope desktop app for macOS, Windows, and Linux when a
+# version tag (e.g. v0.1.0) is pushed, and attaches the installers to a
+# GitHub Release. Can also be run manually from the Actions tab.
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the web client and Electron bundle
+        run: |
+          npm run build
+          npm run build:electron
+
+      # electron-builder publishes the installers AND the update metadata
+      # (latest.yml / latest-mac.yml / latest-linux.yml + .blockmap files) that
+      # electron-updater needs. On a tag push it uploads to the matching draft
+      # release; review and publish it to make the update available.
+      - name: Package and publish
+        run: npx electron-builder --publish always
+        env:
+          # Skip code signing in CI unless secrets are configured. Provide
+          # CSC_LINK / CSC_KEY_PASSWORD (and Apple notarization secrets) to sign.
+          # NOTE: auto-update requires signed builds (mandatory on macOS).
+          CSC_IDENTITY_AUTO_DISCOVERY: false
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload installers as workflow artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: freqscope-${{ matrix.os }}
+          path: |
+            release/*.dmg
+            release/*.zip
+            release/*.exe
+            release/*.AppImage
+            release/*.yml
+            release/*.blockmap
+          if-no-files-found: ignore

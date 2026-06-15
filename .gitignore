@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Electron build output
+dist-electron
+release
+
 scripts/nasr/
 
 public/Workers

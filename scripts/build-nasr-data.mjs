@@ -13,6 +13,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { writeDataMeta } from './dataMeta.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const NASR_DIR = path.join(__dirname, 'nasr')
@@ -422,8 +423,10 @@ function buildFromNasr() {
 function main() {
   fs.mkdirSync(path.dirname(OUT_AIRPORTS), { recursive: true })
 
+  let source = 'FAA NASR'
   let data = buildFromNasr()
   if (!data) {
+    source = 'OurAirports'
     data = buildFromOurAirports()
   }
 
@@ -458,6 +461,9 @@ function main() {
     `Wrote ${data.airports.length} airports, ${Object.keys(data.frequencies).length} ICAO frequency groups, and ${Object.keys(runways).length} ICAO runway groups`,
   )
 
+  writeDataMeta({
+    nasr: { generatedAt: new Date().toISOString(), source },
+  })
 }
 
 main()

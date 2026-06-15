@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "nasr": {
+    "generatedAt": "2026-06-13T19:54:37.146Z",
+    "source": "FAA NASR"
+  },
+  "airspace": {
+    "generatedAt": "2026-06-13T19:54:37.147Z",
+    "source": "@squawk/airspace-data"
+  }
+}

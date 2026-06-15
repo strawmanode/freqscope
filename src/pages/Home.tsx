@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useFeedSetup } from '../components/setup/useFeedSetup'
+import { DataFreshnessBadge } from '../components/DataFreshnessBadge'
 import airportsData from '../data/airports.json'
 import { getAirspace } from '../lib/airspace'
 import { formatTempFahrenheit, parseMetarBatch, type MetarBrief } from '../lib/metarBrief'
 import type { Airport } from '../types'
-
-const airports = airportsData as Airport[]
 
 // Verified airports - curated list with confirmed radar and frequency data
 // Search is hidden until more airports are verified
@@ -23,10 +22,6 @@ const VERIFIED_ICAOS = [
   'KSEA',
   'KMEM',
 ]
-
-const verifiedAirports = VERIFIED_ICAOS
-  .map((icao) => airports.find((a) => a.icao === icao))
-  .filter((a): a is Airport => Boolean(a))
 
 const METAR_REFRESH_MS = 5 * 60_000
 
@@ -55,6 +50,15 @@ export function Home() {
   const { status, loading, openSetup } = useFeedSetup()
   const [briefs, setBriefs] = useState<Map<string, MetarBrief>>(new Map())
 
+  // Computed in-component so it reflects reference data refreshed at startup.
+  const verifiedAirports = useMemo(
+    () =>
+      VERIFIED_ICAOS.map((icao) =>
+        (airportsData as Airport[]).find((a) => a.icao === icao),
+      ).filter((a): a is Airport => Boolean(a)),
+    [],
+  )
+
   useEffect(() => {
     let cancelled = false
     const fetchBriefs = async () => {
@@ -78,7 +82,7 @@ export function Home() {
 
   const tickerItems = useMemo(
     () => verifiedAirports.map((a) => tickerText(a, briefs.get(a.icao))),
-    [briefs],
+    [briefs, verifiedAirports],
   )
   const hasWeather = briefs.size > 0
 
@@ -256,8 +260,9 @@ export function Home() {
           })}
         </div>
 
-        <div className="mt-8 text-center text-xs text-muted">
-          Additional airports coming soon
+        <div className="mt-8 flex flex-col items-center gap-3 text-center text-xs text-muted">
+          <span>Additional airports coming soon</span>
+          <DataFreshnessBadge />
         </div>
       </div>
     </div>

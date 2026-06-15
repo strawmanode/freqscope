@@ -26,6 +26,98 @@ or OurAirports CSVs — see [`scripts/README.md`](scripts/README.md)).
 
 Open [http://localhost:5173](http://localhost:5173).
 
+## Desktop app
+
+FreqScope can also be packaged as a double-click desktop app (Electron) so
+non-technical users can run it without Node or a terminal. The app bundles a
+small production server, serves the built client, and opens it in its own
+window. Your name/email is stored per-user in the OS app-data directory instead
+of a project `.env.local`.
+
+### Run the desktop app from source
+
+```bash
+npm install
+npm run electron:dev     # builds the main process, starts Vite, opens a window
+```
+
+### Build installers
+
+```bash
+npm run electron:build   # full installer(s) for the current OS into release/
+npm run electron:pack    # faster unpacked build (no installer) for testing
+```
+
+`electron-builder` produces a `.dmg`/`.zip` on macOS, an NSIS `.exe` on Windows,
+and an `.AppImage` on Linux. Each OS must be built on (or cross-built for) that
+platform — the easiest way to produce all three is the
+`.github/workflows/release.yml` GitHub Actions workflow, which builds on a
+macOS/Windows/Linux matrix when you push a `v*` tag and attaches the installers
+to a GitHub Release.
+
+### Automatic updates
+
+The desktop app updates itself via [electron-updater](https://www.electron.build/auto-update),
+using GitHub Releases as the update feed (configured under `publish:` in
+`electron-builder.yml`). On launch, a packaged app checks the latest release,
+downloads a newer version in the background, and installs it on the next
+restart. Update problems (offline, no release yet) are logged and never block
+startup.
+
+For this to work end to end:
+
+1. **Bump `version` in `package.json`** and push a matching `vX.Y.Z` tag. The
+   release workflow runs `electron-builder --publish always`, which uploads the
+   installers **and** the `latest*.yml` + `.blockmap` metadata electron-updater
+   reads. It creates a *draft* release — review and publish it to go live.
+2. **Sign the builds.** Auto-update requires a valid signature — it is
+   mandatory on macOS and strongly recommended on Windows. Unsigned builds
+   install manually but will not auto-update on macOS. See
+   [Code signing](#code-signing) below.
+
+To smoke-test the update flow locally, point electron-updater at a feed with a
+`dev-app-update.yml` in the project root and run a packaged build; see the
+electron-updater docs.
+
+### Headless server (optional)
+
+To serve the production build in a browser without an Electron window (handy for
+self-hosting or testing):
+
+```bash
+npm run build && npm run build:electron
+npm run serve            # serves the built app at http://127.0.0.1:4173
+```
+
+`HOST`, `PORT`, and `FREQSCOPE_CONFIG_DIR` env vars override the defaults.
+
+### Icons
+
+A placeholder radar-scope icon ships at `build/icon.png` (1024×1024).
+electron-builder auto-generates the macOS `.icns`, Windows `.ico`, and Linux
+icon set from that single file, so to rebrand just replace `build/icon.png`.
+
+### Build architectures
+
+The builds target the architectures real users have: a **universal** macOS
+binary (Apple Silicon + Intel), **Windows x64** (NSIS), and **Linux x64**
+(AppImage). Adjust the `arch` entries in `electron-builder.yml` to add others
+(e.g. Windows arm64).
+
+### Code signing
+
+Unsigned builds run fine locally but trigger an "unidentified developer"
+warning. On macOS, right-click the app → **Open** the first time to bypass it;
+on Windows, click **More info → Run anyway** on the SmartScreen prompt. For
+distribution without warnings, sign the builds:
+
+- **macOS** — an Apple Developer ID certificate plus notarization. Provide
+  `CSC_LINK`, `CSC_KEY_PASSWORD`, and the Apple notarization credentials to
+  electron-builder (see its docs); the CI workflow leaves slots for these.
+- **Windows** — an Authenticode certificate via `CSC_LINK` / `CSC_KEY_PASSWORD`.
+
+Signing requires your own certificates and cannot be done for you.
+
 ## Feed configuration
 
 On first run, FreqScope prompts for your **name and email** for the live
@@ -91,6 +183,43 @@ Airport and frequency JSON are built from **FAA NASR** when `APT_BASE.csv` and
 `FRQ.csv` are placed in `scripts/nasr/`. Otherwise the build script uses the
 OurAirports CSV fallback. See [`scripts/README.md`](scripts/README.md) for
 details.
+
+## Reference data freshness
+
+Two kinds of data exist in FreqScope:
+
+- **Live data** — aircraft, TFRs, SIGMET/G-AIRMET, and METAR — is fetched at
+  runtime and is always current, including in a downloaded desktop build.
+- **Reference data** — airports, frequencies, runways, and airspace volumes —
+  is generated at build time and baked into the app. The FAA NASR datasets
+  follow a 28-day cycle, so a downloaded build slowly goes out of date.
+
+The build scripts stamp `src/data/data-meta.json` with the date and source of
+each reference dataset. The search page shows a small "REFERENCE DATA · <date>"
+badge that turns amber after one cycle (28 days) and red after two, so users can
+tell when a newer release is worth downloading. Regenerate the data with
+`npm run build:data` and `npm run build:airspace`; the stamp updates
+automatically.
+
+### Automatic reference-data updates
+
+Reference data refreshes without shipping a new app version:
+
+1. **Publisher** — `.github/workflows/data-update.yml` runs on a schedule
+   (and on demand), regenerates the data from OurAirports, and publishes the
+   JSON plus a `data-manifest.json` to a moving **`data-latest`** GitHub
+   release.
+2. **App** — on every launch the client fetches `/data/*.json` from the
+   embedded server, which serves a downloaded copy when present
+   (`server/dataHandler.ts`). The Electron app checks the `data-latest`
+   manifest in the background and, if newer, downloads the bundle into the
+   user's data folder; it takes effect on the **next** launch (same model as
+   app updates — never blocks startup, never serves a half-written file). The
+   bundled copy is always the offline fallback, so the app works with no
+   network.
+
+The freshness badge reflects whichever copy is in use, so it goes green again
+once a newer bundle has been downloaded.
 
 ## Routes
 
