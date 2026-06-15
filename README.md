@@ -1,109 +1,138 @@
 # FreqScope
 
+[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](package.json)
+[![Release](https://img.shields.io/github/v/release/strawmanode/freqscope)](https://github.com/strawmanode/freqscope/releases)
+
 **See live air traffic on a true 3D radar scope — and hear the controllers working it.**
 
-Search any major US airport and watch real aircraft move through a three-dimensional scope built on a real globe. The airspace around the field — tower, TRACON, and center volumes, special-use areas, and active TFRs — is drawn as 3D shells you can tilt, orbit, and look inside, with traffic flying through them. One click opens a credited **Listen** handoff to [LiveATC.net](https://www.liveatc.net/), so you can watch the picture and hear the controllers at the same time.
+FreqScope puts **real ADS-B traffic, 3D airspace, and a credited LiveATC handoff** in one view. Search any major US airport, watch aircraft move through tower, TRACON, and center volumes on a globe you can tilt and orbit, then open the matching [LiveATC.net](https://www.liveatc.net/) feed with one click.
 
-<a href="./screenshots/scope.png"><img src="screenshots/scope.png" width="900" alt="FreqScope radar scope"></a>
+<p align="center">
+  <a href="./screenshots/scope.png">
+    <img src="screenshots/scope.png" width="900" alt="FreqScope radar scope showing live traffic and 3D airspace">
+  </a>
+</p>
 
-## Why FreqScope
+[Download](#download) · [Quick start](#quick-start) · [Highlights](#highlights) · [Contributing](CONTRIBUTING.md) · [Setup guide](SETUP.md) · [Report a bug](https://github.com/strawmanode/freqscope/issues/new) · [Security](SECURITY.md)
 
-Air traffic simulators run pretend traffic. Flight trackers show real traffic on a flat 2D map. Nothing else puts **real live aircraft, a true 3D scope, real-world airspace you can see, and live ATC audio** together in one view.
+**New here?** Download the [desktop app](#download) — no Node or terminal required. Developers can jump to the [quick start](#quick-start) below.
 
-FreqScope takes something most people only ever glimpse in a control room and makes it readable, explorable, and genuinely fun to watch — no aviation background required. It's both an education in how the sky is organized and a live window onto the traffic overhead.
+---
 
-## What it does
+## Download
 
-- **A true 3D scope** — built on a real 3D globe, not a flat map. Tilt, orbit, and zoom to see the airspace from any angle.
-- **3D airspace volumes** — tower / TRACON / ARTCC boundaries, special-use airspace (MOA, restricted, warning, alert), and TFRs rendered as 3D shells you can look inside, with traffic flying through them.
-- **Live ADS-B radar** — real aircraft positions polled every few seconds in a box around your selected airport.
-- **Scope-style targets** — altitude-banded symbology (tower / TRACON / center / ground), VFR and emergency-squawk detection, data blocks, and trails.
-- **Real-world map underlay** — terrain, city labels, and landmarks beneath the scope so the traffic has context.
-- **Live weather** — METAR, plus SIGMET / G-AIRMET advisories for the area.
-- **Selectable scope themes** — STARS, ERAM, and a modern light theme.
-- **LiveATC handoff** — a credited **Listen** button that opens the airport's LiveATC page so you can hear the positions you're watching.
-- **Optional 3D aircraft** — swap 2D symbols for 3D models on supported types (third-party assets, downloaded separately).
+Installers for macOS, Windows, and Linux are published on
+[GitHub Releases](https://github.com/strawmanode/freqscope/releases).
 
-## Screenshots
+| Platform | Download |
+| -------- | -------- |
+| **macOS** (Apple Silicon & Intel) | [DMG](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.dmg) · [ZIP](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.zip) |
+| **Windows** (x64) | [Installer](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-win.exe) |
+| **Linux** (x64) | [AppImage](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-linux.AppImage) |
 
-<a href="./screenshots/search.png"><img src="screenshots/search.png" width="900" alt="Airport search"></a>
+On first launch, enter your name and email when prompted — that's all the live
+aircraft feed needs.
 
-## Get started
+> macOS and Windows may warn that the app is from an unidentified developer until
+> builds are code-signed. See [SETUP.md § Desktop app](SETUP.md#desktop-app).
 
-### Desktop app (no terminal required)
+---
 
-Download the installer for your platform from
-[GitHub Releases](https://github.com/strawmanode/freqscope/releases):
+## Quick start
 
-| Platform | Installer |
-| -------- | --------- |
-| **macOS** (Apple Silicon & Intel) | `FreqScope-mac.dmg` or `FreqScope-mac.zip` |
-| **Windows** (x64) | `FreqScope-win.exe` |
-| **Linux** (x64) | `FreqScope-linux.AppImage` |
-
-> Installers are uploaded when a version tag is published (e.g. `v0.1.0`). If
-> Releases is empty, push a tag and wait for the
-> [Build desktop app](https://github.com/strawmanode/freqscope/actions/workflows/release.yml)
-> workflow to finish, then publish the draft release.
-
-Open the app and, on first run, enter your name and email when prompted — that's
-all the live aircraft feed needs. No Node, no terminal, no commands.
-
-> macOS/Windows may warn that the app is from an unidentified developer until
-> the builds are code-signed. See [SETUP.md](SETUP.md#desktop-app) for how to
-> open it and for signing notes.
-
-### Run from source (developers)
+For local development in a browser:
 
 ```bash
+git clone https://github.com/strawmanode/freqscope.git
+cd freqscope
 npm install
-cp .env.example .env.local   # then add your own name and email
+cp .env.example .env.local   # add your name and email
 npm run dev
 ```
 
-To run the desktop app from source instead of a browser:
+Open [http://localhost:5173](http://localhost:5173).
+
+**Desktop app from source:**
 
 ```bash
 npm run electron:dev     # dev window with hot reload
-npm run electron:build   # build an installer for your OS into release/
+npm run electron:build   # installer for your OS into release/
 ```
 
-Airport, frequency, and airspace data ship prebuilt in `src/data/`. Run
-`npm run build:data` only when you want to regenerate that data (requires FAA
-NASR or OurAirports CSVs — see [`scripts/README.md`](scripts/README.md)).
+Airport, frequency, and airspace data ship prebuilt in `src/data/`. Full
+configuration, feed setup, optional 3D models, and troubleshooting are in
+**[SETUP.md](SETUP.md)**.
 
-Open [http://localhost:5173](http://localhost:5173). Full instructions —
-including feed configuration, optional 3D models, data sources, and
-troubleshooting — are in **[SETUP.md](SETUP.md)**.
+---
 
-> **Heads up:** the live aircraft feed requires you to identify yourself to
-> upstream ADS-B providers. FreqScope prompts for your name and email on first
-> run and won't start the feed until they're set. Details in
-> [SETUP.md](SETUP.md#feed-configuration).
+## Highlights
 
-## Tech stack
+- **True 3D scope** — Cesium globe with tilt, orbit, and zoom; not a flat map.
+- **3D airspace** — tower / TRACON / ARTCC boundaries, SUA, and TFRs as shells you can look inside.
+- **Live ADS-B radar** — real aircraft positions polled every few seconds around your airport.
+- **Scope symbology** — altitude-banded targets, VFR and emergency-squawk detection, data blocks, trails.
+- **Weather layer** — METAR plus SIGMET / G-AIRMET advisories for the area.
+- **Scope themes** — STARS, ERAM, and a modern light theme.
+- **LiveATC handoff** — credited **Listen** button opens the airport's LiveATC page.
+- **Desktop app** — double-click install with bundled server and automatic updates via GitHub Releases.
+- **Optional 3D aircraft** — swap 2D symbols for GLB models on supported types ([setup](public/models/aircraft/README.md)).
 
-Vite · React · TypeScript · React Router · Tailwind CSS · CesiumJS · static JSON · [airplanes.live](https://api.airplanes.live) (with [adsb.lol](https://api.adsb.lol) fallback)
+<p align="center">
+  <a href="./screenshots/search.png">
+    <img src="screenshots/search.png" width="700" alt="FreqScope airport search">
+  </a>
+</p>
+
+---
+
+## Get involved
+
+FreqScope is source-available and built in the open. We'd love your help making
+it better — whether you fly, code, write docs, or just love watching traffic.
+
+| | |
+| --- | --- |
+| **Try it & report bugs** | [Open an issue](https://github.com/strawmanode/freqscope/issues/new) with steps to reproduce, your OS, and a screenshot if you can. |
+| **Contribute code** | Read **[CONTRIBUTING.md](CONTRIBUTING.md)**, pick an issue (or propose one), and open a pull request. |
+| **Improve docs** | Setup guides, screenshots, and README polish are always welcome. |
+| **Aviation & data** | Airport defaults, frequency mappings, airspace edge cases, and reference-data scripts live in [`scripts/`](scripts/README.md). |
+| **Scope & UI** | Themes, symbology, performance with heavy traffic, and radar UX feedback. |
+| **Desktop & packaging** | Electron builds, code signing, and cross-platform testing (especially Windows and Linux). |
+
+Before opening a PR: `npm run lint` and `npm run build` should pass. Security
+issues go through **[SECURITY.md](SECURITY.md)** — please don't file them
+publicly.
+
+---
 
 ## Project docs
 
-- **[SETUP.md](SETUP.md)** — install, configuration, data, and scripts
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — how to contribute
-- **[SECURITY.md](SECURITY.md)** — reporting vulnerabilities
-- **[NOTICE.md](NOTICE.md)** — third-party services, data, and license notices
+| Doc | What's in it |
+| --- | --- |
+| **[SETUP.md](SETUP.md)** | Install, feed configuration, data sources, desktop app, scripts |
+| **[CONTRIBUTING.md](CONTRIBUTING.md)** | How to contribute, PR checklist, license note |
+| **[SECURITY.md](SECURITY.md)** | Reporting vulnerabilities |
+| **[NOTICE.md](NOTICE.md)** | Third-party services, data, and license notices |
+| **[scripts/README.md](scripts/README.md)** | Regenerating airport, frequency, and airspace data |
+
+## Tech stack
+
+Vite · React · TypeScript · Tailwind CSS · CesiumJS · Electron ·
+[airplanes.live](https://api.airplanes.live) (with [adsb.lol](https://api.adsb.lol) fallback)
+
+---
 
 ## License & disclaimer
 
 FreqScope is **source-available, not open source.** It is licensed under the
 [PolyForm Noncommercial License 1.0.0](LICENSE) for personal, educational,
 research, public-safety, government, charitable, and other non-commercial use.
-Commercial use — selling, hosting, or bundling FreqScope as part of a paid
-product or service — requires a separate license from the copyright holder.
+Commercial use requires a separate license from the copyright holder.
 
 The license covers only what the copyright holder can grant in FreqScope itself.
-It does **not** grant rights to any third-party service, feed, audio stream,
-dataset, photo, trademark, or content. FreqScope is provided "as is" and is
-**not** for aviation, operational, law-enforcement, judicial, safety-critical,
-or other reliance-based use. Users are responsible for complying with
-[LiveATC.net's Terms of Use](https://www.liveatc.net/legal/) and the terms of
-any other provider they access. See [NOTICE.md](NOTICE.md).
+It does **not** grant rights to third-party services, feeds, audio streams,
+datasets, or trademarks. FreqScope is provided **"as is"** and is **not** for
+aviation, operational, safety-critical, or reliance-based use. Users must comply
+with [LiveATC.net's Terms of Use](https://www.liveatc.net/legal/) and all
+other provider terms. See [NOTICE.md](NOTICE.md).
