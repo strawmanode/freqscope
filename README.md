@@ -34,11 +34,24 @@ Installers for macOS, Windows, and Linux are published on
 On first launch, enter your name and email when prompted — that's all the live
 aircraft feed needs.
 
+**Safe to install.** FreqScope is source-available — every line of code is in
+this repo. Installers are built publicly on
+[GitHub Actions](https://github.com/strawmanode/freqscope/actions/workflows/release.yml)
+from tagged commits. The app has **no ads, no telemetry, and no bundled
+malware**. It runs a local server on your machine and only talks to documented
+aviation APIs (ADS-B feeds, weather, reference data) plus GitHub when checking
+for updates. Your name and email stay on your device for feed identification
+only.
+
 <details>
 <summary><strong>macOS: “Apple can’t check app for malicious software”?</strong></summary>
 
-FreqScope is not code-signed yet, so macOS Gatekeeper blocks the first launch.
-This is expected for early releases built outside the Mac App Store.
+This warning is **not** Apple saying FreqScope contains malware. It means the
+app is not yet signed with an Apple Developer ID, so macOS cannot verify who
+published it. That is normal for independent apps distributed outside the Mac
+App Store. FreqScope is built from the public source in this repository.
+
+To open the app the first time:
 
 1. Try to open **FreqScope** once (double-click or from the DMG). macOS will block it.
 2. Open **System Settings** → **Privacy & Security**.
@@ -52,8 +65,39 @@ notes (Windows SmartScreen, code signing plans) are in
 
 </details>
 
-> **Windows** may show a similar SmartScreen warning until builds are signed.
-> See [SETUP.md](SETUP.md#windows-smartscreen-unsigned-build).
+> **Windows** may show a similar SmartScreen prompt for the same reason — the
+> build is not yet Authenticode-signed. See
+> [SETUP.md](SETUP.md#windows-smartscreen-unsigned-build).
+
+<details>
+<summary><strong>Verify your download matches our official build</strong></summary>
+
+Each release includes a
+[`SHA256SUMS`](https://github.com/strawmanode/freqscope/releases/latest/download/SHA256SUMS)
+file, generated automatically when installers are built. This lets you confirm
+the file on your machine is **byte-for-byte identical** to the one we published
+— nothing was corrupted or swapped during download.
+
+**macOS / Linux** (in the folder where the installer was saved):
+
+```bash
+curl -fsSLO https://github.com/strawmanode/freqscope/releases/latest/download/SHA256SUMS
+shasum -a 256 -c SHA256SUMS          # macOS
+# sha256sum -c SHA256SUMS            # Linux
+```
+
+**Windows** (PowerShell):
+
+```powershell
+Get-FileHash .\FreqScope-win.exe -Algorithm SHA256
+```
+
+Compare the output to the matching line in `SHA256SUMS`. A match means you have
+the authentic FreqScope installer from this repository's release pipeline.
+
+Found a security concern? Please report it privately via [SECURITY.md](SECURITY.md).
+
+</details>
 
 ---
 
