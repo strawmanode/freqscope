@@ -106,12 +106,13 @@ binary (Apple Silicon + Intel), **Windows x64** (NSIS), and **Linux x64**
 
 ### Opening FreqScope on macOS (unsigned build)
 
-Unsigned builds run fine but macOS Gatekeeper may show:
+macOS may show:
 
 > **Apple can't check app for malicious software**
 
-That happens because the app is not signed with an Apple Developer ID yet — not
-because macOS detected anything wrong with FreqScope specifically.
+This is **not** a malware finding. It means FreqScope is not yet signed with an
+Apple Developer ID, so Gatekeeper cannot verify the publisher. The app is built
+from the public source in this repository and is safe to install.
 
 **To open the app the first time:**
 
