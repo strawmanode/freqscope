@@ -32,12 +32,13 @@ FreqScope takes something most people only ever glimpse in a control room and ma
 
 ### Desktop app (no terminal required)
 
-Download the installer for your operating system from the
-[latest release](https://github.com/strawmanode/freqscope/releases/latest):
+Download the installer for your platform ([all releases](https://github.com/strawmanode/freqscope/releases)):
 
-- **macOS** — `FreqScope-*.dmg` (universal — Apple Silicon and Intel)
-- **Windows** — `FreqScope-Setup-*.exe`
-- **Linux** — `FreqScope-*.AppImage`
+| Platform | Download |
+| -------- | -------- |
+| **macOS** (Apple Silicon & Intel) | [DMG](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.dmg) · [ZIP](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.zip) |
+| **Windows** (x64) | [Installer](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-win.exe) |
+| **Linux** (x64) | [AppImage](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-linux.AppImage) |
 
 Open the app and, on first run, enter your name and email when prompted — that's
 all the live aircraft feed needs. No Node, no terminal, no commands.
