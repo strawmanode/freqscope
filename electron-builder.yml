@@ -1,0 +1,65 @@
+# electron-builder packaging config for the FreqScope desktop app.
+# Run `npm run electron:build` to produce installers in release/.
+#
+# Icon: build/icon.png (1024x1024) is the single source icon — electron-builder
+# auto-generates the macOS .icns, Windows .ico, and Linux PNG set from it. To
+# rebrand, replace build/icon.png (a placeholder radar-scope icon ships now).
+appId: net.freqscope.desktop
+productName: FreqScope
+copyright: © Chris Dionne
+
+# Update feed: electron-updater reads release assets (latest*.yml + installer)
+# from GitHub Releases. The release workflow publishes with --publish always.
+publish:
+  provider: github
+  owner: strawmanode
+  repo: freqscope
+
+directories:
+  output: release
+  buildResources: build
+
+# The Electron main process is bundled (esbuild) with no runtime deps, so we
+# ship only the bundle + manifest. The built web client is shipped as an
+# unpacked resource so the embedded server can read Cesium's many asset files
+# directly from disk (rather than from inside the asar archive).
+files:
+  - dist-electron/**/*
+  - package.json
+extraResources:
+  - from: dist
+    to: dist
+  # Bundled reference-data fallback the embedded server serves at /data/* when
+  # no newer downloaded copy is present (see server/dataHandler.ts).
+  - from: src/data
+    to: data-bundled
+
+asar: true
+
+mac:
+  category: public.app-category.education
+  # Universal binary runs natively on both Apple Silicon and Intel Macs.
+  target:
+    - target: dmg
+      arch: universal
+    - target: zip
+      arch: universal
+  # Unsigned local builds are fine for testing. For distribution, set up an
+  # Apple Developer ID and notarization (see SETUP.md).
+  identity: null
+
+win:
+  target:
+    - target: nsis
+      arch: x64
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+
+linux:
+  category: Education
+  target:
+    - target: AppImage
+      arch: x64

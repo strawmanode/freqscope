@@ -1,0 +1,84 @@
+name: Publish reference data
+
+# Regenerates the bundled reference data (airports, frequencies, runways,
+# airspace) from OurAirports on a schedule and publishes it to a moving
+# `data-latest` GitHub release. The desktop app checks this release on launch
+# and downloads a newer bundle for use on the next launch.
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Mondays 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Download OurAirports CSVs
+        run: |
+          mkdir -p scripts/nasr
+          dl() {
+            curl -fsSL -o "scripts/nasr/$1" "https://davidmegginson.github.io/ourairports-data/$1" \
+              || curl -fsSL -o "scripts/nasr/$1" "https://ourairports.com/data/$1"
+          }
+          dl airports.csv
+          dl airport-frequencies.csv
+          dl runways.csv
+
+      - name: Refresh airspace dataset (best effort)
+        run: npm install --no-save @squawk/airspace-data@latest || true
+
+      - name: Regenerate data
+        run: |
+          npm run build:data
+          npm run build:airspace
+
+      - name: Build data manifest
+        run: |
+          node -e '
+            const fs = require("fs");
+            const version = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+            const files = [
+              "airports.json", "frequencies.json", "runways.json",
+              "airspace.json", "artcc.json", "sua.json", "data-meta.json",
+            ];
+            const manifest = {
+              version,
+              generatedAt: new Date().toISOString(),
+              source: "OurAirports",
+              files,
+            };
+            fs.writeFileSync("data-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
+            console.log(manifest);
+          '
+
+      - name: Publish to data-latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view data-latest >/dev/null 2>&1 || \
+            gh release create data-latest \
+              --title "FreqScope reference data (latest)" \
+              --notes "Auto-published reference data. The desktop app downloads this on launch." \
+              --prerelease --target "$GITHUB_SHA"
+          gh release upload data-latest \
+            src/data/airports.json \
+            src/data/frequencies.json \
+            src/data/runways.json \
+            src/data/airspace.json \
+            src/data/artcc.json \
+            src/data/sua.json \
+            src/data/data-meta.json \
+            data-manifest.json \
+            --clobber

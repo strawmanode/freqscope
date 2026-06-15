@@ -2,6 +2,7 @@ import fs from 'fs'
 import zlib from 'zlib'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { writeDataMeta } from './dataMeta.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -351,3 +352,10 @@ console.log('artcc.json written.')
 fs.writeFileSync(suaPath, JSON.stringify(suaFeatures, null, 2))
 console.log(`sua.json written — ${suaFeatures.length} special-use areas.`)
 console.log('ARTCC assignments written.')
+
+writeDataMeta({
+  airspace: {
+    generatedAt: new Date().toISOString(),
+    source: '@squawk/airspace-data',
+  },
+})

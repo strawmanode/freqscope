@@ -13,6 +13,7 @@
     "url": "https://github.com/strawmanode/freqscope.git"
   },
   "type": "module",
+  "main": "dist-electron/main.cjs",
   "scripts": {
     "postinstall": "cp -r node_modules/cesium/Build/Cesium/Workers public/Workers && cp -r node_modules/cesium/Build/Cesium/Assets public/Assets && cp -r node_modules/cesium/Build/Cesium/ThirdParty public/ThirdParty && cp -r node_modules/cesium/Build/Cesium/Widgets public/Widgets",
     "dev": "vite",
@@ -21,7 +22,12 @@
     "preview": "vite preview",
     "build:data": "node scripts/build-nasr-data.mjs",
     "build:airspace": "node scripts/build-airspace.mjs",
-    "setup:models": "node scripts/setup-fr24-models.mjs"
+    "setup:models": "node scripts/setup-fr24-models.mjs",
+    "build:electron": "node electron/build.mjs",
+    "serve": "node dist-electron/serve.cjs",
+    "electron:dev": "node electron/dev.mjs",
+    "electron:pack": "npm run build && npm run build:electron && electron-builder --dir",
+    "electron:build": "npm run build && npm run build:electron && electron-builder"
   },
   "dependencies": {
     "cesium": "^1.142.0",
@@ -41,6 +47,10 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "autoprefixer": "^10.5.0",
+    "electron": "^33.3.0",
+    "electron-builder": "^25.1.8",
+    "electron-updater": "^6.3.9",
+    "esbuild": "^0.28.1",
     "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",

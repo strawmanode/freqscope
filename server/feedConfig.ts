@@ -42,6 +42,48 @@ function envString(name: string): string | null {
   return value && value.length > 0 ? value : null
 }
 
+/**
+ * Directory that holds the writable `.env.local` feed-identity file.
+ *
+ * In the Vite dev server this is the project root (process.cwd()). In the
+ * packaged desktop app the project directory is read-only, so the Electron
+ * main process sets FREQSCOPE_CONFIG_DIR to a writable per-user location
+ * (app.getPath('userData')).
+ */
+export function feedConfigDir(): string {
+  return process.env.FREQSCOPE_CONFIG_DIR?.trim() || process.cwd()
+}
+
+function envLocalPath(): string {
+  return path.join(feedConfigDir(), '.env.local')
+}
+
+/**
+ * Loads `.env.local` from {@link feedConfigDir} into process.env without
+ * overwriting values that are already set. Vite loads env vars itself, so this
+ * is only used by the standalone production server / Electron main process.
+ */
+export function loadEnvLocal(): void {
+  const envPath = envLocalPath()
+  if (!fs.existsSync(envPath)) return
+
+  for (const rawLine of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const line = rawLine.trim()
+    if (!line || line.startsWith('#')) continue
+    const eq = line.indexOf('=')
+    if (eq <= 0) continue
+    const key = line.slice(0, eq).trim()
+    let value = line.slice(eq + 1).trim()
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1)
+    }
+    if (process.env[key] == null) process.env[key] = value
+  }
+}
+
 function fieldLabel(name: string): string {
   if (name === 'AIRCRAFT_FEED_APPLICATION' || name === 'AIRCRAFT_FEED_X_APPLICATION') {
     return 'Your name'
@@ -150,7 +192,8 @@ export function assertFeedConfigured(): void {
 }
 
 function upsertEnvLocal(updates: Record<string, string>): void {
-  const envPath = path.resolve('.env.local')
+  const envPath = envLocalPath()
+  fs.mkdirSync(path.dirname(envPath), { recursive: true })
   const lines = fs.existsSync(envPath)
     ? fs.readFileSync(envPath, 'utf8').split('\n')
     : []
