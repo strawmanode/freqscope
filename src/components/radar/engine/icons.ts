@@ -12,9 +12,11 @@ import {
 } from 'cesium'
 import type { Airport } from '../../../types'
 import { getRadarTheme, type RadarThemeId } from '../../../lib/radarThemes'
+import type { AltFilter } from '../types'
 import {
   BILLBOARD_SCALE_BY_DISTANCE,
   GROUND_LABEL_DISPLAY_MAX_M,
+  GROUND_LABEL_TWR_DISPLAY_MAX_M,
   LABEL_DISPLAY_MAX_M,
 } from '../constants'
 
@@ -107,11 +109,17 @@ export function getAircraftBillboardUri(
 
 export function aircraftLabelDistanceDisplayCondition(
   onGround: boolean,
+  options?: { altFilter?: AltFilter; isSelected?: boolean },
 ): DistanceDisplayCondition {
-  return new DistanceDisplayCondition(
-    0,
-    onGround ? GROUND_LABEL_DISPLAY_MAX_M : LABEL_DISPLAY_MAX_M,
-  )
+  if (onGround) {
+    const twrDeclutter =
+      options?.altFilter === 'TWR' && !options?.isSelected
+    const maxM = twrDeclutter
+      ? GROUND_LABEL_TWR_DISPLAY_MAX_M
+      : GROUND_LABEL_DISPLAY_MAX_M
+    return new DistanceDisplayCondition(0, maxM)
+  }
+  return new DistanceDisplayCondition(0, LABEL_DISPLAY_MAX_M)
 }
 
 export function buildAircraftBillboard(

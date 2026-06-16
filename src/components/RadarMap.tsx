@@ -236,6 +236,10 @@ export function RadarMap({
   // Dead reckoning: where each target is currently displayed, extrapolated
   // from the aircraft fix timestamp so client polling never resets motion.
   const drPosByIcaoRef = useRef<Map<string, DrPosition>>(new Map())
+  // Last effective ground state rendered per target (feed bit OR dead-reckoning
+  // landing model). Lets the animator recolor on touchdown without waiting for
+  // the next poll/filter toggle.
+  const renderedGroundByIcaoRef = useRef<Map<string, boolean>>(new Map())
   const timesharePhaseRef = useRef<TimesharePhase>('main')
   // J-rings: icao24 -> radius NM (state so toggles re-run the render effect
   // and the detail card chip updates)
@@ -362,12 +366,20 @@ export function RadarMap({
     [airport.lat, airport.lon, altFilter],
   )
 
+  // Stable runway list for the airport (geometry-aware ground inference in the
+  // feed hook). Memoized so it doesn't retrigger the polling effect each render.
+  const feedRunways = useMemo(
+    () => allRunways[airport.icao] ?? [],
+    [airport.icao],
+  )
+
   const { states, feedError: error, feedConfigRequired } = useAircraftFeed({
     icao: airport.icao,
     lat: airport.lat,
     lon: airport.lon,
     elevationFt: airport.elevation_ft,
     bbox,
+    runways: feedRunways,
     altFilter,
   })
 
@@ -1058,22 +1070,29 @@ export function RadarMap({
       const dispLon = dr?.lon ?? lon
       const dispAltM = scopeHeightM(dr?.altitudeFt ?? s.altitudeFt, airport.elevation_ft)
       const position = Cartesian3.fromDegrees(dispLon, dispLat, dispAltM)
+      // Effective ground state: the feed's air/ground bit can lag a landing by
+      // many seconds, so also treat a target the dead-reckoning model has put
+      // on the runway as on-ground. Without this a just-landed target keeps its
+      // tower/approach color until the feed catches up (or a filter toggle
+      // forces a refetch).
+      const onGroundEff = s.onGround || (dr?.onGround ?? false)
+      renderedGroundByIcaoRef.current.set(s.icao24, onGroundEff)
       const alertCode = emergencyAlertCode(s)
       const aircraftColor = alertCode
         ? cachedColor(EMERGENCY_CSS)
         : cachedColor(
             themedAirspaceColor(
-              airspaceColor(s, airport, airspaceCfg, artccStrata),
+              airspaceColor(s, airport, airspaceCfg, artccStrata, onGroundEff),
               radarTheme,
             ),
           )
 
-      const use3DModel = aircraftUses3DModel(s, camAltM)
+      const use3DModel = !onGroundEff && aircraftUses3DModel(s, camAltM)
       const modelDef = use3DModel ? resolveAircraftModel(s.aircraftType) : null
       const isSelected = selectedIcaoRef.current === s.icao24
       const showAircraftLabel = !declutterWideCenter || isSelected
 
-      const labelText = buildDatablockText(s, timesharePhaseRef.current)
+      const labelText = buildDatablockText(s, timesharePhaseRef.current, onGroundEff)
       const themeLabel = getRadarTheme(radarTheme).label
       // Ownership colors: selected/owned track uses the theme's strongest contrast.
       const labelColor =
@@ -1129,13 +1148,13 @@ export function RadarMap({
           existing.billboard.image = new ConstantProperty(
             getAircraftBillboardUri(
               aircraftColor.toCssColorString(),
-              s.onGround,
+              onGroundEff,
               getRadarTheme(radarTheme).aircraftSymbolHalo,
               canvasCacheRef.current,
             ),
           )
           existing.billboard.rotation = new ConstantProperty(
-            s.onGround ? 0 : CesiumMath.toRadians(-(leaderTrackDeg ?? 0)),
+            onGroundEff ? 0 : CesiumMath.toRadians(-(leaderTrackDeg ?? 0)),
           )
           existing.billboard.scaleByDistance = new ConstantProperty(
             BILLBOARD_SCALE_BY_DISTANCE,
@@ -1158,7 +1177,10 @@ export function RadarMap({
             existing.label.backgroundPadding = new ConstantProperty(labelPadding)
           }
           existing.label.distanceDisplayCondition = new ConstantProperty(
-            aircraftLabelDistanceDisplayCondition(s.onGround),
+            aircraftLabelDistanceDisplayCondition(onGroundEff, {
+              altFilter,
+              isSelected,
+            }),
           )
         }
       } else {
@@ -1193,7 +1215,7 @@ export function RadarMap({
             : {
                 billboard: buildAircraftBillboard(
                   aircraftColor,
-                  s.onGround,
+                  onGroundEff,
                   s.trackDeg,
                   getRadarTheme(radarTheme).aircraftSymbolHalo,
                   canvasCacheRef.current,
@@ -1216,7 +1238,8 @@ export function RadarMap({
             backgroundPadding: labelPadding,
             scaleByDistance: new NearFarScalar(1000, 1.0, 2000000, 0.6),
             distanceDisplayCondition: aircraftLabelDistanceDisplayCondition(
-              s.onGround,
+              onGroundEff,
+              { altFilter, isSelected },
             ),
             disableDepthTestDistance: Number.POSITIVE_INFINITY,
           },
@@ -1256,7 +1279,7 @@ export function RadarMap({
       // Leader line — fixed screen-size tick so all targets read consistently
       if (
         !declutterTrackArtifacts &&
-        !s.onGround &&
+        !onGroundEff &&
         camAltM < LEADER_LOD_CUTOFF_M &&
         s.speedKts != null &&
         s.speedKts >= LEADER_MIN_SPEED_KTS &&
@@ -1320,6 +1343,9 @@ export function RadarMap({
     for (const icao of drPosByIcaoRef.current.keys()) {
       if (!renderedEntityIds.has(icao)) drPosByIcaoRef.current.delete(icao)
     }
+    for (const icao of renderedGroundByIcaoRef.current.keys()) {
+      if (!renderedEntityIds.has(icao)) renderedGroundByIcaoRef.current.delete(icao)
+    }
 
     visibleStatesListRef.current = [...nextVisibleStatesByIcao.values()]
     labelOffsetByIcaoRef.current = nextLabelOffsetsByIcao
@@ -1359,6 +1385,11 @@ export function RadarMap({
 
       const camAltM = viewer.camera.positionCartographic.height
       const airportRunways = allRunways[airport.icao] ?? []
+      const airspaceCfgAnim = getAirspace(airport.icao)
+      const artccStrataAnim = airspaceCfgAnim.artcc
+        ? getArtcc(airspaceCfgAnim.artcc)
+        : undefined
+      const themeAnim = radarThemeRef.current
 
       // Batch per-tick property churn into one collectionChanged flush
       aircraftLayer.entities.suspendEvents()
@@ -1367,11 +1398,6 @@ export function RadarMap({
       for (const s of visibleStatesListRef.current) {
         const entity = aircraftLayer.entities.getById(s.icao24)
         if (!entity) continue
-
-        if (phaseFlipped && entity.label) {
-          entity.label.text = new ConstantProperty(buildDatablockText(s, phase))
-          dirty = true
-        }
 
         const leaderTrackDeg = getLeaderTrackDeg(
           s,
@@ -1391,6 +1417,65 @@ export function RadarMap({
             qnhHpaRef.current,
           ),
         )
+        // Effective ground state: feed bit OR the dead-reckoning landing model.
+        const onGroundEff = s.onGround || (dr?.onGround ?? false)
+
+        if (phaseFlipped && entity.label) {
+          entity.label.text = new ConstantProperty(
+            buildDatablockText(s, phase, onGroundEff),
+          )
+          dirty = true
+        }
+
+        // Recolor on touchdown: the moment the landing model puts the target on
+        // the runway, switch it to the GND color/symbol instead of waiting for
+        // the feed's air/ground bit (or a filter toggle) to catch up. Also drop
+        // the predicted-track leader so it doesn't dangle off the now-grounded
+        // target until the next poll prunes it.
+        if (
+          renderedGroundByIcaoRef.current.get(s.icao24) !== onGroundEff &&
+          !emergencyAlertCode(s)
+        ) {
+          renderedGroundByIcaoRef.current.set(s.icao24, onGroundEff)
+          const color = cachedColor(
+            themedAirspaceColor(
+              airspaceColor(s, airport, airspaceCfgAnim, artccStrataAnim, onGroundEff),
+              themeAnim,
+            ),
+          )
+          if (entity.billboard) {
+            entity.billboard.image = new ConstantProperty(
+              getAircraftBillboardUri(
+                color.toCssColorString(),
+                onGroundEff,
+                getRadarTheme(themeAnim).aircraftSymbolHalo,
+                canvasCacheRef.current,
+              ),
+            )
+            entity.billboard.rotation = new ConstantProperty(
+              onGroundEff ? 0 : CesiumMath.toRadians(-(leaderTrackDeg ?? 0)),
+            )
+          }
+          if (entity.label) {
+            entity.label.fillColor = new ConstantProperty(
+              selectedIcaoRef.current === s.icao24
+                ? cachedColor(getRadarTheme(themeAnim).selectedTrackColor)
+                : color,
+            )
+            entity.label.distanceDisplayCondition = new ConstantProperty(
+              aircraftLabelDistanceDisplayCondition(onGroundEff, {
+                altFilter: altFilterRef.current,
+                isSelected: selectedIcaoRef.current === s.icao24,
+              }),
+            )
+          }
+          if (onGroundEff) {
+            const leaderEntity = trailsLayer.entities.getById(`leader-${s.icao24}`)
+            if (leaderEntity) trailsLayer.entities.remove(leaderEntity)
+          }
+          dirty = true
+        }
+
         if (!dr) {
           drPosByIcaoRef.current.delete(s.icao24)
           continue
@@ -1398,16 +1483,16 @@ export function RadarMap({
         drPosByIcaoRef.current.set(s.icao24, dr)
         const altM = scopeHeightM(dr.altitudeFt, airport.elevation_ft)
         const pos = Cartesian3.fromDegrees(dr.lon, dr.lat, altM)
-        if (entity.position instanceof ConstantPositionProperty) {
-          entity.position.setValue(pos)
-        } else {
-          entity.position = new ConstantPositionProperty(pos)
-        }
+        // Assign a fresh position property (rather than mutating via setValue)
+        // so the datablock label repositions in lockstep with the symbol on
+        // every tick — mirrors the per-poll render path. Mutating in place left
+        // the label trailing behind the moving target between polls.
+        entity.position = new ConstantPositionProperty(pos)
         dirty = true
 
         // Keep target-anchored geometry attached as the target moves
         const leader = trailsLayer.entities.getById(`leader-${s.icao24}`)
-        if (leaderTrackDeg != null && s.speedKts != null) {
+        if (!onGroundEff && leaderTrackDeg != null && s.speedKts != null) {
           if (leader?.polyline) {
             const endPt = destinationPoint(
               dr.lat,
@@ -1445,7 +1530,7 @@ export function RadarMap({
       if (dirty) viewer.scene.requestRender()
     }, DR_TICK_MS)
     return () => window.clearInterval(id)
-  }, [viewerReady, airport.icao, airport.elevation_ft])
+  }, [viewerReady, airport])
 
   // J-ring cycle: off -> 3 NM -> 5 NM -> off
   const cycleJRing = useCallback((icao: string) => {

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import type { RichAircraftState } from '../../../types/aircraft'
+import type { Runway } from '../../../types'
 import type { BoundingBox } from '../../../lib/geo'
 import { getAircraftInBoundingBox, AircraftFeedRequestError } from '../../../lib/aircraftFeedClient'
 import { normalizeGroundState } from '../../../lib/groundInference'
@@ -12,6 +13,9 @@ interface UseAircraftFeedOptions {
   lon: number
   elevationFt: number
   bbox: BoundingBox
+  /** Runways for the scope airport — used for geometry-aware ground inference
+   *  (landing rollout / takeoff roll on a runway). */
+  runways: Runway[]
   /** Position (TWR/TRACON/CTR) — changing it resets the fetch throttle so the
    *  wider/narrower bbox is polled immediately instead of waiting a cycle. */
   altFilter: string
@@ -34,6 +38,7 @@ export function useAircraftFeed({
   lon,
   elevationFt,
   bbox,
+  runways,
   altFilter,
 }: UseAircraftFeedOptions): UseAircraftFeedResult {
   const [states, setStates] = useState<RichAircraftState[]>([])
@@ -43,6 +48,9 @@ export function useAircraftFeed({
   const lastFetchRef = useRef(0)
   const backoffUntilRef = useRef(0)
   const consecutiveFailuresRef = useRef(0)
+  // Previous resolved ground state per icao24 — keeps inferred ground sticky so
+  // a landed target stays GND through rollout/taxi instead of flickering.
+  const groundStickyRef = useRef<Map<string, boolean>>(new Map())
 
   useEffect(() => {
     lastFetchRef.current = 0
@@ -84,11 +92,19 @@ export function useAircraftFeed({
         consecutiveFailuresRef.current = 0
         setFeedError(null)
         setFeedConfigRequired(false)
-        // Some transponders never flip the air/ground bit while taxiing, which
-        // left ground traffic labeled AIRBORNE. Normalize once here so every
-        // consumer (datablocks, detail card, phase classifier, runway logic)
-        // sees a consistent onGround value.
-        setStates(normalizeGroundState(result.states, elevationFt))
+        // Some transponders never flip the air/ground bit while taxiing/rolling
+        // out, which left ground traffic labeled AIRBORNE. Normalize once here
+        // (geometry-aware + sticky) so every consumer (datablocks, detail card,
+        // phase classifier, runway logic, target coloring) sees a consistent
+        // onGround value that persists through the landing rollout and taxi.
+        const normalized = normalizeGroundState(
+          result.states,
+          elevationFt,
+          runways,
+          groundStickyRef.current,
+        )
+        groundStickyRef.current = normalized.ground
+        setStates(normalized.states)
       } catch (err: unknown) {
         if (cancelled) return
         if (err instanceof AircraftFeedRequestError && err.code === 'feed_configuration') {
@@ -128,7 +144,7 @@ export function useAircraftFeed({
       window.clearInterval(id)
     }
     // display filters omitted — client-side filter only; avoids refetch on pill toggle
-  }, [icao, lat, lon, elevationFt, altFilter, bbox])
+  }, [icao, lat, lon, elevationFt, altFilter, bbox, runways])
 
   return { states, feedError, feedConfigRequired }
 }

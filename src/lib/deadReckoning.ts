@@ -5,6 +5,15 @@ import { destinationPoint } from './geo'
 export const DR_TICK_MS = 100
 /** Stop extrapolating past this age — matches radar "coast" behavior. */
 export const DR_MAX_EXTRAP_MS = 30_000
+/**
+ * Cap on how far forward a target is *moved* between fixes. The feed polls
+ * ~every 5 s, so a fix older than this means the target has likely stopped
+ * reporting (e.g. just landed and dropped off ground coverage). Past this we
+ * hold position instead of flying the extrapolation onward — otherwise a stale
+ * fix sends the symbol and its datablock sailing a mile down the track, away
+ * from where the aircraft actually is.
+ */
+export const DR_MAX_MOTION_MS = 8_000
 /** Below this groundspeed dead reckoning adds jitter, not realism. */
 export const DR_MIN_SPEED_KTS = 30
 
@@ -23,6 +32,13 @@ export interface DrPosition {
   lat: number
   lon: number
   altitudeFt: number
+  /**
+   * Whether the target is on the surface per the model — true once the
+   * touchdown/rollout model has put it on the runway, even before the feed's
+   * air/ground bit flips. Drives ground coloring so a landed target doesn't
+   * stay tower-colored while the feed catches up.
+   */
+  onGround: boolean
 }
 
 export interface DeadReckonContext {
@@ -85,7 +101,7 @@ export function deadReckon(
   if (state.speedKts == null || state.speedKts < DR_MIN_SPEED_KTS) return null
   if (trackDeg == null) return null
 
-  const dtMs = Math.min(Math.max(0, nowMs - baseMs), DR_MAX_EXTRAP_MS)
+  const dtMs = Math.min(Math.max(0, nowMs - baseMs), DR_MAX_MOTION_MS)
   if (dtMs <= 0) return null
 
   const groundElevFt = ctx?.groundElevFt ?? 0
@@ -94,7 +110,7 @@ export function deadReckon(
   if (ctx?.landing && state.onGround) {
     const distNm = rolloutDistanceNm(state.speedKts, dtMs)
     const { lat, lon } = destinationPoint(state.lat, state.lon, trackDeg, distNm)
-    return { lat, lon, altitudeFt: state.altitudeFt }
+    return { lat, lon, altitudeFt: state.altitudeFt, onGround: true }
   }
 
   // Touchdown: descending fix on short final — fly the sink rate down to the
@@ -119,7 +135,7 @@ export function deadReckon(
         trackDeg,
         airDistNm + rollDistNm,
       )
-      return { lat, lon, altitudeFt: groundElevFt }
+      return { lat, lon, altitudeFt: groundElevFt, onGround: true }
     }
 
     // Still airborne: render the corrected descent (anchored to the field,
@@ -130,7 +146,7 @@ export function deadReckon(
     if (dispAglFt <= RUNWAY_PIN_MAX_AGL_FT && ctx.isOverRunway?.(lat, lon)) {
       dispAglFt = 0
     }
-    return { lat, lon, altitudeFt: groundElevFt + dispAglFt }
+    return { lat, lon, altitudeFt: groundElevFt + dispAglFt, onGround: dispAglFt === 0 }
   }
 
   const distNm = (state.speedKts * dtMs) / 3_600_000
@@ -143,5 +159,5 @@ export function deadReckon(
     altitudeFt = Math.max(floorFt, altitudeFt + (state.verticalRateFpm * dtMs) / 60_000)
   }
 
-  return { lat, lon, altitudeFt }
+  return { lat, lon, altitudeFt, onGround: state.onGround }
 }

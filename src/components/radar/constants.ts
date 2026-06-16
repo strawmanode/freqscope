@@ -11,6 +11,8 @@ export const NM_TO_METERS = 1852
 export const MODEL_LOD_CUTOFF_M = 90_000
 export const LABEL_DISPLAY_MAX_M = 500_000
 export const GROUND_LABEL_DISPLAY_MAX_M = 150_000
+/** Ground datablocks in TWR only appear once zoomed to ~5 NM or closer. */
+export const GROUND_LABEL_TWR_DISPLAY_MAX_M = 5 * NM_TO_METERS * 2.2
 export const CENTER_DECLUTTER_RANGE_NM = 80
 export const TRACON_TRACK_DECLUTTER_RANGE_NM = 80
 export const BILLBOARD_SCALE_NEAR_M = 200_000

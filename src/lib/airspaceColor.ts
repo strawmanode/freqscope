@@ -96,10 +96,17 @@ export function airspaceColor(
   airport: Airport,
   config: AirspaceConfig,
   artccStrata?: ArtccStratum[],
+  /**
+   * Treat the target as on the ground regardless of the feed's air/ground bit.
+   * Used so a target the dead-reckoning landing model has put on the runway is
+   * colored GND immediately, instead of staying tower/approach-colored until
+   * the feed catches up.
+   */
+  onGroundOverride?: boolean,
 ): string {
   const squawk = state.squawk
   if (isEmergencySquawk(squawk)) return COLOR_EMERG
-  if (state.onGround === true) return COLOR_GND
+  if ((onGroundOverride ?? state.onGround) === true) return COLOR_GND
 
   const lat = state.lat
   const lon = state.lon
