@@ -30,6 +30,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Regenerate reference data
+        run: |
+          mkdir -p scripts/nasr
+          dl() {
+            curl -fsSL -o "scripts/nasr/$1" "https://davidmegginson.github.io/ourairports-data/$1" \
+              || curl -fsSL -o "scripts/nasr/$1" "https://ourairports.com/data/$1"
+          }
+          dl airports.csv
+          dl airport-frequencies.csv
+          dl runways.csv
+          npm install --no-save @squawk/airspace-data@latest || true
+          npm run build:reference-data
+
       - name: Build the web client and Electron bundle
         run: |
           npm run build
@@ -59,6 +72,71 @@ jobs:
             release/*.yml
             release/*.blockmap
           if-no-files-found: ignore
+
+  # Guarantees the moving `data-latest` feed exists and is current whenever an
+  # app release is cut, so freshly-downloaded apps always have a live feed to
+  # pull from on launch. Mirrors the scheduled data-update workflow; runs
+  # independently of the installer build so a build failure can't leave the
+  # feed stale.
+  publish-data:
+    name: Publish reference data feed
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Download OurAirports CSVs
+        run: |
+          mkdir -p scripts/nasr
+          dl() {
+            curl -fsSL -o "scripts/nasr/$1" "https://davidmegginson.github.io/ourairports-data/$1" \
+              || curl -fsSL -o "scripts/nasr/$1" "https://ourairports.com/data/$1"
+          }
+          dl airports.csv
+          dl airport-frequencies.csv
+          dl runways.csv
+
+      - name: Refresh airspace dataset (best effort)
+        run: npm install --no-save @squawk/airspace-data@latest || true
+
+      - name: Regenerate data
+        run: npm run build:reference-data
+
+      - name: Publish to data-latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release view data-latest >/dev/null 2>&1 || \
+            gh release create data-latest \
+              --title "FreqScope reference data (latest)" \
+              --notes "Auto-published reference data. The desktop app downloads this on launch." \
+              --prerelease --target "$GITHUB_SHA"
+          gh release upload data-latest \
+            src/data/airports.json \
+            src/data/frequencies.json \
+            src/data/runways.json \
+            src/data/airspace.json \
+            src/data/artcc.json \
+            src/data/sua.json \
+            src/data/data-meta.json \
+            src/data/scope-airports.json \
+            src/data/data-manifest.json \
+            --clobber
+
+      - name: Verify the feed is reachable
+        run: |
+          URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/data-latest/data-manifest.json"
+          echo "Checking $URL"
+          curl -fsSL "$URL" | tee /tmp/manifest.json
+          node -e "const m=require('/tmp/manifest.json'); if(!m.version||!Array.isArray(m.files)||!m.files.length){console.error('feed manifest invalid');process.exit(1)} console.log('feed OK — version',m.version)"
 
   publish:
     name: Publish release

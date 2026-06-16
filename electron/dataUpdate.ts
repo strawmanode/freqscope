@@ -7,8 +7,9 @@ import path from 'path'
  *
  * Mirrors the app-update model: on launch we serve the most recent data we've
  * already downloaded, and check for a newer bundle in the background. A newly
- * downloaded bundle is swapped in atomically and takes effect on the *next*
- * launch — so we never block startup or read a half-written file.
+ * downloaded bundle is swapped in atomically. When a download completes during
+ * an active session, callers can reload the window so the new data applies
+ * immediately (see electron/main.ts).
  *
  * The data feed is a moving GitHub release (`data-latest`) published by the
  * scheduled data-update workflow.
@@ -35,15 +36,30 @@ export function applyDownloadedDataDir(): void {
   }
 }
 
-function localVersion(dir: string): string | null {
+function readManifestVersion(manifestPath: string): string | null {
   try {
     const m = JSON.parse(
-      fs.readFileSync(path.join(dir, 'data-manifest.json'), 'utf8'),
+      fs.readFileSync(manifestPath, 'utf8'),
     ) as Manifest
     return typeof m.version === 'string' ? m.version : null
   } catch {
     return null
   }
+}
+
+function localVersion(dir: string): string | null {
+  return readManifestVersion(path.join(dir, 'data-manifest.json'))
+}
+
+function bundledVersion(): string | null {
+  const bundled = process.env.FREQSCOPE_BUNDLED_DATA_DIR?.trim()
+  if (!bundled) return null
+  return readManifestVersion(path.join(bundled, 'data-manifest.json'))
+}
+
+/** Best-known version: downloaded copy, else the manifest shipped in the installer. */
+function currentVersion(dir: string): string | null {
+  return localVersion(dir) ?? bundledVersion()
 }
 
 async function download(url: string, timeoutMs: number): Promise<Buffer> {
@@ -56,7 +72,7 @@ async function download(url: string, timeoutMs: number): Promise<Buffer> {
  * Background check for a newer data bundle. Safe to call without awaiting;
  * never throws. Downloads are staged in a temp dir and swapped in atomically.
  */
-export async function checkForDataUpdate(): Promise<void> {
+export async function checkForDataUpdate(): Promise<boolean> {
   const dir = dataDir()
 
   let manifest: Manifest
@@ -65,15 +81,15 @@ export async function checkForDataUpdate(): Promise<void> {
       cache: 'no-store',
       signal: AbortSignal.timeout(15000),
     })
-    if (!res.ok) return
+    if (!res.ok) return false
     manifest = (await res.json()) as Manifest
   } catch {
-    return // offline / no release yet
+    return false // offline / no release yet
   }
 
   const files = Array.isArray(manifest.files) ? manifest.files : []
-  if (!manifest.version || files.length === 0) return
-  if (manifest.version === localVersion(dir)) return // already current
+  if (!manifest.version || files.length === 0) return false
+  if (manifest.version === currentVersion(dir)) return false // already current
 
   const tmp = `${dir}.tmp-${Date.now()}`
   try {
@@ -92,11 +108,12 @@ export async function checkForDataUpdate(): Promise<void> {
     if (fs.existsSync(dir)) await fs.promises.rename(dir, backup)
     await fs.promises.rename(tmp, dir)
     await fs.promises.rm(backup, { recursive: true, force: true }).catch(() => {})
-    console.log(
-      `[freqscope] reference data updated to ${manifest.version} (applies next launch)`,
-    )
+    process.env.FREQSCOPE_DATA_DIR = dir
+    console.log(`[freqscope] reference data updated to ${manifest.version}`)
+    return true
   } catch (err) {
     console.error('[freqscope] data update failed', err)
     await fs.promises.rm(tmp, { recursive: true, force: true }).catch(() => {})
+    return false
   }
 }

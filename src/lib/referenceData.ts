@@ -5,6 +5,8 @@ import airspaceBundled from '../data/airspace.json'
 import artccBundled from '../data/artcc.json'
 import suaBundled from '../data/sua.json'
 import dataMetaBundled from '../data/data-meta.json'
+import scopeBundled from '../data/scope-airports.json'
+import { applyScopeAirports } from './scopeAirports'
 
 /**
  * Keeps the app's bundled reference data current.
@@ -33,6 +35,7 @@ const DATASETS: Dataset[] = [
   { name: 'sua', ref: suaBundled, kind: 'array' },
   // Keeps the freshness badge (dataFreshness.ts) in sync with downloaded data.
   { name: 'data-meta', ref: dataMetaBundled, kind: 'object' },
+  { name: 'scope-airports', ref: scopeBundled, kind: 'object' },
 ]
 
 function mergeArrayInPlace(ref: unknown, fresh: unknown): void {
@@ -71,4 +74,5 @@ async function refreshDataset({ name, ref, kind }: Dataset): Promise<void> {
  */
 export async function initReferenceData(): Promise<void> {
   await Promise.all(DATASETS.map(refreshDataset))
+  applyScopeAirports(scopeBundled as import('./scopeAirports').ScopeAirportsConfig)
 }

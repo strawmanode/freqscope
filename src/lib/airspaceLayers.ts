@@ -215,6 +215,8 @@ export function renderClassBAirspace(
 
   removeEntitiesWithPrefix(layer, `class-b-${airport.icao}-`)
 
+  removeEntitiesWithPrefix(layer, `class-c-${airport.icao}-`)
+
   removeEntitiesWithPrefix(layer, `tracon-${airport.icao}-`)
 
   const style = getAirspacePalette(themeId).tracon
@@ -228,9 +230,51 @@ export function renderClassBAirspace(
     preset,
   )
 
+  // Class C: stack every charted shelf ring at its true MSL floor/ceiling, as
+  // published. The SFC core is drawn by renderTowerAirspace, so only the
+  // higher-floored shelves are added here (avoids double-drawing the core).
+  if (config.class_c?.length) {
+    const shelves = config.class_c.filter((t) => t.floor_ref !== 'SFC')
+    for (let i = 0; i < shelves.length; i++) {
+      const tier = shelves[i]
+      const floorM = tier.floor_ft / 3.28084
+      const ceilM = tier.ceiling_ft / 3.28084
+      if (ceilM <= floorM || !tier.boundary?.length) continue
+      const positions = tier.boundary.map(([lat, lon]) =>
+        Cartesian3.fromDegrees(lon, lat),
+      )
+      layer.entities.add({
+        id: `class-c-${airport.icao}-${i}`,
+        polygon: {
+          hierarchy: positions,
+          height: floorM,
+          extrudedHeight: ceilM,
+          material: traconFillMaterial,
+          outline: true,
+          outlineColor: getOutlineColor(
+            style.color,
+            style.outlineAlphaMin,
+            style.outlineAlphaMax,
+            2500,
+            i / Math.max(1, shelves.length),
+            preset,
+          ),
+          outlineWidth: style.outlineWidth,
+          closeTop: false,
+          closeBottom: true,
+        },
+      })
+    }
+    return
+  }
+
   if (config.tracon_boundary && config.tracon_boundary.length > 0) {
-    const traconFloorM = towerTopM(airport, config)
     const traconCeilM = traconCeilingM(airport, config)
+    // Class C outer shelf often shares the inner ceiling; extrude from field elevation.
+    const traconFloorM =
+      config.class === 'C' && config.tracon_ceil_ft <= config.twr_ceil_ft
+        ? airport.elevation_ft / 3.28084
+        : towerTopM(airport, config)
     if (traconCeilM > traconFloorM) {
       const positions = config.tracon_boundary.map(([lat, lon]) =>
         Cartesian3.fromDegrees(lon, lat),
@@ -255,8 +299,11 @@ export function renderClassBAirspace(
 
   if (!config.class_b?.length) {
     const radiusM = config.tracon_radius_nm * 1852
-    const floorM = towerTopM(airport, config)
     const ceilM = traconCeilingM(airport, config)
+    const floorM =
+      config.class === 'C' && config.tracon_ceil_ft <= config.twr_ceil_ft
+        ? airport.elevation_ft / 3.28084
+        : towerTopM(airport, config)
     if (ceilM <= floorM) {
       console.warn(
         `[airspace] TRACON cylinder skipped for ${airport.icao}: ceilM=${ceilM} <= floorM=${floorM}`,

@@ -65,11 +65,18 @@ function resolveBundledDataDir(): string {
     : path.join(__dirname, '..', 'src', 'data')
 }
 
+async function prepareReferenceData(): Promise<void> {
+  if (RENDERER_URL || !app.isPackaged) return
+  process.env.FREQSCOPE_BUNDLED_DATA_DIR ??= resolveBundledDataDir()
+  applyDownloadedDataDir()
+  // Fresh installs: fetch data-latest before the window opens so the first
+  // screen already has new airports/airspace when the user is online.
+  await checkForDataUpdate()
+}
+
 async function resolveStartUrl(): Promise<string> {
   if (RENDERER_URL) return RENDERER_URL
   loadEnvLocal()
-  // Reference-data resolution for the embedded server: prefer a downloaded
-  // copy, fall back to the bundle shipped with the app.
   process.env.FREQSCOPE_BUNDLED_DATA_DIR ??= resolveBundledDataDir()
   applyDownloadedDataDir()
   running = await startServer({ distDir: resolveDistDir() })
@@ -137,10 +144,17 @@ if (!gotLock) {
 
   app.whenReady()
     .then(async () => {
+      await prepareReferenceData()
       await createWindow()
       initAutoUpdate()
-      // Refresh reference data in the background for next launch (packaged only).
-      if (app.isPackaged) void checkForDataUpdate()
+      // Catch bundles published while the app was open; reload if one lands.
+      if (app.isPackaged) {
+        void checkForDataUpdate().then((updated) => {
+          if (updated && mainWindow && !mainWindow.isDestroyed()) {
+            mainWindow.webContents.reload()
+          }
+        })
+      }
     })
     .catch((err) => {
       console.error('[freqscope] failed to start', err)

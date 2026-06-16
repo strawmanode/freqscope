@@ -7,21 +7,7 @@ import { getAirspace } from '../lib/airspace'
 import { formatTempFahrenheit, parseMetarBatch, type MetarBrief } from '../lib/metarBrief'
 import type { Airport } from '../types'
 
-// Verified airports - curated list with confirmed radar and frequency data
-// Search is hidden until more airports are verified
-const VERIFIED_ICAOS = [
-  'KATL',
-  'KORD',
-  'KLAX',
-  'KJFK',
-  'KSFO',
-  'KDFW',
-  'KDEN',
-  'KLAS',
-  'KMIA',
-  'KSEA',
-  'KMEM',
-]
+import { getVerifiedIcaos } from '../lib/scopeAirports'
 
 const METAR_REFRESH_MS = 5 * 60_000
 
@@ -50,20 +36,22 @@ export function Home() {
   const { status, loading, openSetup } = useFeedSetup()
   const [briefs, setBriefs] = useState<Map<string, MetarBrief>>(new Map())
 
+  const verifiedIcaos = useMemo(() => getVerifiedIcaos(), [])
+
   // Computed in-component so it reflects reference data refreshed at startup.
   const verifiedAirports = useMemo(
     () =>
-      VERIFIED_ICAOS.map((icao) =>
-        (airportsData as Airport[]).find((a) => a.icao === icao),
-      ).filter((a): a is Airport => Boolean(a)),
-    [],
+      verifiedIcaos
+        .map((icao) => (airportsData as Airport[]).find((a) => a.icao === icao))
+        .filter((a): a is Airport => Boolean(a)),
+    [verifiedIcaos],
   )
 
   useEffect(() => {
     let cancelled = false
     const fetchBriefs = async () => {
       try {
-        const ids = VERIFIED_ICAOS.join(',')
+        const ids = verifiedIcaos.join(',')
         const res = await fetch(`/api/metar?ids=${ids}&format=raw`)
         if (!res.ok || cancelled) return
         const text = await res.text()
@@ -78,7 +66,7 @@ export function Home() {
       cancelled = true
       window.clearInterval(id)
     }
-  }, [])
+  }, [verifiedIcaos])
 
   const tickerItems = useMemo(
     () => verifiedAirports.map((a) => tickerText(a, briefs.get(a.icao))),

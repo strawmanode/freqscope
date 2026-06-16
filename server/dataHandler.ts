@@ -25,6 +25,7 @@ const DATA_FILES = new Set([
   'sua',
   'landmarks',
   'data-meta',
+  'scope-airports',
 ])
 
 function bundledDir(): string {

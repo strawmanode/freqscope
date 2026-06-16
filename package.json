@@ -22,6 +22,8 @@
     "preview": "vite preview",
     "build:data": "node scripts/build-nasr-data.mjs",
     "build:airspace": "node scripts/build-airspace.mjs",
+    "build:reference-data": "npm run build:data && npm run build:airspace && node scripts/write-data-manifest.mjs",
+    "publish:data": "node scripts/publish-data.mjs",
     "setup:models": "node scripts/setup-fr24-models.mjs",
     "build:electron": "node electron/build.mjs",
     "serve": "node dist-electron/serve.cjs",

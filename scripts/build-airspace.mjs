@@ -29,6 +29,18 @@ function outerTierByMaxRadius(features, centerLat, centerLon) {
   }, null)?.feature ?? null
 }
 
+/** FAA shelf ceilings are MSL; FreqScope stores AGL for non–Class B rendering. */
+function mslCeilingToAgl(ceilingMsl, elevationFt) {
+  return Math.round(Math.max(0, ceilingMsl - elevationFt))
+}
+
+function roundBoundary(ring) {
+  return ring.map(([lat, lon]) => [
+    Math.round(lat * 100000) / 100000,
+    Math.round(lon * 100000) / 100000,
+  ])
+}
+
 const gzPath = path.resolve(__dirname, '../node_modules/@squawk/airspace-data/data/airspace.geojson.gz')
 const gz = fs.readFileSync(gzPath)
 const geojson = JSON.parse(zlib.gunzipSync(gz).toString())
@@ -76,6 +88,7 @@ const airspace = JSON.parse(fs.readFileSync(airspacePath, 'utf8'))
 
 const airportsPath = path.resolve(__dirname, '../src/data/airports.json')
 const airports = JSON.parse(fs.readFileSync(airportsPath, 'utf8'))
+
 
 for (const faaId of AIRPORTS) {
   const icao = FAA_TO_ICAO[faaId]
@@ -194,11 +207,43 @@ for (const airport of airports) {
     })
     const inner = byRadius[0]
     const outer = byRadius[byRadius.length - 1]
-    airspace[icao].twr_ceil_ft = inner.properties.ceiling.valueFt
-    airspace[icao].tracon_ceil_ft = outer.properties.ceiling.valueFt
-    const outerCoords = outer.geometry.coordinates[0].map((c) => [c[1], c[0]])
+    const innerCeilMsl = inner.properties.ceiling.valueFt
+    const outerCeilMsl = outer.properties.ceiling.valueFt
+    airspace[icao].twr_ceil_ft = mslCeilingToAgl(innerCeilMsl, airport.elevation_ft)
+    airspace[icao].tracon_ceil_ft = mslCeilingToAgl(outerCeilMsl, airport.elevation_ft)
+    const innerCoords = roundBoundary(
+      inner.geometry.coordinates[0].map((c) => [c[1], c[0]]),
+    )
+    const outerCoords = roundBoundary(
+      outer.geometry.coordinates[0].map((c) => [c[1], c[0]]),
+    )
+    airspace[icao].twr_radius_nm = polygonRadiusNm(innerCoords, airport.lat, airport.lon)
     airspace[icao].tracon_radius_nm = polygonRadiusNm(outerCoords, airport.lat, airport.lon)
     airspace[icao].class = 'C'
+
+    // Full chart fidelity: capture every charted ring (SFC core + each shelf)
+    // with its true MSL floor/ceiling, so the renderer can stack the rings
+    // exactly as published instead of approximating the outer shelf as a single
+    // ground-to-ceiling volume. Sorted SFC core first, then ascending floor.
+    airspace[icao].class_c = classCFeatures
+      .map((f) => ({
+        floor_ft: f.properties.floor.valueFt,
+        floor_ref: f.properties.floor.reference,
+        ceiling_ft: f.properties.ceiling.valueFt,
+        boundary: roundBoundary(
+          f.geometry.coordinates[0].map((c) => [c[1], c[0]]),
+        ),
+      }))
+      .sort((a, b) => a.floor_ft - b.floor_ft)
+
+    // SFC core doubles as the tower lateral boundary; the outer ring is the
+    // TRACON filter footprint. Kept for the TWR/TRACON altitude bands.
+    const sfcTier =
+      classCFeatures.find((f) => f.properties.floor.reference === 'SFC') ?? inner
+    airspace[icao].tower_boundary = roundBoundary(
+      sfcTier.geometry.coordinates[0].map((c) => [c[1], c[0]]),
+    )
+    airspace[icao].tracon_boundary = outerCoords
     enrichedCount++
     continue
   }
@@ -209,7 +254,10 @@ for (const airport of airports) {
   )
   if (classDFeatures.length > 0) {
     const d = classDFeatures[0]
-    airspace[icao].twr_ceil_ft = d.properties.ceiling.valueFt
+    airspace[icao].twr_ceil_ft = mslCeilingToAgl(
+      d.properties.ceiling.valueFt,
+      airport.elevation_ft,
+    )
     airspace[icao].class = 'D'
     enrichedCount++
   }

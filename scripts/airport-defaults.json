@@ -2,56 +2,85 @@
   "KATL": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "ATLANTA TOWER",
+    "approachName": "A80 ATLANTA TRACON"
   },
   "KORD": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "CHICAGO O'HARE TOWER",
+    "approachName": "C90 CHICAGO TRACON"
   },
   "KLAX": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "LOS ANGELES TOWER",
+    "approachName": "SCT SOUTHERN CALIFORNIA TRACON"
   },
   "KJFK": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "KENNEDY TOWER",
+    "approachName": "N90 NEW YORK TRACON"
   },
   "KSFO": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "SAN FRANCISCO TOWER",
+    "approachName": "NCT NORTHERN CALIFORNIA TRACON"
   },
   "KDFW": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "DALLAS-FORT WORTH TOWER",
+    "approachName": "D10 DALLAS-FORT WORTH TRACON"
   },
   "KDEN": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "DENVER TOWER",
+    "approachName": "D01 DENVER TRACON"
   },
   "KLAS": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "LAS VEGAS TOWER",
+    "approachName": "L30 LAS VEGAS TRACON"
   },
   "KMIA": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "MIAMI TOWER",
+    "approachName": "MIA MIAMI APPROACH"
   },
   "KSEA": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "SEATTLE TOWER",
+    "approachName": "S46 SEATTLE TRACON"
+  },
+  "KGEG": {
+    "altFilter": "TWR",
+    "trafficFilter": "AIR",
+    "autoTuneSlot": "TOWER",
+    "towerName": "SPOKANE TOWER",
+    "approachName": "SPOKANE APPROACH"
   },
   "KMEM": {
     "altFilter": "TWR",
     "trafficFilter": "AIR",
-    "autoTuneSlot": "TOWER"
+    "autoTuneSlot": "TOWER",
+    "towerName": "MEMPHIS TOWER",
+    "approachName": "M03 MEMPHIS TRACON"
   }
 }

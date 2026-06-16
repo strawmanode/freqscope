@@ -14,6 +14,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { writeDataMeta } from './dataMeta.mjs'
+import { writeScopeAirports } from './write-scope-airports.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const NASR_DIR = path.join(__dirname, 'nasr')
@@ -464,6 +465,8 @@ function main() {
   writeDataMeta({
     nasr: { generatedAt: new Date().toISOString(), source },
   })
+
+  writeScopeAirports()
 }
 
 main()
