@@ -21,9 +21,12 @@ export function verticalTrend(verticalRateFpm: number | null): string {
   return ''
 }
 
-export function formatDataLine2(state: RichAircraftState): string {
+export function formatDataLine2(
+  state: RichAircraftState,
+  onGround: boolean = state.onGround,
+): string {
   const speed = formatGroundspeedKnots(state.speedKts)
-  if (state.onGround) return `${speed}  GND`
+  if (onGround) return `${speed}  GND`
   const alt = formatAltitudeDisplay(state.altitudeFt)
   return `${speed}  ${alt}${verticalTrend(state.verticalRateFpm)}`
 }
@@ -55,10 +58,14 @@ export function timesharePhase(nowMs: number): TimesharePhase {
 export function buildDatablockText(
   state: RichAircraftState,
   phase: TimesharePhase,
+  /** Effective ground state (feed bit OR dead-reckoning landing model) so the
+   *  data line reads GND in lockstep with the ground symbol. */
+  onGround: boolean = state.onGround,
 ): string {
   const callsign = (state.callsign ?? '').trim() || '—'
   const altLine = formatDataLine3(state)
-  const dataLine = phase === 'alt' && altLine ? altLine : formatDataLine2(state)
+  const dataLine =
+    phase === 'alt' && altLine ? altLine : formatDataLine2(state, onGround)
   const alert = emergencyAlertCode(state)
   return alert ? `${alert}\n${callsign}\n${dataLine}` : `${callsign}\n${dataLine}`
 }
