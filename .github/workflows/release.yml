@@ -168,6 +168,10 @@ jobs:
       - name: Publish release and upload checksums
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # This job has no checkout (only downloads artifacts), so `gh` can't
+          # infer the repo from git. Set it explicitly to avoid the
+          # "not a git repository" failure.
+          GH_REPO: ${{ github.repository }}
         run: |
           TAG="${GITHUB_REF_NAME}"
           gh release upload "$TAG" SHA256SUMS --clobber
