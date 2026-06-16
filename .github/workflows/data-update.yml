@@ -71,3 +71,10 @@ jobs:
             src/data/scope-airports.json \
             src/data/data-manifest.json \
             --clobber
+
+      - name: Verify the feed is reachable
+        run: |
+          URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/data-latest/data-manifest.json"
+          echo "Checking $URL"
+          curl -fsSL "$URL" | tee /tmp/manifest.json
+          node -e "const m=require('/tmp/manifest.json'); if(!m.version||!Array.isArray(m.files)||!m.files.length){console.error('feed manifest invalid');process.exit(1)} console.log('feed OK — version',m.version)"
