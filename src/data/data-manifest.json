@@ -1,0 +1,15 @@
+{
+  "version": "20260616",
+  "generatedAt": "2026-06-16T02:33:05.312Z",
+  "source": "OurAirports",
+  "files": [
+    "airports.json",
+    "frequencies.json",
+    "runways.json",
+    "airspace.json",
+    "artcc.json",
+    "sua.json",
+    "data-meta.json",
+    "scope-airports.json"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "icaos": [
+    "KATL",
+    "KORD",
+    "KLAX",
+    "KJFK",
+    "KSFO",
+    "KDFW",
+    "KDEN",
+    "KLAS",
+    "KMIA",
+    "KSEA",
+    "KGEG",
+    "KMEM"
+  ],
+  "facilities": {
+    "KATL": {
+      "tower": "ATLANTA TOWER",
+      "approach": "A80 ATLANTA TRACON"
+    },
+    "KORD": {
+      "tower": "CHICAGO O'HARE TOWER",
+      "approach": "C90 CHICAGO TRACON"
+    },
+    "KLAX": {
+      "tower": "LOS ANGELES TOWER",
+      "approach": "SCT SOUTHERN CALIFORNIA TRACON"
+    },
+    "KJFK": {
+      "tower": "KENNEDY TOWER",
+      "approach": "N90 NEW YORK TRACON"
+    },
+    "KSFO": {
+      "tower": "SAN FRANCISCO TOWER",
+      "approach": "NCT NORTHERN CALIFORNIA TRACON"
+    },
+    "KDFW": {
+      "tower": "DALLAS-FORT WORTH TOWER",
+      "approach": "D10 DALLAS-FORT WORTH TRACON"
+    },
+    "KDEN": {
+      "tower": "DENVER TOWER",
+      "approach": "D01 DENVER TRACON"
+    },
+    "KLAS": {
+      "tower": "LAS VEGAS TOWER",
+      "approach": "L30 LAS VEGAS TRACON"
+    },
+    "KMIA": {
+      "tower": "MIAMI TOWER",
+      "approach": "MIA MIAMI APPROACH"
+    },
+    "KSEA": {
+      "tower": "SEATTLE TOWER",
+      "approach": "S46 SEATTLE TRACON"
+    },
+    "KGEG": {
+      "tower": "SPOKANE TOWER",
+      "approach": "SPOKANE APPROACH"
+    },
+    "KMEM": {
+      "tower": "MEMPHIS TOWER",
+      "approach": "M03 MEMPHIS TRACON"
+    }
+  }
+}

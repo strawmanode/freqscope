@@ -5,6 +5,15 @@ name: Publish reference data
 # `data-latest` GitHub release. The desktop app checks this release on launch
 # and downloads a newer bundle for use on the next launch.
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-airspace.mjs'
+      - 'scripts/build-nasr-data.mjs'
+      - 'scripts/airport-defaults.json'
+      - 'scripts/write-scope-airports.mjs'
+      - 'scripts/sua-overrides.json'
+      - '.github/workflows/data-update.yml'
   schedule:
     - cron: '0 8 * * 1' # Mondays 08:00 UTC
   workflow_dispatch:
@@ -40,28 +49,7 @@ jobs:
         run: npm install --no-save @squawk/airspace-data@latest || true
 
       - name: Regenerate data
-        run: |
-          npm run build:data
-          npm run build:airspace
-
-      - name: Build data manifest
-        run: |
-          node -e '
-            const fs = require("fs");
-            const version = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-            const files = [
-              "airports.json", "frequencies.json", "runways.json",
-              "airspace.json", "artcc.json", "sua.json", "data-meta.json",
-            ];
-            const manifest = {
-              version,
-              generatedAt: new Date().toISOString(),
-              source: "OurAirports",
-              files,
-            };
-            fs.writeFileSync("data-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
-            console.log(manifest);
-          '
+        run: npm run build:reference-data
 
       - name: Publish to data-latest release
         env:
@@ -80,5 +68,6 @@ jobs:
             src/data/artcc.json \
             src/data/sua.json \
             src/data/data-meta.json \
-            data-manifest.json \
+            src/data/scope-airports.json \
+            src/data/data-manifest.json \
             --clobber

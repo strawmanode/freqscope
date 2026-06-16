@@ -860,7 +860,9 @@ export function RadarMap({
         const toRemove = layer.entities.values.filter(
           (e) =>
             typeof e.id === 'string' &&
-            (e.id.startsWith('class-b-') || e.id.startsWith('tracon-')),
+            (e.id.startsWith('class-b-') ||
+              e.id.startsWith('class-c-') ||
+              e.id.startsWith('tracon-')),
         )
         for (const e of toRemove) layer.entities.remove(e)
       }

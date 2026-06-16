@@ -53,6 +53,8 @@ export interface AirspaceConfig {
   /** [lat, lon] pairs for TRACON lateral boundary (when present, used instead of radius cylinder) */
   tracon_boundary?: number[][]
   class_b?: ClassBTier[]
+  /** Charted Class C rings (SFC core + shelves), each with its true MSL floor/ceiling. */
+  class_c?: ClassBTier[]
   artcc?: string | null
 }
 

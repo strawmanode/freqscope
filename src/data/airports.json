@@ -790,7 +790,12 @@
     "state": "WA",
     "lat": 47.6199,
     "lon": -117.533997,
-    "elevation_ft": 2376
+    "elevation_ft": 2376,
+    "defaults": {
+      "altFilter": "TWR",
+      "trafficFilter": "AIR",
+      "autoTuneSlot": "TOWER"
+    }
   },
   {
     "icao": "KSTL",

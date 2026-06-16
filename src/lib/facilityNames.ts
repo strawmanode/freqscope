@@ -1,5 +1,6 @@
 import airportsData from '../data/airports.json'
 import { getAirspace } from './airspace'
+import { getScopeFacilityNames } from './scopeAirports'
 
 const airports = airportsData as { icao: string; name: string }[]
 
@@ -38,6 +39,7 @@ const TRACON_NAMES: Record<string, string> = {
   KDEN: 'D01 DENVER TRACON',
   KLAS: 'L30 LAS VEGAS TRACON',
   KSEA: 'S46 SEATTLE TRACON',
+  KGEG: 'SPOKANE APPROACH',
   KBOS: 'A90 BOSTON TRACON',
   KDCA: 'PCT POTOMAC TRACON',
   KIAD: 'PCT POTOMAC TRACON',
@@ -73,6 +75,7 @@ const TWR_NAMES: Record<string, string> = {
   KLAS: 'LAS VEGAS TOWER',
   KMIA: 'MIAMI TOWER',
   KSEA: 'SEATTLE TOWER',
+  KGEG: 'SPOKANE TOWER',
   KBOS: 'BOSTON TOWER',
   KPHL: 'PHILADELPHIA TOWER',
   KDCA: 'WASHINGTON NATIONAL TOWER',
@@ -107,6 +110,8 @@ function shortenAirportName(name: string): string {
 }
 
 export function getTwrName(icao: string): string {
+  const scope = getScopeFacilityNames(icao)
+  if (scope?.tower) return scope.tower
   if (TWR_NAMES[icao]) return TWR_NAMES[icao]
   const airport = airports.find((a) => a.icao === icao)
   const name = airport
@@ -116,6 +121,8 @@ export function getTwrName(icao: string): string {
 }
 
 export function getAppName(icao: string): string {
+  const scope = getScopeFacilityNames(icao)
+  if (scope?.approach) return scope.approach
   if (TRACON_NAMES[icao]) return TRACON_NAMES[icao]
   const airport = airports.find((a) => a.icao === icao)
   const name = airport ? shortenAirportName(airport.name) : icao
