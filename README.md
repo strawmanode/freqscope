@@ -1,12 +1,26 @@
 # FreqScope
 
-[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](package.json)
-[![Version](https://img.shields.io/github/v/tag/strawmanode/freqscope?label=version)](https://github.com/strawmanode/freqscope/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status: No longer maintained](https://img.shields.io/badge/status-no%20longer%20maintained-lightgrey)](#development-status)
 
-**See live air traffic on a true 3D radar scope — and hear the controllers working it.**
+**Live air traffic on a 3D radar scope, with explorable airspace and a LiveATC handoff.**
 
-FreqScope puts **real ADS-B traffic, 3D airspace, and a credited LiveATC handoff** in one view. Search any major US airport, watch aircraft move through tower, TRACON, and center volumes on a globe you can tilt and orbit, then open the matching [LiveATC.net](https://www.liveatc.net/) feed with one click.
+FreqScope brings ADS-B traffic, 3D airspace, and airport radio-frequency information
+into one view. Search an airport, explore tower, TRACON, and center volumes on a
+Cesium globe, and open the matching [LiveATC.net](https://www.liveatc.net/) page.
+
+## Development status
+
+I've moved on to a more ambitious project and am no longer actively developing
+FreqScope. The repository remains available for anyone interested in exploring
+the code, learning from it, or building on it.
+
+No further software updates, support, or review of issues and pull requests are
+planned. Prebuilt desktop installers are no longer distributed. The final
+reference-data snapshot remains available for existing installations; it is
+not being refreshed.
+
+## Screenshots
 
 <p align="center">
   <a href="./screenshots/scope.png">
@@ -14,187 +28,82 @@ FreqScope puts **real ADS-B traffic, 3D airspace, and a credited LiveATC handoff
   </a>
 </p>
 
-[Download](#download) · [Quick start](#quick-start) · [Highlights](#highlights) · [Contributing](CONTRIBUTING.md) · [Setup guide](SETUP.md) · [Report a bug](https://github.com/strawmanode/freqscope/issues/new) · [Security](SECURITY.md)
-
-**New here?** Download the [desktop app](#download) — no Node or terminal required. Developers can jump to the [quick start](#quick-start) below.
-
----
-
-## Download
-
-Installers for macOS, Windows, and Linux are published on
-[GitHub Releases](https://github.com/strawmanode/freqscope/releases).
-
-| Platform | Download |
-| -------- | -------- |
-| **macOS** (Apple Silicon & Intel) | [DMG](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.dmg) · [ZIP](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-mac.zip) |
-| **Windows** (x64) | [Installer](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-win.exe) |
-| **Linux** (x64) | [AppImage](https://github.com/strawmanode/freqscope/releases/latest/download/FreqScope-linux.AppImage) |
-
-On first launch, enter your name and email when prompted — that's all the live
-aircraft feed needs.
-
-**Safe to install.** FreqScope is source-available — every line of code is in
-this repo. Installers are built publicly on
-[GitHub Actions](https://github.com/strawmanode/freqscope/actions/workflows/release.yml)
-from tagged commits. The app has **no ads, no telemetry, and no bundled
-malware**. It runs a local server on your machine and only talks to documented
-aviation APIs (ADS-B feeds, weather, reference data) plus GitHub when checking
-for updates. Your name and email stay on your device for feed identification
-only.
-
-<details>
-<summary><strong>macOS: “Apple can’t check app for malicious software”?</strong></summary>
-
-This warning is **not** Apple saying FreqScope contains malware. It means the
-app is not yet signed with an Apple Developer ID, so macOS cannot verify who
-published it. That is normal for independent apps distributed outside the Mac
-App Store. FreqScope is built from the public source in this repository.
-
-To open the app the first time:
-
-1. Try to open **FreqScope** once (double-click or from the DMG). macOS will block it.
-2. Open **System Settings** → **Privacy & Security**.
-3. Scroll to **Security** — you should see a message about FreqScope being blocked.
-4. Click **Open Anyway** (this option appears for about an hour after you try to open the app).
-5. Enter your Mac login password and confirm.
-
-FreqScope is then saved as an exception and opens normally from then on. Full
-notes (Windows SmartScreen, code signing plans) are in
-[SETUP.md § Desktop app](SETUP.md#opening-freqscope-on-macos-unsigned-build).
-
-</details>
-
-> **Windows** may show a similar SmartScreen prompt for the same reason — the
-> build is not yet Authenticode-signed. See
-> [SETUP.md](SETUP.md#windows-smartscreen-unsigned-build).
-
-<details>
-<summary><strong>Verify your download matches our official build</strong></summary>
-
-Each release includes a
-[`SHA256SUMS`](https://github.com/strawmanode/freqscope/releases/latest/download/SHA256SUMS)
-file, generated automatically when installers are built. This lets you confirm
-the file on your machine is **byte-for-byte identical** to the one we published
-— nothing was corrupted or swapped during download.
-
-**macOS / Linux** (in the folder where the installer was saved):
-
-```bash
-curl -fsSLO https://github.com/strawmanode/freqscope/releases/latest/download/SHA256SUMS
-shasum -a 256 -c SHA256SUMS          # macOS
-# sha256sum -c SHA256SUMS            # Linux
-```
-
-**Windows** (PowerShell):
-
-```powershell
-Get-FileHash .\FreqScope-win.exe -Algorithm SHA256
-```
-
-Compare the output to the matching line in `SHA256SUMS`. A match means you have
-the authentic FreqScope installer from this repository's release pipeline.
-
-Found a security concern? Please report it privately via [SECURITY.md](SECURITY.md).
-
-</details>
-
----
-
-## Quick start
-
-For local development in a browser:
-
-```bash
-git clone https://github.com/strawmanode/freqscope.git
-cd freqscope
-npm install
-cp .env.example .env.local   # add your name and email
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173).
-
-**Desktop app from source:**
-
-```bash
-npm run electron:dev     # dev window with hot reload
-npm run electron:build   # installer for your OS into release/
-```
-
-Airport, frequency, and airspace data ship prebuilt in `src/data/`. Full
-configuration, feed setup, optional 3D models, and troubleshooting are in
-**[SETUP.md](SETUP.md)**.
-
----
-
-## Highlights
-
-- **True 3D scope** — Cesium globe with tilt, orbit, and zoom; not a flat map.
-- **3D airspace** — tower / TRACON / ARTCC boundaries, SUA, and TFRs as shells you can look inside.
-- **Live ADS-B radar** — real aircraft positions polled every few seconds around your airport.
-- **Scope symbology** — altitude-banded targets, VFR and emergency-squawk detection, data blocks, trails.
-- **Weather layer** — METAR plus SIGMET / G-AIRMET advisories for the area.
-- **Scope themes** — STARS, ERAM, and a modern light theme.
-- **LiveATC handoff** — credited **Listen** button opens the airport's LiveATC page.
-- **Desktop app** — double-click install with bundled server and automatic updates via GitHub Releases.
-- **Optional 3D aircraft** — swap 2D symbols for GLB models on supported types ([setup](public/models/aircraft/README.md)).
-
 <p align="center">
   <a href="./screenshots/search.png">
     <img src="screenshots/search.png" width="700" alt="FreqScope airport search">
   </a>
 </p>
 
----
+## Features
 
-## Get involved
+- **3D radar scope:** a Cesium globe with tilt, orbit, zoom, and scope themes.
+- **Airspace:** tower, TRACON, ARTCC, special-use airspace, and TFR layers.
+- **Aircraft traffic:** ADS-B positions, data blocks, trails, and scope symbology.
+- **Weather:** METAR, SIGMET, and G-AIRMET information.
+- **LiveATC handoff:** a credited Listen button opens the airport's LiveATC page.
+- **Desktop source:** an Electron app with a bundled local server.
+- **Optional aircraft models:** separately downloaded third-party 3D assets.
 
-FreqScope is source-available and built in the open. We'd love your help making
-it better — whether you fly, code, write docs, or just love watching traffic.
+External services and dependencies may change after development has ended.
 
-| | |
-| --- | --- |
-| **Try it & report bugs** | [Open an issue](https://github.com/strawmanode/freqscope/issues/new) with steps to reproduce, your OS, and a screenshot if you can. |
-| **Contribute code** | Read **[CONTRIBUTING.md](CONTRIBUTING.md)**, pick an issue (or propose one), and open a pull request. |
-| **Improve docs** | Setup guides, screenshots, and README polish are always welcome. |
-| **Aviation & data** | Airport defaults, frequency mappings, airspace edge cases, and reference-data scripts live in [`scripts/`](scripts/README.md). |
-| **Scope & UI** | Themes, symbology, performance with heavy traffic, and radar UX feedback. |
-| **Desktop & packaging** | Electron builds, code signing, and cross-platform testing (especially Windows and Linux). |
+## Run from source
 
-Before opening a PR: `npm run lint` and `npm run build` should pass. Security
-issues go through **[SECURITY.md](SECURITY.md)** — please don't file them
-publicly.
+Use Node.js 20 or newer and npm. For local use in a browser:
 
----
+```bash
+git clone https://github.com/strawmanode/freqscope.git
+cd freqscope
+npm ci
+cp .env.example .env.local   # configure your own upstream feed identity
+npm run dev
+```
 
-## Project docs
+Open [http://localhost:5173](http://localhost:5173). The live aircraft feed needs
+your own name and email for identification with its upstream providers. Never
+commit `.env.local`. See [SETUP.md](SETUP.md#feed-configuration) for details.
 
-| Doc | What's in it |
-| --- | --- |
-| **[SETUP.md](SETUP.md)** | Install, feed configuration, data sources, desktop app, scripts |
-| **[CONTRIBUTING.md](CONTRIBUTING.md)** | How to contribute, PR checklist, license note |
-| **[SECURITY.md](SECURITY.md)** | Reporting vulnerabilities |
-| **[NOTICE.md](NOTICE.md)** | Third-party services, data, and license notices |
-| **[scripts/README.md](scripts/README.md)** | Regenerating airport, frequency, and airspace data |
+To run or build the desktop app locally:
 
-## Tech stack
+```bash
+npm run electron:dev     # desktop development window
+npm run electron:build   # local installer(s) in release/
+```
 
-Vite · React · TypeScript · Tailwind CSS · CesiumJS · Electron ·
-[airplanes.live](https://api.airplanes.live) (with [adsb.lol](https://api.adsb.lol) fallback)
+These are local build instructions, not a maintained release service. See
+[SETUP.md](SETUP.md) for configuration, packaging, and troubleshooting.
 
----
+## Reference data
 
-## License & disclaimer
+The [final reference-data snapshot](https://github.com/strawmanode/freqscope/releases/tag/data-latest)
+was generated on **September 20, 2026 (UTC)**. It contains airport, runway,
+frequency, and airspace data derived from OurAirports, the Squawk airspace
+dataset, and project defaults. It is retained for existing installations, with
+**no further refreshes planned**. Its data will become outdated.
 
-FreqScope is **source-available, not open source.** It is licensed under the
-[PolyForm Noncommercial License 1.0.0](LICENSE) for personal, educational,
-research, public-safety, government, charitable, and other non-commercial use.
-Commercial use requires a separate license from the copyright holder.
+The `data-latest` tag and download filenames are preserved for compatibility.
+Existing desktop installations can retrieve this snapshot, or use their
+previously downloaded or bundled reference data. Live aircraft and weather
+requests are separate and remain subject to their providers' availability and
+terms.
 
-The license covers only what the copyright holder can grant in FreqScope itself.
-It does **not** grant rights to third-party services, feeds, audio streams,
-datasets, or trademarks. FreqScope is provided **"as is"** and is **not** for
-aviation, operational, safety-critical, or reliance-based use. Users must comply
-with [LiveATC.net's Terms of Use](https://www.liveatc.net/legal/) and all
-other provider terms. See [NOTICE.md](NOTICE.md).
+Prebuilt reference data also remains in `src/data/`. Instructions for generating
+your own copy are in [scripts/README.md](scripts/README.md).
+
+## Documentation
+
+- [Setup and local builds](SETUP.md)
+- [Data generation](scripts/README.md)
+- [Optional aircraft models](public/models/aircraft/README.md)
+- [Security maintenance status](SECURITY.md)
+- [Third-party notices](NOTICE.md)
+
+## License and disclaimer
+
+FreqScope's own code is available under the [MIT license](LICENSE).
+Third-party code, models, datasets, services, audio streams, and trademarks
+remain subject to their own licenses and terms; see [NOTICE.md](NOTICE.md).
+
+FreqScope is provided **as is** and is not intended for aviation operations,
+navigation, safety-critical decisions, or other reliance-based use. Data may be
+outdated, incomplete, or inaccurate. LiveATC use remains subject to
+[LiveATC.net's Terms of Use](https://www.liveatc.net/legal/).

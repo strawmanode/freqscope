@@ -1,6 +1,6 @@
 # FreqScope Notices
 
-FreqScope is an independent source-available project by strawmanode. It is
+FreqScope is an independent, unmaintained open-source project by strawmanode. It is
 not affiliated with, endorsed by, or sponsored by LiveATC.net, airplanes.live,
 adsb.lol, planespotters.net, CARTO, Google, the FAA, NOAA/NWS, Flightradar24,
 OurAirports, or any other third-party provider.
@@ -53,7 +53,7 @@ Provider reference links:
 ## Third-Party Code, Models, and Assets
 
 Third-party code, packages, generated assets, and model files remain under
-their own licenses. FreqScope's PolyForm Noncommercial license does not
+their own licenses. FreqScope's MIT license does not
 relicense those materials or remove their requirements.
 
 Known third-party materials used with FreqScope include:
@@ -61,11 +61,11 @@ Known third-party materials used with FreqScope include:
 | Material | Location | License / source notes |
 | --- | --- | --- |
 | CesiumJS and copied Cesium static assets | `node_modules/cesium`, `public/Workers`, `public/Assets`, `public/ThirdParty`, `public/Widgets` | Cesium packages are Apache-2.0. Keep Cesium license notices intact. |
-| Aircraft GLB models (optional, not shipped in repo) | `public/models/aircraft` | **Not** licensed under PolyForm. Download separately via `npm run setup:models`. Mostly from Flightradar24 `fr24-3d-models` (GPLv2); `c172.glb` is from FGMEMBERS/BelugaProject sources (GPLv2). See `public/models/aircraft/README.md`. |
+| Aircraft GLB models (optional, not shipped in repo) | `public/models/aircraft` | **Not** licensed under FreqScope's MIT license. Download separately via `npm run setup:models`. Mostly from Flightradar24 `fr24-3d-models` (GPLv2); `c172.glb` is from FGMEMBERS/BelugaProject sources (GPLv2). See `public/models/aircraft/README.md`. |
 | Airspace source package | `@squawk/airspace-data` via `scripts/build-airspace.mjs` | MIT-licensed package used to generate local airspace JSON. |
 | React and Vite starter SVGs | `src/assets/react.svg`, `src/assets/vite.svg` | Retained project assets from upstream tools; remove if no longer needed. |
 
-Do not assume that a non-commercial FreqScope use automatically satisfies all
+Do not assume that using FreqScope under MIT automatically satisfies all
 third-party licenses. In particular, copyleft model assets and share-alike data
 licenses may impose separate distribution obligations.
 

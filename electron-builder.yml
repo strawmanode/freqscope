@@ -8,8 +8,8 @@ appId: net.freqscope.desktop
 productName: FreqScope
 copyright: © strawmanode
 
-# Update feed: electron-updater reads release assets (latest*.yml + installer)
-# from GitHub Releases. The release workflow publishes with --publish always.
+# Historical update-feed configuration; upstream installers are retired.
+# Independent distributors must configure their own repository and update feed.
 publish:
   provider: github
   owner: strawmanode
@@ -38,7 +38,7 @@ asar: true
 
 mac:
   category: public.app-category.education
-  # Stable name so README can link to /releases/latest/download/FreqScope-mac.dmg
+  # Stable filename for locally built installers.
   artifactName: FreqScope-mac.${ext}
   # Universal binary runs natively on both Apple Silicon and Intel Macs.
   target:

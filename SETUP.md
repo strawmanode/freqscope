@@ -1,7 +1,8 @@
 # FreqScope setup
 
-Everything you need to run FreqScope locally. For what the project is and why it
-exists, see the [README](README.md).
+FreqScope is no longer maintained. These instructions are retained for running
+and building the source independently. Official installers and ongoing support
+are no longer provided. See the [README](README.md) for the project overview.
 
 FreqScope is designed to run locally through the Vite dev server. The local API
 routes for aircraft, METAR, SIGMET/G-AIRMET, and TFR data are served by
@@ -49,35 +50,22 @@ npm run electron:pack    # faster unpacked build (no installer) for testing
 ```
 
 `electron-builder` produces a `.dmg`/`.zip` on macOS, an NSIS `.exe` on Windows,
-and an `.AppImage` on Linux. Each OS must be built on (or cross-built for) that
-platform — the easiest way to produce all three is the
-`.github/workflows/release.yml` GitHub Actions workflow, which builds on a
-macOS/Windows/Linux matrix when you push a `v*` tag and attaches the installers
-to a GitHub Release.
+and an `.AppImage` on Linux. Build for the appropriate platform locally.
 
-### Automatic updates
+The historical `.github/workflows/release.yml` workflow is disabled in this
+repository through GitHub settings. Its historical definition is retained as a
+reference for independent maintainers. Anyone distributing their own builds must configure
+their own publishing destination and signing credentials.
 
-The desktop app updates itself via [electron-updater](https://www.electron.build/auto-update),
-using GitHub Releases as the update feed (configured under `publish:` in
-`electron-builder.yml`). On launch, a packaged app checks the latest release,
-downloads a newer version in the background, and installs it on the next
-restart. Update problems (offline, no release yet) are logged and never block
-startup.
+### Retired application updates
 
-For this to work end to end:
+Existing packaged builds contain an application-update check against GitHub
+Releases. No further application releases are planned, and the installer release
+has been removed. Failed update checks are logged without preventing startup.
 
-1. **Bump `version` in `package.json`** and push a matching `vX.Y.Z` tag. The
-   release workflow runs `electron-builder --publish always`, which uploads the
-   installers **and** the `latest*.yml` + `.blockmap` metadata electron-updater
-   reads. It creates a *draft* release — review and publish it to go live.
-2. **Sign the builds.** Auto-update requires a valid signature — it is
-   mandatory on macOS and strongly recommended on Windows. Unsigned builds
-   install manually but will not auto-update on macOS. See
-   [Code signing](#code-signing) below.
-
-To smoke-test the update flow locally, point electron-updater at a feed with a
-`dev-app-update.yml` in the project root and run a packaged build; see the
-electron-updater docs.
+The historical update-feed configuration remains in `electron-builder.yml`.
+Independent distributors must configure their own update feed before publishing.
+The separate frozen reference-data snapshot is described below.
 
 ### Headless server (optional)
 
@@ -104,33 +92,12 @@ binary (Apple Silicon + Intel), **Windows x64** (NSIS), and **Linux x64**
 (AppImage). Adjust the `arch` entries in `electron-builder.yml` to add others
 (e.g. Windows arm64).
 
-### Opening FreqScope on macOS (unsigned build)
+### Unsigned local builds
 
-macOS may show:
-
-> **Apple can't check app for malicious software**
-
-This is **not** a malware finding. It means FreqScope is not yet signed with an
-Apple Developer ID, so Gatekeeper cannot verify the publisher. The app is built
-from the public source in this repository and is safe to install.
-
-**To open the app the first time:**
-
-1. Try to open **FreqScope** once (from the DMG or Applications). macOS will block it.
-2. Open **System Settings** → **Privacy & Security**.
-3. Under **Security**, find the message about FreqScope being blocked.
-4. Click **Open Anyway** (this button is available for about an hour after you try to open the app).
-5. Enter your Mac login password and confirm.
-
-The app is saved as a security exception and opens normally after that.
-
-On older macOS versions, **right-click** the app → **Open** the first time may
-also work.
-
-### Windows SmartScreen (unsigned build)
-
-Windows may show **Windows protected your PC** (SmartScreen). Click
-**More info** → **Run anyway** for the first launch.
+Locally built installers may be unsigned. macOS Gatekeeper or Windows
+SmartScreen may display warnings because the publisher cannot be verified.
+Source availability does not establish that a build is safe. Anyone distributing
+builds is responsible for evaluating them and arranging appropriate signing.
 
 ### Code signing
 
@@ -209,40 +176,32 @@ details.
 
 ## Reference data freshness
 
-Two kinds of data exist in FreqScope:
-
-- **Live data** — aircraft, TFRs, SIGMET/G-AIRMET, and METAR — is fetched at
-  runtime and is always current, including in a downloaded desktop build.
+- **Live data** — aircraft positions, TFRs, SIGMET/G-AIRMET, and METAR — is
+  requested from upstream providers at runtime. Availability and freshness
+  depend on those providers; this project no longer maintains the integrations.
 - **Reference data** — airports, frequencies, runways, and airspace volumes —
-  is generated at build time and baked into the app. The FAA NASR datasets
-  follow a 28-day cycle, so a downloaded build slowly goes out of date.
+  comes from bundled or previously downloaded files and can become outdated.
 
-The build scripts stamp `src/data/data-meta.json` with the date and source of
-each reference dataset. The search page shows a small "REFERENCE DATA · <date>"
-badge that turns amber after one cycle (28 days) and red after two, so users can
-tell when a newer release is worth downloading. Regenerate the data with
-`npm run build:data` and `npm run build:airspace`; the stamp updates
-automatically.
+Build scripts stamp `src/data/data-meta.json` with each dataset's generation
+date and source. The search page's reference-data badge reflects the copy in
+use. Regenerate your own data using the instructions in [scripts/README.md](scripts/README.md).
 
-### Automatic reference-data updates
+### Final reference-data snapshot
 
-Reference data refreshes without shipping a new app version:
+The [`data-latest` release](https://github.com/strawmanode/freqscope/releases/tag/data-latest)
+is preserved as a frozen snapshot generated on **September 20, 2026 (UTC)**.
+No further refreshes are planned. Its tag and filenames remain unchanged so
+existing desktop installations can continue downloading it.
 
-1. **Publisher** — `.github/workflows/data-update.yml` runs on a schedule
-   (and on demand), regenerates the data from OurAirports, and publishes the
-   JSON plus a `data-manifest.json` to a moving **`data-latest`** GitHub
-   release.
-2. **App** — on every launch the client fetches `/data/*.json` from the
-   embedded server, which serves a downloaded copy when present
-   (`server/dataHandler.ts`). The Electron app checks the `data-latest`
-   manifest in the background and, if newer, downloads the bundle into the
-   user's data folder; it takes effect on the **next** launch (same model as
-   app updates — never blocks startup, never serves a half-written file). The
-   bundled copy is always the offline fallback, so the app works with no
-   network.
+On launch, a packaged app checks the manifest and downloads the snapshot if its
+version differs from the local copy. It serves downloaded reference data when
+available, with bundled files as a fallback if a download is unavailable.
+This reference-data check is separate from the retired application-update feed.
 
-The freshness badge reflects whichever copy is in use, so it goes green again
-once a newer bundle has been downloaded.
+The data-publishing workflow is disabled in this repository through GitHub
+settings. Its historical definition and the local generation scripts remain
+available for independent maintainers. Regenerating data locally does not refresh the published
+snapshot unless a maintainer explicitly publishes it.
 
 ## Routes
 

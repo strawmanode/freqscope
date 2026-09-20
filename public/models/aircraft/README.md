@@ -3,7 +3,7 @@
 FreqScope renders known ICAO types in 3D when matching GLB files are present.
 Without these files, aircraft still appear as 2D scope symbols.
 
-These models are **not** part of the PolyForm-licensed FreqScope source code.
+These models are **not** part of the MIT-licensed FreqScope source code.
 They are third-party assets under **GPLv2** (or upstream terms noted below).
 Download them only if you accept those licenses.
 

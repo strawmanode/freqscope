@@ -1,5 +1,9 @@
 # Data build scripts
 
+FreqScope is no longer maintained. These instructions are retained for local
+data generation. The published `data-latest` snapshot is frozen, and automatic
+publication is disabled.
+
 ## `npm run build:data`
 
 Generates [`../src/data/airports.json`](../src/data/airports.json), [`../src/data/frequencies.json`](../src/data/frequencies.json), and [`../src/data/runways.json`](../src/data/runways.json).
@@ -35,7 +39,7 @@ Runway data uses `APT_RWY.csv` when building from NASR, or falls back to OurAirp
 ## `npm run setup:models`
 
 Downloads optional GPLv2 aircraft GLB models into `public/models/aircraft/`.
-These files are gitignored and not part of the PolyForm-licensed FreqScope
+These files are gitignored and not part of the MIT-licensed FreqScope
 source. See [`../public/models/aircraft/README.md`](../public/models/aircraft/README.md).
 
 ## LiveATC
